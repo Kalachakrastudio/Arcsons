@@ -1,174 +1,93 @@
+(() => {
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+  const navLinks = document.querySelectorAll(".nav-link");
+  const currentYear = document.getElementById("currentYear");
 
-/* =========================================
-   ARCSONS INFRATECH
-   Homepage Interactions
-========================================= */
+  // Update copyright year.
+  if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+  }
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    // =====================================
-    // MOBILE NAVIGATION
-    // =====================================
-
-    const menuToggle = document.getElementById("menuToggle");
-    const mainNav = document.getElementById("mainNav");
-    const navLinks = document.querySelectorAll(".nav-link, .nav-cta");
-
-    function closeMenu() {
-        mainNav.classList.remove("is-open");
-        menuToggle.classList.remove("is-open");
-
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation");
-
-        document.body.classList.remove("menu-open");
-    }
-
+  // Mobile navigation.
+  if (menuToggle && mainNav) {
     menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
 
-        const isOpen = mainNav.classList.toggle("is-open");
-
-        menuToggle.classList.toggle("is-open", isOpen);
-
-        menuToggle.setAttribute("aria-expanded", String(isOpen));
-
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen ? "Close navigation" : "Open navigation"
-        );
-
-        document.body.classList.toggle("menu-open", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
     });
 
-    navLinks.forEach((link) => {
-        link.addEventListener("click", closeMenu);
+    mainNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      });
     });
 
     document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            closeMenu();
-        }
+      if (event.key === "Escape") {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      }
     });
+  }
 
-    // Close mobile menu when switching to desktop.
+  // Reveal sections as they enter the viewport.
+  const revealItems = document.querySelectorAll(".reveal");
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-    window.addEventListener("resize", () => {
-        if (window.innerWidth > 850) {
-            closeMenu();
-        }
-    });
-
-
-    // =====================================
-    // SCROLL REVEAL ANIMATIONS
-    // =====================================
-
-    const revealElements = document.querySelectorAll(".reveal");
-
-    const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if ("IntersectionObserver" in window && !prefersReducedMotion) {
-
-        const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
-
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("visible");
-
-                        observer.unobserve(entry.target);
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.12,
-                rootMargin: "0px 0px -35px 0px"
-            }
-        );
-
-        revealElements.forEach((element) => {
-            revealObserver.observe(element);
+  if ("IntersectionObserver" in window && !prefersReducedMotion) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
         });
-
-    } else {
-
-        // Fallback for older browsers and reduced-motion users.
-
-        revealElements.forEach((element) => {
-            element.classList.add("visible");
-        });
-
-    }
-
-
-    // =====================================
-    // ACTIVE NAVIGATION ON SCROLL
-    // =====================================
-
-    const sections = document.querySelectorAll(
-        "main section[id]"
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -35px 0px"
+      }
     );
 
-    const navigationLinks = document.querySelectorAll(
-        ".nav-link"
+    revealItems.forEach((item) => revealObserver.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  }
+
+  // Highlight the navigation link for the section currently in view.
+  const sections = document.querySelectorAll("main section[id]");
+
+  if ("IntersectionObserver" in window && sections.length) {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const sectionId = entry.target.getAttribute("id");
+
+          navLinks.forEach((link) => {
+            const isActive = link.getAttribute("href") === `#${sectionId}`;
+            link.classList.toggle("active", isActive);
+          });
+        });
+      },
+      {
+        rootMargin: "-35% 0px -55% 0px",
+        threshold: 0
+      }
     );
 
-    if ("IntersectionObserver" in window) {
-
-        const sectionObserver = new IntersectionObserver(
-            (entries) => {
-
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        const sectionId = entry.target.id;
-
-                        navigationLinks.forEach((link) => {
-
-                            const isActive =
-                                link.getAttribute("href") ===
-                                `#${sectionId}`;
-
-                            link.classList.toggle(
-                                "active",
-                                isActive
-                            );
-
-                        });
-
-                    }
-
-                });
-
-            },
-            {
-                rootMargin: "-30% 0px -60% 0px",
-                threshold: 0
-            }
-        );
-
-        sections.forEach((section) => {
-            sectionObserver.observe(section);
-        });
-
-    }
-
-
-    // =====================================
-    // AUTOMATIC COPYRIGHT YEAR
-    // =====================================
-
-    const currentYear = document.getElementById("currentYear");
-
-    if (currentYear) {
-        currentYear.textContent = new Date().getFullYear();
-    }
-
-});
+    sections.forEach((section) => sectionObserver.observe(section));
+  }
+})();
