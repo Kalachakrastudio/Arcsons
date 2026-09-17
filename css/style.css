@@ -1497,14 +1497,19 @@ h2 em {
     gap: 8px;
   }
 }
-/* Industries We Serve — image-free layout */
+
+/* Industries We Serve */
 .industries-section {
-  padding-top: 390px;
-  padding-bottom: 390px;
+  padding: 100px 0;
   background: #fff;
-  color: #171717;
+  color: var(--ink);
 }
 
+@media (max-width: 560px) {
+  .industries-section {
+    padding: 68px 0;
+  }
+}
 .industries-heading {
   max-width: 650px;
   margin-bottom: 38px;
