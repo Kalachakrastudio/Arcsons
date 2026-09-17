@@ -1393,7 +1393,164 @@ h2 em {
   .sector-card {
     height: 150px;
   }
+/* Sector cards — image-free layout */
+.sector-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
 
+.sector-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 190px;
+  padding: 25px;
+  overflow: hidden;
+  border: 1px solid #e5e5e3;
+  border-radius: 8px;
+  background: #fff;
+  color: #101820;
+  text-decoration: none;
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* In case the old image rule is still present */
+.sector-card img {
+  display: none;
+}
+
+.sector-number {
+  color: #e8752d;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.sector-card-title {
+  display: block;
+  margin: 28px 0 24px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(19px, 2vw, 25px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.sector-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid #ececea;
+}
+
+.sector-card-bottom small {
+  color: #70777d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.sector-card-bottom b {
+  display: inline-flex;
+  flex: 0 0 30px;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f7eee8;
+  color: #e8752d;
+  font-size: 16px;
+  font-weight: 600;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.sector-card:hover,
+.sector-card:focus-visible {
+  border-color: #e8752d;
+  background: #fffaf6;
+  transform: translateY(-3px);
+}
+
+.sector-card:hover .sector-card-bottom b,
+.sector-card:focus-visible .sector-card-bottom b {
+  color: #fff;
+  background: #e8752d;
+  transform: translate(2px, -2px);
+}
+
+.sector-card:focus-visible {
+  outline: 2px solid #e8752d;
+  outline-offset: 3px;
+}
+
+.sector-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.sector-tags span {
+  padding: 9px 13px;
+  border: 1px solid #e5e5e3;
+  border-radius: 4px;
+  background: #f8f8f6;
+  color: #5f666c;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .sector-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .sector-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sector-card {
+    min-height: 160px;
+    padding: 21px;
+  }
+
+  .sector-card-title {
+    margin: 22px 0;
+    font-size: 22px;
+  }
+
+  .sector-tags {
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .sector-tags span {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sector-card,
+  .sector-card-bottom b {
+    transition: none;
+  }
+}
   .sector-card > span {
     right: 10px;
     left: 10px;
