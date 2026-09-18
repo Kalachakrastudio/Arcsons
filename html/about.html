@@ -15,7 +15,11 @@
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
@@ -29,6 +33,7 @@
   <link rel="stylesheet" href="../css/about.css" />
 </head>
 
+
 <body>
 
   <!-- =====================================================
@@ -36,13 +41,21 @@
        ===================================================== -->
 
   <div class="topbar">
+
     <div class="container topbar-inner">
 
       <span>Maharashtra, India</span>
 
       <div class="topbar-contact">
-        <a href="tel:+919422556347">+91 94225 56347</a>
-        <a href="mailto:contact@arcsons.com">contact@arcsons.com</a>
+
+        <a href="tel:+919422556347">
+          +91 94225 56347
+        </a>
+
+        <a href="mailto:contact@arcsons.com">
+          contact@arcsons.com
+        </a>
+
       </div>
 
       <span class="topbar-tag">
@@ -50,6 +63,7 @@
       </span>
 
     </div>
+
   </div>
 
 
@@ -73,24 +87,36 @@
         </span>
 
         <span class="brand-copy">
+
           <strong>ARCSONS</strong>
-          <small>INFRATECH PRIVATE LIMITED</small>
+
+          <small>
+            INFRATECH PRIVATE LIMITED
+          </small>
+
         </span>
 
       </a>
 
+
+      <!-- Mobile menu -->
 
       <button
         class="menu-toggle"
         id="menuToggle"
         aria-label="Open navigation"
         aria-expanded="false"
+        type="button"
       >
+
         <span></span>
         <span></span>
         <span></span>
+
       </button>
 
+
+      <!-- Navigation -->
 
       <nav
         class="main-nav"
@@ -98,9 +124,13 @@
         aria-label="Main navigation"
       >
 
-        <a class="nav-link" href="../index.html#home">
+        <a
+          class="nav-link"
+          href="../index.html#home"
+        >
           Home
         </a>
+
 
         <a
           class="nav-link active"
@@ -110,24 +140,45 @@
           About Us
         </a>
 
-        <a class="nav-link" href="../html/services.html">
+
+        <a
+          class="nav-link"
+          href="../html/services.html"
+        >
           Services
         </a>
 
-        <a class="nav-link" href="../index.html#sectors">
+
+        <a
+          class="nav-link"
+          href="../index.html#sectors"
+        >
           Sectors
         </a>
 
-        <a class="nav-link" href="capabilities.html">
+
+        <a
+          class="nav-link"
+          href="capabilities.html"
+        >
           Capabilities
         </a>
 
-        <a class="nav-link" href="../index.html#contact">
+
+        <a
+          class="nav-link"
+          href="../index.html#contact"
+        >
           Contact
         </a>
 
-        <a class="nav-cta" href="../index.html#contact">
-          Get in Touch <span>↗</span>
+
+        <a
+          class="nav-cta"
+          href="../index.html#contact"
+        >
+          Get in Touch
+          <span>↗</span>
         </a>
 
       </nav>
@@ -137,51 +188,118 @@
   </header>
 
 
+  <!-- =====================================================
+       MAIN CONTENT
+       ===================================================== -->
+
   <main>
 
 
-    <!-- =====================================================
+    <!-- ===================================================
          ABOUT HERO
-         ===================================================== -->
+         =================================================== -->
 
     <section class="about-hero">
 
-      <!-- Premium technical background -->
-      <div class="about-hero-grid" aria-hidden="true"></div>
 
-      <div class="about-hero-glow" aria-hidden="true"></div>
+      <!-- Technical grid -->
 
-      <div class="about-hero-structure" aria-hidden="true">
+      <div
+        class="about-hero-grid"
+        aria-hidden="true"
+      ></div>
 
-        <span class="structure-line structure-line-1"></span>
-        <span class="structure-line structure-line-2"></span>
-        <span class="structure-line structure-line-3"></span>
-        <span class="structure-line structure-line-4"></span>
 
-        <span class="structure-ring structure-ring-1"></span>
-        <span class="structure-ring structure-ring-2"></span>
+      <!-- Orange glow -->
 
-        <span class="structure-node structure-node-1"></span>
-        <span class="structure-node structure-node-2"></span>
-        <span class="structure-node structure-node-3"></span>
+      <div
+        class="about-hero-glow"
+        aria-hidden="true"
+      ></div>
+
+
+      <!-- Technical structure -->
+
+      <div
+        class="about-hero-structure"
+        aria-hidden="true"
+      >
+
+        <span
+          class="structure-line structure-line-1"
+        ></span>
+
+        <span
+          class="structure-line structure-line-2"
+        ></span>
+
+        <span
+          class="structure-line structure-line-3"
+        ></span>
+
+        <span
+          class="structure-line structure-line-4"
+        ></span>
+
+
+        <span
+          class="structure-ring structure-ring-1"
+        ></span>
+
+        <span
+          class="structure-ring structure-ring-2"
+        ></span>
+
+
+        <span
+          class="structure-node structure-node-1"
+        ></span>
+
+        <span
+          class="structure-node structure-node-2"
+        ></span>
+
+        <span
+          class="structure-node structure-node-3"
+        ></span>
 
       </div>
 
 
-      <!-- Large technical watermark -->
-      <div class="about-hero-watermark" aria-hidden="true">
+      <!-- Large watermark -->
+
+      <div
+        class="about-hero-watermark"
+        aria-hidden="true"
+      >
         ARCSONS
       </div>
 
 
-      <div class="container about-hero-content reveal">
+      <!-- =================================================
+           HERO CONTENT
+
+           IMPORTANT:
+           The .container controls horizontal padding.
+           ================================================= -->
+
+      <div
+        class="container about-hero-content reveal"
+      >
+
+
+        <!-- Hero top information -->
 
         <div class="about-hero-top">
 
           <div class="eyebrow eyebrow-light">
+
             <span></span>
+
             ABOUT ARCSONS
+
           </div>
+
 
           <span class="about-hero-code">
             ARC / 01
@@ -190,34 +308,54 @@
         </div>
 
 
+        <!-- Hero kicker -->
+
         <p class="about-hero-kicker">
           Engineering Capability. Execution Excellence.
         </p>
 
 
+        <!-- Hero heading -->
+
         <h1>
-          Infrastructure built<br />
+          Infrastructure built
+          <br />
           around <em>purpose.</em>
         </h1>
 
 
+        <!-- Hero description -->
+
         <p class="about-hero-description">
-          A multidisciplinary EPC and infrastructure project-services company
-          delivering integrated engineering and execution solutions for critical infrastructure.
+
+          A multidisciplinary EPC and infrastructure
+          project-services company delivering integrated
+          engineering and execution solutions for critical
+          infrastructure.
+
         </p>
 
+
+        <!-- Hero CTA -->
 
         <a
           class="button button-orange"
           href="#our-story"
         >
-          Discover ARCSONS <span>↓</span>
+
+          Discover ARCSONS
+
+          <span>↓</span>
+
         </a>
 
       </div>
 
 
-      <!-- Hero information strip -->
+      <!-- =================================================
+           HERO BOTTOM INFORMATION STRIP
+           ================================================= -->
+
       <div class="about-hero-bottom">
 
         <span>
@@ -238,7 +376,7 @@
 
 
     <!-- =====================================================
-         ABOUT ARCSONS
+         ABOUT ARCSONS / WHO WE ARE
          ===================================================== -->
 
     <section
@@ -249,52 +387,85 @@
       <div class="container about-intro-grid">
 
 
+        <!-- Left -->
+
         <div class="about-intro-heading reveal">
 
           <div class="eyebrow">
+
             <span></span>
+
             WHO WE ARE
+
           </div>
 
+
           <h2>
-            Engineering capability.<br />
-            <em>Execution excellence.</em>
+
+            Engineering capability.
+            <br />
+
+            <em>
+              Execution excellence.
+            </em>
+
           </h2>
+
 
           <div class="about-heading-rule"></div>
 
+
           <p class="about-intro-note">
-            Integrated project delivery for the infrastructure that connects,
-            powers and supports communities.
+
+            Integrated project delivery for the infrastructure
+            that connects, powers and supports communities.
+
           </p>
 
         </div>
 
 
+        <!-- Right -->
+
         <div class="about-intro-copy reveal">
 
           <p>
-            ARCSONS INFRATECH PRIVATE LIMITED is a multidisciplinary EPC and
-            infrastructure project-services company delivering engineering and
-            execution solutions for critical infrastructure.
+
+            ARCSONS INFRATECH PRIVATE LIMITED is a
+            multidisciplinary EPC and infrastructure
+            project-services company delivering engineering
+            and execution solutions for critical infrastructure.
+
           </p>
 
-          <p>
-            Our business is built around integrated project delivery across
-            Telecom &amp; OFC Infrastructure, City Gas Distribution, Water &amp;
-            Sewer Infrastructure, Electrical &amp; Power Infrastructure,
-            HDD &amp; Trenchless Technology, Solar EPC and Civil &amp; Utility Infrastructure.
-          </p>
 
           <p>
-            ARCSONS supports projects through the complete lifecycle — from
-            surveys, planning and engineering through procurement, construction,
-            installation, testing, commissioning and final handover.
+
+            Our business is built around integrated project
+            delivery across Telecom &amp; OFC Infrastructure,
+            City Gas Distribution, Water &amp; Sewer
+            Infrastructure, Electrical &amp; Power Infrastructure,
+            HDD &amp; Trenchless Technology, Solar EPC and
+            Civil &amp; Utility Infrastructure.
+
           </p>
 
+
           <p>
-            Our objective is simple: deliver technically sound infrastructure
-            safely, reliably and professionally.
+
+            ARCSONS supports projects through the complete
+            lifecycle — from surveys, planning and engineering
+            through procurement, construction, installation,
+            testing, commissioning and final handover.
+
+          </p>
+
+
+          <p>
+
+            Our objective is simple: deliver technically sound
+            infrastructure safely, reliably and professionally.
+
           </p>
 
         </div>
@@ -312,45 +483,86 @@
 
       <div class="container about-lifecycle-inner">
 
+
+        <!-- Lifecycle heading -->
+
         <div class="about-lifecycle-title reveal">
 
           <span class="about-section-index">
             01 / OUR APPROACH
           </span>
 
+
           <h2>
-            One coordinated journey.<br />
-            <em>From plan to handover.</em>
+
+            One coordinated journey.
+            <br />
+
+            <em>
+              From plan to handover.
+            </em>
+
           </h2>
 
         </div>
 
 
+        <!-- Lifecycle steps -->
+
         <div class="about-lifecycle-steps reveal">
 
           <div>
+
             <span>01</span>
-            <strong>Survey &amp; Planning</strong>
+
+            <strong>
+              Survey &amp; Planning
+            </strong>
+
           </div>
 
+
           <div>
+
             <span>02</span>
-            <strong>Engineering</strong>
+
+            <strong>
+              Engineering
+            </strong>
+
           </div>
 
+
           <div>
+
             <span>03</span>
-            <strong>Procurement</strong>
+
+            <strong>
+              Procurement
+            </strong>
+
           </div>
 
+
           <div>
+
             <span>04</span>
-            <strong>Construction</strong>
+
+            <strong>
+              Construction
+            </strong>
+
           </div>
 
+
           <div>
+
             <span>05</span>
-            <strong>Testing &amp; Handover</strong>
+
+            <strong>
+              Testing &amp; Handover
+            </strong>
+
           </div>
 
         </div>
@@ -368,32 +580,53 @@
 
       <div class="container">
 
+
+        <!-- Section heading -->
+
         <div class="section-heading about-section-heading reveal">
 
           <div>
 
             <div class="eyebrow">
+
               <span></span>
+
               OUR DIRECTION
+
             </div>
 
+
             <h2>
-              Purpose that guides<br />
-              <em>every project.</em>
+
+              Purpose that guides
+              <br />
+
+              <em>
+                every project.
+              </em>
+
             </h2>
 
           </div>
 
+
           <p>
-            Our vision defines where we aim to go. Our mission shapes how we
-            work, collaborate and deliver.
+
+            Our vision defines where we aim to go.
+            Our mission shapes how we work,
+            collaborate and deliver.
+
           </p>
 
         </div>
 
 
+        <!-- Vision / Mission cards -->
+
         <div class="vision-mission-grid">
 
+
+          <!-- Vision -->
 
           <article class="vm-card vm-vision reveal">
 
@@ -402,6 +635,7 @@
               <span class="vm-number">
                 01
               </span>
+
 
               <span
                 class="vm-symbol"
@@ -412,23 +646,38 @@
 
             </div>
 
+
             <span class="vm-label">
               OUR VISION
             </span>
 
+
             <h3>
-              Building a lasting<br />
-              <em>infrastructure legacy.</em>
+
+              Building a lasting
+              <br />
+
+              <em>
+                infrastructure legacy.
+              </em>
+
             </h3>
 
+
             <p>
-              To build ARCSONS into a leading Indian multi-sector EPC and
-              infrastructure company recognized for engineering excellence,
-              reliable execution, sustainable development and long-term value creation.
+
+              To build ARCSONS into a leading Indian
+              multi-sector EPC and infrastructure company
+              recognized for engineering excellence,
+              reliable execution, sustainable development
+              and long-term value creation.
+
             </p>
 
           </article>
 
+
+          <!-- Mission -->
 
           <article class="vm-card vm-mission reveal">
 
@@ -437,6 +686,7 @@
               <span class="vm-number">
                 02
               </span>
+
 
               <span
                 class="vm-symbol"
@@ -447,19 +697,31 @@
 
             </div>
 
+
             <span class="vm-label">
               OUR MISSION
             </span>
 
+
             <h3>
-              Turning intent into<br />
-              <em>reliable delivery.</em>
+
+              Turning intent into
+              <br />
+
+              <em>
+                reliable delivery.
+              </em>
+
             </h3>
 
+
             <p>
-              To deliver infrastructure projects with engineering precision
-              and disciplined execution, while building lasting relationships
-              through quality, safety, transparency and performance.
+
+              To deliver infrastructure projects with
+              engineering precision and disciplined execution,
+              while building lasting relationships through
+              quality, safety, transparency and performance.
+
             </p>
 
           </article>
@@ -480,25 +742,42 @@
       <div class="container mission-principles-grid">
 
 
+        <!-- Mission introduction -->
+
         <div class="mission-principles-intro reveal">
 
           <div class="eyebrow eyebrow-light">
+
             <span></span>
+
             OUR MISSION IN ACTION
+
           </div>
 
+
           <h2>
-            What we work<br />
-            towards <em>every day.</em>
+
+            What we work
+            <br />
+
+            towards
+            <em>every day.</em>
+
           </h2>
 
+
           <p>
-            Our mission is reflected in the standards we set, the partnerships
-            we build and the infrastructure solutions we deliver.
+
+            Our mission is reflected in the standards we set,
+            the partnerships we build and the infrastructure
+            solutions we deliver.
+
           </p>
 
         </div>
 
+
+        <!-- Mission list -->
 
         <div class="mission-list">
 
@@ -508,7 +787,8 @@
             <span>01</span>
 
             <p>
-              Deliver infrastructure projects with engineering precision and disciplined execution.
+              Deliver infrastructure projects with engineering
+              precision and disciplined execution.
             </p>
 
           </article>
@@ -519,7 +799,8 @@
             <span>02</span>
 
             <p>
-              Maintain strong standards of quality, safety and compliance.
+              Maintain strong standards of quality,
+              safety and compliance.
             </p>
 
           </article>
@@ -530,7 +811,8 @@
             <span>03</span>
 
             <p>
-              Build long-term relationships based on trust, transparency and performance.
+              Build long-term relationships based on trust,
+              transparency and performance.
             </p>
 
           </article>
@@ -541,7 +823,8 @@
             <span>04</span>
 
             <p>
-              Adopt modern construction, digital and trenchless technologies.
+              Adopt modern construction, digital and
+              trenchless technologies.
             </p>
 
           </article>
@@ -552,7 +835,8 @@
             <span>05</span>
 
             <p>
-              Continuously strengthen engineering, project-management and execution capabilities.
+              Continuously strengthen engineering,
+              project-management and execution capabilities.
             </p>
 
           </article>
@@ -563,11 +847,11 @@
             <span>06</span>
 
             <p>
-              Support India’s digital, energy, water, utility, transport and renewable infrastructure development.
+              Support India’s digital, energy, water, utility,
+              transport and renewable infrastructure development.
             </p>
 
           </article>
-
 
         </div>
 
@@ -585,36 +869,59 @@
       <div class="container">
 
 
+        <!-- Values heading -->
+
         <div class="section-heading about-section-heading reveal">
 
           <div>
 
             <div class="eyebrow">
+
               <span></span>
+
               OUR VALUES
+
             </div>
 
+
             <h2>
-              The principles behind<br />
-              <em>our work.</em>
+
+              The principles behind
+              <br />
+
+              <em>
+                our work.
+              </em>
+
             </h2>
 
           </div>
 
+
           <p>
-            The values we uphold shape our decisions, our partnerships and
-            our approach to project delivery.
+
+            The values we uphold shape our decisions,
+            our partnerships and our approach to
+            project delivery.
+
           </p>
 
         </div>
 
 
+        <!-- Values grid -->
+
         <div class="values-grid">
 
 
+          <!-- 01 -->
+
           <article class="value-card reveal">
 
-            <span class="value-index">01</span>
+            <span class="value-index">
+              01
+            </span>
+
 
             <span
               class="value-icon"
@@ -623,18 +930,28 @@
               ◇
             </span>
 
-            <h3>Integrity</h3>
+
+            <h3>
+              Integrity
+            </h3>
+
 
             <p>
-              We conduct our business responsibly and transparently.
+              We conduct our business responsibly
+              and transparently.
             </p>
 
           </article>
 
 
+          <!-- 02 -->
+
           <article class="value-card reveal">
 
-            <span class="value-index">02</span>
+            <span class="value-index">
+              02
+            </span>
+
 
             <span
               class="value-icon"
@@ -643,18 +960,28 @@
               ↗
             </span>
 
-            <h3>Commitment</h3>
+
+            <h3>
+              Commitment
+            </h3>
+
 
             <p>
-              We take ownership of our commitments and project responsibilities.
+              We take ownership of our commitments
+              and project responsibilities.
             </p>
 
           </article>
 
 
+          <!-- 03 -->
+
           <article class="value-card reveal">
 
-            <span class="value-index">03</span>
+            <span class="value-index">
+              03
+            </span>
+
 
             <span
               class="value-icon"
@@ -663,18 +990,28 @@
               ✳
             </span>
 
-            <h3>Quality</h3>
+
+            <h3>
+              Quality
+            </h3>
+
 
             <p>
-              We focus on engineering standards, workmanship and documentation.
+              We focus on engineering standards,
+              workmanship and documentation.
             </p>
 
           </article>
 
 
+          <!-- 04 -->
+
           <article class="value-card reveal">
 
-            <span class="value-index">04</span>
+            <span class="value-index">
+              04
+            </span>
+
 
             <span
               class="value-icon"
@@ -683,18 +1020,28 @@
               ＋
             </span>
 
-            <h3>Safety</h3>
+
+            <h3>
+              Safety
+            </h3>
+
 
             <p>
-              We place the safety of people, assets and communities at the centre of project execution.
+              We place the safety of people, assets and
+              communities at the centre of project execution.
             </p>
 
           </article>
 
 
+          <!-- 05 -->
+
           <article class="value-card reveal">
 
-            <span class="value-index">05</span>
+            <span class="value-index">
+              05
+            </span>
+
 
             <span
               class="value-icon"
@@ -703,18 +1050,28 @@
               ⌁
             </span>
 
-            <h3>Reliability</h3>
+
+            <h3>
+              Reliability
+            </h3>
+
 
             <p>
-              We strive for consistent and dependable project delivery.
+              We strive for consistent and dependable
+              project delivery.
             </p>
 
           </article>
 
 
+          <!-- 06 -->
+
           <article class="value-card reveal">
 
-            <span class="value-index">06</span>
+            <span class="value-index">
+              06
+            </span>
+
 
             <span
               class="value-icon"
@@ -723,18 +1080,28 @@
               ✧
             </span>
 
-            <h3>Innovation</h3>
+
+            <h3>
+              Innovation
+            </h3>
+
 
             <p>
-              We continuously evaluate technologies and methods that improve execution.
+              We continuously evaluate technologies and
+              methods that improve execution.
             </p>
 
           </article>
 
 
+          <!-- 07 -->
+
           <article class="value-card value-card-wide reveal">
 
-            <span class="value-index">07</span>
+            <span class="value-index">
+              07
+            </span>
+
 
             <span
               class="value-icon"
@@ -743,20 +1110,22 @@
               ◎
             </span>
 
+
             <div>
 
               <h3>
                 Customer Focus
               </h3>
 
+
               <p>
-                We work to understand client objectives and deliver practical project solutions.
+                We work to understand client objectives
+                and deliver practical project solutions.
               </p>
 
             </div>
 
           </article>
-
 
         </div>
 
@@ -776,23 +1145,37 @@
         aria-hidden="true"
       ></div>
 
+
       <div class="container about-cta-inner reveal">
 
         <div>
 
           <div class="eyebrow eyebrow-light">
+
             <span></span>
+
             WORK WITH ARCSONS
+
           </div>
 
+
           <h2>
-            Let’s build infrastructure<br />
+
+            Let’s build infrastructure
+            <br />
+
             with <em>purpose.</em>
+
           </h2>
 
+
           <p>
-            Have a project to discuss? Connect with our team to explore
-            engineering and execution solutions for your infrastructure needs.
+
+            Have a project to discuss?
+            Connect with our team to explore
+            engineering and execution solutions
+            for your infrastructure needs.
+
           </p>
 
         </div>
@@ -802,7 +1185,11 @@
           class="button button-white"
           href="../index.html#contact"
         >
-          Discuss Your Project <span>→</span>
+
+          Discuss Your Project
+
+          <span>→</span>
+
         </a>
 
       </div>
@@ -821,6 +1208,8 @@
     <div class="container footer-main">
 
 
+      <!-- Footer brand -->
+
       <div class="footer-brand">
 
         <a
@@ -836,9 +1225,12 @@
             <b></b>
           </span>
 
+
           <span class="brand-copy">
 
-            <strong>ARCSONS</strong>
+            <strong>
+              ARCSONS
+            </strong>
 
             <small>
               INFRATECH PRIVATE LIMITED
@@ -848,9 +1240,11 @@
 
         </a>
 
+
         <p>
           Engineering Excellence for a Stronger Tomorrow.
         </p>
+
 
         <small>
           Multi-Sector EPC &amp; Infrastructure Project Services
@@ -859,31 +1253,39 @@
       </div>
 
 
+      <!-- Quick Links -->
+
       <div class="footer-column">
 
         <h3>
           Quick Links
         </h3>
 
+
         <a href="../index.html#home">
           Home
         </a>
+
 
         <a href="about.html">
           About Us
         </a>
 
+
         <a href="../html/services.html">
           Services
         </a>
+
 
         <a href="../index.html#sectors">
           Sectors
         </a>
 
+
         <a href="capabilities.html">
           Capabilities
         </a>
+
 
         <a href="../index.html#contact">
           Contact
@@ -892,31 +1294,39 @@
       </div>
 
 
+      <!-- Services -->
+
       <div class="footer-column">
 
         <h3>
           Our Services
         </h3>
 
+
         <a href="../index.html#services">
           Telecom &amp; OFC
         </a>
+
 
         <a href="../index.html#services">
           City Gas Distribution
         </a>
 
+
         <a href="../index.html#services">
           Water &amp; Sewer
         </a>
+
 
         <a href="../index.html#services">
           Electrical &amp; Power
         </a>
 
+
         <a href="../index.html#services">
           HDD &amp; Trenchless
         </a>
+
 
         <a href="../index.html#services">
           Solar &amp; Renewable
@@ -925,19 +1335,24 @@
       </div>
 
 
+      <!-- Contact -->
+
       <div class="footer-column footer-contact">
 
         <h3>
           Get in Touch
         </h3>
 
+
         <span>
           ⌖ &nbsp; Maharashtra, India
         </span>
 
+
         <a href="tel:+919422556347">
           ☎ &nbsp; +91 94225 56347
         </a>
+
 
         <a href="mailto:contact@arcsons.com">
           ✉ &nbsp; contact@arcsons.com
@@ -948,13 +1363,21 @@
     </div>
 
 
+    <!-- Footer bottom -->
+
     <div class="container footer-bottom">
 
+
       <span>
+
         © <span id="currentYear"></span>
+
         ARCSONS INFRATECH PRIVATE LIMITED.
+
         All rights reserved.
+
       </span>
+
 
       <div>
 
@@ -996,7 +1419,10 @@
   </footer>
 
 
-  <!-- JavaScript -->
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
   <script src="../js/about.js"></script>
 
 </body>
