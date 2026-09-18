@@ -97,7 +97,9 @@
 }
 
 
-/* Structural lines */
+/* =========================================================
+   STRUCTURAL LINES
+   ========================================================= */
 
 .structure-line {
   position: absolute;
@@ -255,14 +257,21 @@
   width: 100%;
 
   /*
-   * Same spacious container rhythm as the other ARCSONS pages.
-   * The global .container controls horizontal padding.
+   * IMPORTANT:
+   * No left/right padding here.
+   *
+   * The global .container controls the horizontal
+   * spacing exactly like the other ARCSONS pages.
    */
 
   padding-top: 82px;
   padding-bottom: 105px;
 }
 
+
+/* =========================================================
+   HERO TOP META
+   ========================================================= */
 
 .about-hero-top {
   display: flex;
@@ -418,6 +427,10 @@
   justify-content: space-between;
 
   gap: 20px;
+
+  /*
+   * Same horizontal alignment as the main .container.
+   */
 
   padding:
     17px
@@ -1064,7 +1077,7 @@
     linear-gradient(
       135deg,
       transparent 0 48%,
-      rgba(255,255,255,0.8) 49%,
+      rgba(255, 255, 255, 0.8) 49%,
       transparent 50%
     );
 
@@ -1139,7 +1152,9 @@
 
 @media (max-width: 900px) {
 
-  /* Hero */
+  /* -------------------------------------------------------
+     HERO
+     ------------------------------------------------------- */
 
   .about-hero {
     min-height: 590px;
@@ -1157,8 +1172,42 @@
   }
 
 
-  .about-intro-grid,
-  .about-lifecycle-inner,
+  /* -------------------------------------------------------
+     INTRO
+     ------------------------------------------------------- */
+
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+
+  .about-intro-copy {
+    padding-top: 0;
+  }
+
+
+  /* -------------------------------------------------------
+     LIFECYCLE
+     ------------------------------------------------------- */
+
+  .about-lifecycle-inner {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+
+  .about-lifecycle-steps {
+    max-width: 650px;
+  }
+
+
+  /* -------------------------------------------------------
+     MISSION
+     ------------------------------------------------------- */
+
   .mission-principles-grid {
     grid-template-columns: 1fr;
 
@@ -1171,10 +1220,9 @@
   }
 
 
-  .about-lifecycle-steps {
-    max-width: 650px;
-  }
-
+  /* -------------------------------------------------------
+     VALUES
+     ------------------------------------------------------- */
 
   .values-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1184,7 +1232,6 @@
   .value-card-wide {
     grid-column: 1 / -1;
   }
-
 }
 
 
@@ -1209,6 +1256,11 @@
     opacity: 0.25;
   }
 
+
+  /*
+     Horizontal spacing continues to come from
+     the global .container.
+  */
 
   .about-hero-content {
     padding-top: 65px;
@@ -1257,6 +1309,7 @@
 
   .about-hero-watermark {
     right: -45px;
+
     bottom: 70px;
 
     font-size: 70px;
@@ -1477,7 +1530,74 @@
   .about-cta .button {
     width: 100%;
   }
+}
 
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .about-hero {
+    min-height: 620px;
+  }
+
+
+  .about-hero-content {
+    padding-top: 58px;
+    padding-bottom: 105px;
+  }
+
+
+  .about-hero h1 {
+    font-size: 43px;
+
+    letter-spacing: -0.055em;
+  }
+
+
+  .about-hero-description {
+    font-size: 13px;
+  }
+
+
+  .about-hero-top {
+    margin-bottom: 20px;
+  }
+
+
+  .about-hero-code {
+    font-size: 7px;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  .about-hero-bottom {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+
+  .about-intro-heading h2 {
+    font-size: 34px;
+  }
+
+
+  .about-section-heading h2 {
+    font-size: 32px;
+  }
+
+
+  .mission-principles h2 {
+    font-size: 34px;
+  }
+
+
+  .about-cta h2 {
+    font-size: 32px;
+  }
 }
 
 
@@ -1487,8 +1607,10 @@
 
 @media (prefers-reduced-motion: reduce) {
 
+  .about-hero *,
   .value-card {
-    transition: none;
-  }
+    animation: none !important;
 
+    transition: none !important;
+  }
 }
