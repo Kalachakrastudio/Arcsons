@@ -1,50 +1,42 @@
+/* =========================================================
+   ARCSONS — CAPABILITIES PAGE JS
+   ========================================================= */
+
 (() => {
   "use strict";
 
+
+  /* =======================================================
+     MOBILE MENU
+  ======================================================= */
+
   const menuToggle = document.getElementById("menuToggle");
   const mainNav = document.getElementById("mainNav");
-  const currentYear = document.getElementById("currentYear");
 
-  /* =========================================================
-     CURRENT YEAR
-     ========================================================= */
-
-  if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
-  }
-
-
-  /* =========================================================
-     MOBILE NAVIGATION
-     ========================================================= */
 
   if (menuToggle && mainNav) {
 
     const closeMenu = () => {
 
-      mainNav.classList.remove("open");
+      mainNav.classList.remove("is-open");
 
-      menuToggle.classList.remove("active");
+      menuToggle.classList.remove("is-active");
 
       menuToggle.setAttribute(
         "aria-expanded",
         "false"
       );
 
-      menuToggle.setAttribute(
-        "aria-label",
-        "Open navigation"
-      );
     };
 
 
     menuToggle.addEventListener("click", () => {
 
       const isOpen =
-        mainNav.classList.toggle("open");
+        mainNav.classList.toggle("is-open");
 
       menuToggle.classList.toggle(
-        "active",
+        "is-active",
         isOpen
       );
 
@@ -53,24 +45,19 @@
         String(isOpen)
       );
 
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen
-          ? "Close navigation"
-          : "Open navigation"
-      );
-
     });
 
 
-    mainNav.querySelectorAll("a").forEach((link) => {
+    mainNav
+      .querySelectorAll("a")
+      .forEach((link) => {
 
-      link.addEventListener(
-        "click",
-        closeMenu
-      );
+        link.addEventListener(
+          "click",
+          closeMenu
+        );
 
-    });
+      });
 
 
     document.addEventListener(
@@ -99,19 +86,35 @@
   }
 
 
-  /* =========================================================
-     REVEAL ANIMATION
-     ========================================================= */
+  /* =======================================================
+     CURRENT YEAR
+  ======================================================= */
 
-  const revealItems =
+  const currentYear =
+    document.getElementById("currentYear");
+
+
+  if (currentYear) {
+
+    currentYear.textContent =
+      new Date().getFullYear();
+
+  }
+
+
+  /* =======================================================
+     SCROLL REVEAL
+  ======================================================= */
+
+  const revealElements =
     document.querySelectorAll(".reveal");
 
 
   if ("IntersectionObserver" in window) {
 
-    const revealObserver =
+    const observer =
       new IntersectionObserver(
-        (entries, observer) => {
+        (entries, obs) => {
 
           entries.forEach((entry) => {
 
@@ -121,9 +124,7 @@
                 "is-visible"
               );
 
-              observer.unobserve(
-                entry.target
-              );
+              obs.unobserve(entry.target);
 
             }
 
@@ -136,20 +137,60 @@
       );
 
 
-    revealItems.forEach((item) => {
-
-      revealObserver.observe(item);
-
+    revealElements.forEach((element) => {
+      observer.observe(element);
     });
 
   } else {
 
-    revealItems.forEach((item) => {
-
-      item.classList.add("is-visible");
-
+    revealElements.forEach((element) => {
+      element.classList.add("is-visible");
     });
 
   }
+
+
+  /* =======================================================
+     SMOOTH INTERNAL LINKS
+  ======================================================= */
+
+  document
+    .querySelectorAll('a[href^="#"]')
+    .forEach((link) => {
+
+      link.addEventListener("click", (event) => {
+
+        const targetId =
+          link.getAttribute("href");
+
+
+        if (
+          !targetId ||
+          targetId === "#"
+        ) {
+          return;
+        }
+
+
+        const target =
+          document.querySelector(targetId);
+
+
+        if (!target) {
+          return;
+        }
+
+
+        event.preventDefault();
+
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      });
+
+    });
 
 })();
