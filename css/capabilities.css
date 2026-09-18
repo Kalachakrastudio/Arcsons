@@ -1,0 +1,667 @@
+/* =========================================================
+   ARCSONS — PAGE 4
+   EXTENDED EPC CAPABILITIES
+   ========================================================= */
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.capabilities-hero {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.capabilities-hero-bg {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2200&q=85");
+
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+}
+
+.capabilities-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 14, 20, 0.94) 0%,
+      rgba(8, 14, 20, 0.78) 48%,
+      rgba(8, 14, 20, 0.45) 100%
+    );
+}
+
+.capabilities-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 150px;
+  padding-bottom: 90px;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-bottom: 25px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero-meta span:first-child {
+  color: var(--orange);
+}
+
+.hero-meta span:last-child {
+  position: relative;
+  padding-left: 18px;
+}
+
+.hero-meta span:last-child::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 7px;
+  height: 7px;
+
+  background: var(--orange);
+
+  transform: translateY(-50%);
+}
+
+.capabilities-hero h1 {
+  max-width: 800px;
+  margin: 0;
+
+  color: #fff;
+
+  font-size: clamp(52px, 7vw, 92px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+}
+
+.capabilities-hero h1 em {
+  color: var(--orange);
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+.capabilities-hero-content > p {
+  max-width: 610px;
+  margin: 30px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.extended-intro {
+  background: var(--paper);
+}
+
+.extended-intro-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.section-label {
+  display: inline-block;
+
+  color: var(--orange);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.extended-intro-heading h2 {
+  max-width: 540px;
+  margin: 22px 0 0;
+
+  color: var(--ink);
+
+  font-size: clamp(38px, 4.2vw, 60px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.extended-intro-heading h2 em {
+  color: var(--orange);
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+.extended-intro-copy {
+  padding-top: 45px;
+}
+
+.extended-intro-copy p {
+  max-width: 680px;
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   CAPABILITY SECTION
+   ========================================================= */
+
+.capability-sector-section {
+  padding: 20px 0 110px;
+
+  background: var(--paper-soft);
+}
+
+.capability-section-header {
+  margin-bottom: 50px;
+}
+
+.capability-section-header h2 {
+  max-width: 720px;
+  margin: 18px 0 0;
+
+  color: var(--ink);
+
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.capability-section-header h2 em {
+  color: var(--orange);
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   CAPABILITY GRID
+   ========================================================= */
+
+.capability-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.capability-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 25px;
+
+  min-height: 250px;
+  padding: 34px 35px;
+
+  background: #fff;
+
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.capability-card:hover {
+  background: #fff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 16px 35px rgba(17, 24, 32, 0.08);
+}
+
+.capability-number {
+  position: relative;
+
+  padding-top: 2px;
+
+  color: var(--orange);
+
+  font-family: var(--serif);
+  font-size: 25px;
+  line-height: 1;
+}
+
+.capability-number::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 38px;
+
+  width: 25px;
+  height: 1px;
+
+  background: var(--orange);
+}
+
+.capability-content {
+  min-width: 0;
+}
+
+.capability-type {
+  display: inline-block;
+
+  margin-bottom: 13px;
+
+  color: #8a9298;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.capability-content h3 {
+  margin: 0 0 14px;
+
+  color: var(--ink);
+
+  font-size: 23px;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+.capability-content p {
+  max-width: 490px;
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   QUALIFICATION NOTE
+   ========================================================= */
+
+.capability-note-section {
+  padding: 0 0 100px;
+
+  background: var(--paper-soft);
+}
+
+.capability-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+
+  padding: 30px 35px;
+
+  border: 1px solid var(--line);
+
+  background: #fff;
+}
+
+.note-mark {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  background: var(--orange);
+
+  color: #fff;
+
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.note-content {
+  min-width: 0;
+}
+
+.note-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--ink);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.note-content p {
+  max-width: 900px;
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.page-cta {
+  padding: 100px 0;
+
+  background: var(--ink);
+}
+
+.page-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.page-cta h2 {
+  max-width: 650px;
+  margin: 17px 0 0;
+
+  color: #fff;
+
+  font-size: clamp(38px, 4.5vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.page-cta h2 em {
+  color: var(--orange);
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  flex: 0 0 auto;
+
+  min-width: 190px;
+  padding: 16px 22px;
+
+  background: var(--orange);
+
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.btn-primary span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.btn-primary:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+  .capabilities-hero {
+    min-height: 500px;
+  }
+
+  .capabilities-hero-content {
+    padding-top: 130px;
+    padding-bottom: 70px;
+  }
+
+  .capabilities-hero h1 {
+    font-size: clamp(48px, 10vw, 70px);
+  }
+
+  .extended-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .extended-intro-copy {
+    padding-top: 0;
+  }
+
+  .capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-card {
+    min-height: auto;
+  }
+
+  .page-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+  .capabilities-hero {
+    min-height: 480px;
+  }
+
+  .capabilities-hero-content {
+    padding-top: 120px;
+    padding-bottom: 55px;
+  }
+
+  .hero-meta {
+    gap: 12px;
+    font-size: 9px;
+  }
+
+  .hero-meta span:last-child {
+    padding-left: 14px;
+  }
+
+  .capabilities-hero h1 {
+    font-size: 47px;
+    line-height: 1;
+  }
+
+  .capabilities-hero-content > p {
+    margin-top: 22px;
+
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+
+  /* Intro */
+
+  .extended-intro {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .extended-intro-heading h2 {
+    margin-top: 17px;
+
+    font-size: 39px;
+  }
+
+  .extended-intro-copy p {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+
+  /* Capability section */
+
+  .capability-sector-section {
+    padding-top: 0;
+    padding-bottom: 70px;
+  }
+
+  .capability-section-header {
+    margin-bottom: 35px;
+  }
+
+  .capability-section-header h2 {
+    font-size: 35px;
+  }
+
+
+  /* Cards */
+
+  .capability-card {
+    grid-template-columns: 45px 1fr;
+    gap: 18px;
+
+    padding: 27px 22px;
+  }
+
+  .capability-number {
+    font-size: 21px;
+  }
+
+  .capability-number::after {
+    top: 32px;
+    width: 20px;
+  }
+
+  .capability-type {
+    margin-bottom: 10px;
+
+    font-size: 9px;
+  }
+
+  .capability-content h3 {
+    font-size: 19px;
+    line-height: 1.25;
+  }
+
+  .capability-content p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+
+  /* Note */
+
+  .capability-note-section {
+    padding-bottom: 70px;
+  }
+
+  .capability-note {
+    gap: 17px;
+    padding: 23px 20px;
+  }
+
+  .note-mark {
+    width: 32px;
+    height: 32px;
+
+    font-size: 18px;
+  }
+
+  .note-label {
+    font-size: 9px;
+  }
+
+  .note-content p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+
+  /* CTA */
+
+  .page-cta {
+    padding: 75px 0;
+  }
+
+  .page-cta h2 {
+    font-size: 38px;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .capabilities-hero-bg,
+  .capability-card,
+  .btn-primary {
+    transition: none;
+  }
+
+}
