@@ -1,109 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101820" />
 
   <meta
     name="description"
-    content="ARCSONS Infratech extended EPC capabilities across pipelines, energy, railways, metro, roads, data centres, ports, water infrastructure and industrial EPC."
-  >
+    content="Explore ARCSONS Infratech's extended EPC capabilities across pipelines, energy, railway, metro, roads, data centres, ports, water resources, industrial EPC and logistics infrastructure."
+  />
 
   <title>Capabilities | ARCSONS Infratech</title>
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
-  >
+  />
 
-  <!-- Global CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+  <!-- Shared Global Styles -->
+  <link rel="stylesheet" href="../css/style.css" />
 
-  <!-- Page CSS -->
-  <link rel="stylesheet" href="../css/capabilities.css">
+  <!-- Capabilities Page Styles -->
+  <link rel="stylesheet" href="../css/capabilities.css" />
 </head>
+
 
 <body>
 
+
   <!-- =========================================================
-       HEADER / NAVBAR
+       TOPBAR
+       ========================================================= -->
+
+  <div class="topbar">
+
+    <div class="container topbar-inner">
+
+      <span>Maharashtra, India</span>
+
+      <div class="topbar-contact">
+
+        <a href="tel:+919422556347">
+          +91 94225 56347
+        </a>
+
+        <a href="mailto:contact@arcsons.com">
+          contact@arcsons.com
+        </a>
+
+      </div>
+
+      <span class="topbar-tag">
+        Multi-Sector EPC &amp; Infrastructure Project Services
+      </span>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       NAVBAR
        ========================================================= -->
 
   <header class="site-header">
 
-    <div class="nav-wrap">
+    <div class="container nav-wrap">
 
-      <a href="index.html" class="brand">
 
-        <div class="brand-mark">
-          <span>A</span>
-        </div>
+      <!-- BRAND -->
 
-        <div class="brand-copy">
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="ARCSONS Infratech home"
+      >
+
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+          <i></i>
+          <b></b>
+        </span>
+
+        <span class="brand-copy">
+
           <strong>ARCSONS</strong>
-          <small>INFRATECH PRIVATE LIMITED</small>
-        </div>
+
+          <small>
+            INFRATECH PRIVATE LIMITED
+          </small>
+
+        </span>
 
       </a>
 
 
-      <nav class="main-nav" aria-label="Main Navigation">
 
-        <a href="../index.html" class="nav-link">
-          Home
-        </a>
-
-        <a href="../html/about.html" class="nav-link">
-          About
-        </a>
-
-        <a href="../html/services.html" class="nav-link">
-          Services
-        </a>
-
-        <a href="../html/industries.html" class="nav-link">
-          Industries
-        </a>
-
-        <a href="../html/capabilities.html" class="nav-link active">
-          Capabilities
-        </a>
-
-        <a href="../html/projects.html" class="nav-link">
-          Projects
-        </a>
-
-        <a href="../html/contact.html" class="nav-link">
-          Contact Us
-        </a>
-
-      </nav>
-
-
-      <a href="contact.html" class="nav-cta">
-        Let's Talk
-      </a>
-
+      <!-- MOBILE MENU -->
 
       <button
         class="menu-toggle"
-        type="button"
-        aria-label="Open navigation menu"
+        id="menuToggle"
+        aria-label="Open navigation"
         aria-expanded="false"
+        aria-controls="mainNav"
       >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
+
+
+      <!-- NAVIGATION -->
+
+      <nav
+        class="main-nav"
+        id="mainNav"
+        aria-label="Main navigation"
+      >
+
+        <a
+          class="nav-link"
+          href="../index.html#home"
+        >
+          Home
+        </a>
+
+        <a
+          class="nav-link"
+          href="about.html"
+        >
+          About Us
+        </a>
+
+        <a
+          class="nav-link"
+          href="services.html"
+        >
+          Services
+        </a>
+
+        <a
+          class="nav-link"
+          href="../index.html#sectors"
+        >
+          Sectors
+        </a>
+
+        <a
+          class="nav-link active"
+          href="capabilities.html"
+          aria-current="page"
+        >
+          Capabilities
+        </a>
+
+        <a
+          class="nav-link"
+          href="../index.html#contact"
+        >
+          Contact
+        </a>
+
+        <a
+          class="nav-cta"
+          href="../index.html#contact"
+        >
+          Get in Touch
+          <span>↗</span>
+        </a>
+
+      </nav>
+
     </div>
 
   </header>
+
 
 
   <main>
@@ -115,65 +196,114 @@
 
     <section class="capabilities-hero">
 
-      <div class="capabilities-hero-bg"></div>
+      <div class="capabilities-hero-image"></div>
 
       <div class="capabilities-hero-overlay"></div>
 
-      <div class="container capabilities-hero-content">
 
-        <div class="hero-meta">
-          <span>04</span>
-          <span>EXTENDED EPC CAPABILITIES</span>
+      <div class="container capabilities-hero-content reveal">
+
+
+        <div class="eyebrow eyebrow-light">
+          <span></span>
+          EXTENDED EPC CAPABILITIES
         </div>
 
+
+        <p class="capabilities-hero-kicker">
+          Expanding Across Infrastructure
+        </p>
+
+
         <h1>
-          Beyond <em>Core EPC.</em>
+          Beyond core
+          <em>EPC.</em>
         </h1>
 
-        <p>
-          Expanding across infrastructure through a multidisciplinary
-          EPC framework built for eligible opportunities.
+
+        <p class="capabilities-hero-description">
+
+          ARCSONS’ corporate objects and multidisciplinary EPC
+          framework enable participation in eligible opportunities
+          across additional infrastructure sectors, subject to
+          project-specific qualifications and approvals.
+
         </p>
+
+
+        <a
+          class="button button-orange"
+          href="#infrastructure-sectors"
+        >
+          Explore Capabilities
+          <span>↓</span>
+        </a>
+
 
       </div>
 
+
+      <div
+        class="capabilities-hero-mark"
+        aria-hidden="true"
+      >
+        ARCSONS / EPC
+      </div>
+
     </section>
+
 
 
     <!-- =========================================================
          INTRODUCTION
          ========================================================= -->
 
-    <section class="extended-intro section-pad">
+    <section class="capabilities-intro section-pad">
 
       <div class="container">
 
-        <div class="extended-intro-grid">
+        <div class="capabilities-intro-grid">
 
-          <div class="extended-intro-heading">
 
-            <span class="section-label">
-              EXTENDED EPC CAPABILITIES
-            </span>
+          <div class="capabilities-intro-heading">
+
+            <div class="eyebrow">
+              <span></span>
+              EXPANDING ACROSS INFRASTRUCTURE
+            </div>
+
 
             <h2>
-              Expanding Across
-              <em>Infrastructure.</em>
+              Built for
+              <em>broader opportunities.</em>
             </h2>
 
           </div>
 
 
-          <div class="extended-intro-copy">
+
+          <div class="capabilities-intro-copy">
+
+            <p class="intro-lead">
+
+              ARCSONS’ multidisciplinary EPC framework is structured
+              to support participation across a broad range of
+              infrastructure sectors.
+
+            </p>
+
 
             <p>
-              ARCSONS’ corporate objects and multidisciplinary EPC
-              framework enable participation in eligible opportunities
-              across additional infrastructure sectors, subject to
-              project-specific qualifications and approvals.
+
+              Our corporate objects and project-services capabilities
+              enable consideration of eligible opportunities beyond
+              core operating sectors, subject to project-specific
+              qualifications, statutory requirements and approvals.
+
             </p>
 
           </div>
+
 
         </div>
 
@@ -182,33 +312,58 @@
     </section>
 
 
+
     <!-- =========================================================
-         CAPABILITIES
+         INFRASTRUCTURE SECTORS
          ========================================================= -->
 
-    <section class="capability-sector-section">
+    <section
+      class="capability-sectors"
+      id="infrastructure-sectors"
+    >
 
       <div class="container">
 
-        <div class="capability-section-header">
 
-          <span class="section-label">
-            INFRASTRUCTURE SECTORS
-          </span>
+        <div class="capability-section-heading reveal">
 
-          <h2>
-            Capabilities Across
-            <em>Critical Infrastructure.</em>
-          </h2>
+          <div>
+
+            <div class="eyebrow">
+              <span></span>
+              INFRASTRUCTURE SECTORS
+            </div>
+
+            <h2>
+              Extended EPC
+              <em>capabilities.</em>
+            </h2>
+
+          </div>
+
+
+          <p>
+
+            ARCSONS can participate in eligible infrastructure
+            opportunities across multiple engineering, construction
+            and utility environments.
+
+          </p>
 
         </div>
 
+
+
+        <!-- =====================================================
+             CAPABILITY GRID
+             ===================================================== -->
 
         <div class="capability-grid">
 
 
           <!-- 01 -->
-          <article class="capability-card">
+
+          <article class="capability-card reveal">
 
             <div class="capability-number">
               01
@@ -216,7 +371,7 @@
 
             <div class="capability-content">
 
-              <span class="capability-type">
+              <span class="capability-overline">
                 ENERGY &amp; PIPELINES
               </span>
 
@@ -225,8 +380,8 @@
               </h3>
 
               <p>
-                Pipeline, terminal, pumping, compressor and associated
-                utility infrastructure.
+                Pipeline, terminal, pumping, compressor and
+                associated utility infrastructure.
               </p>
 
             </div>
@@ -234,8 +389,10 @@
           </article>
 
 
+
           <!-- 02 -->
-          <article class="capability-card">
+
+          <article class="capability-card reveal">
 
             <div class="capability-number">
               02
@@ -243,7 +400,7 @@
 
             <div class="capability-content">
 
-              <span class="capability-type">
+              <span class="capability-overline">
                 ENERGY STORAGE
               </span>
 
@@ -252,8 +409,9 @@
               </h3>
 
               <p>
-                Civil, electrical and balance-of-system infrastructure
-                for BESS and renewable-energy integration.
+                Civil, electrical and balance-of-system
+                infrastructure for BESS and renewable-energy
+                integration.
               </p>
 
             </div>
@@ -261,8 +419,10 @@
           </article>
 
 
+
           <!-- 03 -->
-          <article class="capability-card">
+
+          <article class="capability-card reveal">
 
             <div class="capability-number">
               03
@@ -270,7 +430,7 @@
 
             <div class="capability-content">
 
-              <span class="capability-type">
+              <span class="capability-overline">
                 RAIL INFRASTRUCTURE
               </span>
 
@@ -279,8 +439,9 @@
               </h3>
 
               <p>
-                Civil works, electrification, OFC, stations, crossings,
-                bridges, depots and associated infrastructure.
+                Civil works, electrification, OFC, stations,
+                crossings, bridges, depots and associated
+                infrastructure.
               </p>
 
             </div>
@@ -288,8 +449,10 @@
           </article>
 
 
+
           <!-- 04 -->
-          <article class="capability-card">
+
+          <article class="capability-card reveal">
 
             <div class="capability-number">
               04
@@ -297,7 +460,7 @@
 
             <div class="capability-content">
 
-              <span class="capability-type">
+              <span class="capability-overline">
                 URBAN TRANSPORT
               </span>
 
@@ -307,7 +470,8 @@
 
               <p>
                 Stations, viaducts, utility shifting, telecom,
-                electrical, depot and traction-related infrastructure.
+                electrical, depot and traction-related
+                infrastructure.
               </p>
 
             </div>
@@ -315,8 +479,10 @@
           </article>
 
 
+
           <!-- 05 -->
-          <article class="capability-card">
+
+          <article class="capability-card reveal">
 
             <div class="capability-number">
               05
@@ -324,7 +490,7 @@
 
             <div class="capability-content">
 
-              <span class="capability-type">
+              <span class="capability-overline">
                 TRANSPORT INFRASTRUCTURE
               </span>
 
@@ -342,8 +508,10 @@
           </article>
 
 
+
           <!-- 06 -->
-          <article class="capability-card">
+
+          <article class="capability-card reveal">
 
             <div class="capability-number">
               06
@@ -351,7 +519,7 @@
 
             <div class="capability-content">
 
-              <span class="capability-type">
+              <span class="capability-overline">
                 DIGITAL INFRASTRUCTURE
               </span>
 
@@ -360,9 +528,9 @@
               </h3>
 
               <p>
-                Civil, electrical, fibre, structured cabling, power
-                distribution, backup power, cooling, fire protection,
-                BMS and MEP.
+                Civil, electrical, fibre, structured cabling,
+                power distribution, backup power, cooling,
+                fire protection, BMS and MEP.
               </p>
 
             </div>
@@ -370,8 +538,10 @@
           </article>
 
 
+
           <!-- 07 -->
-          <article class="capability-card">
+
+          <article class="capability-card reveal">
 
             <div class="capability-number">
               07
@@ -379,7 +549,7 @@
 
             <div class="capability-content">
 
-              <span class="capability-type">
+              <span class="capability-overline">
                 TRANSPORT &amp; LOGISTICS
               </span>
 
@@ -388,8 +558,8 @@
               </h3>
 
               <p>
-                Civil, utility, terminal, cargo, electrical, telecom
-                and associated transport infrastructure.
+                Civil, utility, terminal, cargo, electrical,
+                telecom and associated transport infrastructure.
               </p>
 
             </div>
@@ -397,8 +567,10 @@
           </article>
 
 
+
           <!-- 08 -->
-          <article class="capability-card">
+
+          <article class="capability-card reveal">
 
             <div class="capability-number">
               08
@@ -406,7 +578,7 @@
 
             <div class="capability-content">
 
-              <span class="capability-type">
+              <span class="capability-overline">
                 WATER INFRASTRUCTURE
               </span>
 
@@ -424,8 +596,10 @@
           </article>
 
 
+
           <!-- 09 -->
-          <article class="capability-card">
+
+          <article class="capability-card reveal">
 
             <div class="capability-number">
               09
@@ -433,7 +607,7 @@
 
             <div class="capability-content">
 
-              <span class="capability-type">
+              <span class="capability-overline">
                 HEAVY ENGINEERING
               </span>
 
@@ -451,8 +625,10 @@
           </article>
 
 
+
           <!-- 10 -->
-          <article class="capability-card">
+
+          <article class="capability-card reveal">
 
             <div class="capability-number">
               10
@@ -460,7 +636,7 @@
 
             <div class="capability-content">
 
-              <span class="capability-type">
+              <span class="capability-overline">
                 INDUSTRIAL EPC
               </span>
 
@@ -478,8 +654,10 @@
           </article>
 
 
+
           <!-- 11 -->
-          <article class="capability-card">
+
+          <article class="capability-card reveal">
 
             <div class="capability-number">
               11
@@ -487,7 +665,7 @@
 
             <div class="capability-content">
 
-              <span class="capability-type">
+              <span class="capability-overline">
                 ENERGY INFRASTRUCTURE
               </span>
 
@@ -505,8 +683,10 @@
           </article>
 
 
+
           <!-- 12 -->
-          <article class="capability-card">
+
+          <article class="capability-card reveal">
 
             <div class="capability-number">
               12
@@ -514,7 +694,7 @@
 
             <div class="capability-content">
 
-              <span class="capability-type">
+              <span class="capability-overline">
                 LOGISTICS INFRASTRUCTURE
               </span>
 
@@ -523,8 +703,8 @@
               </h3>
 
               <p>
-                Warehouses, logistics parks, cargo systems, conveyors,
-                storage and associated infrastructure.
+                Warehouses, logistics parks, cargo systems,
+                conveyors, storage and associated infrastructure.
               </p>
 
             </div>
@@ -539,34 +719,40 @@
     </section>
 
 
+
     <!-- =========================================================
          QUALIFICATION NOTE
          ========================================================= -->
 
-    <section class="capability-note-section">
+    <section class="capability-disclaimer">
 
       <div class="container">
 
-        <div class="capability-note">
+        <div class="capability-disclaimer-inner reveal">
 
-          <div class="note-mark">
+
+          <div class="disclaimer-mark">
             +
           </div>
 
-          <div class="note-content">
 
-            <span class="note-label">
+          <div>
+
+            <span class="disclaimer-label">
               QUALIFICATION &amp; ELIGIBILITY
             </span>
 
             <p>
-              Participation in the above sectors remains subject to
-              project-specific qualifications, applicable laws,
-              tender requirements, statutory approvals and client
-              requirements.
+
+              Participation in the above sectors remains subject
+              to applicable laws, tender eligibility, financial
+              qualification, statutory approvals and
+              project-specific requirements.
+
             </p>
 
           </div>
+
 
         </div>
 
@@ -575,35 +761,49 @@
     </section>
 
 
+
     <!-- =========================================================
-         CTA
+         CLOSING CTA
          ========================================================= -->
 
-    <section class="page-cta">
+    <section class="capabilities-cta">
 
-      <div class="container">
+      <div class="container capabilities-cta-inner reveal">
 
-        <div class="page-cta-inner">
 
-          <div>
+        <div>
 
-            <span class="section-label">
-              BUILDING WHAT COMES NEXT
-            </span>
-
-            <h2>
-              Let's discuss your
-              <em>next project.</em>
-            </h2>
-
+          <div class="eyebrow eyebrow-light">
+            <span></span>
+            PROJECT OPPORTUNITIES
           </div>
 
-          <a href="contact.html" class="btn-primary">
-            Discuss a Project
-            <span>↗</span>
-          </a>
+
+          <h2>
+            Infrastructure needs
+            <em>disciplined execution.</em>
+          </h2>
+
+
+          <p>
+
+            Connect with ARCSONS to discuss project requirements,
+            potential delivery structures and eligible EPC
+            opportunities.
+
+          </p>
 
         </div>
+
+
+        <a
+          class="button button-white"
+          href="../index.html#contact"
+        >
+          Get in Touch
+          <span>↗</span>
+        </a>
+
 
       </div>
 
@@ -613,107 +813,217 @@
   </main>
 
 
+
   <!-- =========================================================
        FOOTER
+       SAME STRUCTURE AS SERVICES PAGE
        ========================================================= -->
 
   <footer class="site-footer">
 
     <div class="container footer-main">
 
+
+      <!-- FOOTER BRAND -->
+
       <div class="footer-brand">
 
-        <a href="index.html" class="brand">
+        <a
+          class="brand brand-light"
+          href="../index.html"
+        >
 
-          <div class="brand-mark">
-            <span>A</span>
-          </div>
+          <span
+            class="brand-mark"
+            aria-hidden="true"
+          >
+            <i></i>
+            <b></b>
+          </span>
 
-          <div class="brand-copy">
+          <span class="brand-copy">
+
             <strong>ARCSONS</strong>
-            <small>INFRATECH PRIVATE LIMITED</small>
-          </div>
+
+            <small>
+              INFRATECH PRIVATE LIMITED
+            </small>
+
+          </span>
 
         </a>
+
 
         <p>
-          Engineering infrastructure.
-          Executing with precision.
+          Engineering Excellence for a Stronger Tomorrow.
         </p>
 
+        <small>
+          Multi-Sector EPC &amp; Infrastructure Project Services
+        </small>
+
       </div>
 
 
-      <div class="footer-contact">
 
-        <span class="footer-label">
-          GET IN TOUCH
+      <!-- QUICK LINKS -->
+
+      <div class="footer-column">
+
+        <h3>
+          Quick Links
+        </h3>
+
+        <a href="../index.html#home">
+          Home
+        </a>
+
+        <a href="about.html">
+          About Us
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="../index.html#sectors">
+          Sectors
+        </a>
+
+        <a href="capabilities.html">
+          Capabilities
+        </a>
+
+        <a href="../index.html#contact">
+          Contact
+        </a>
+
+      </div>
+
+
+
+      <!-- CAPABILITIES -->
+
+      <div class="footer-column">
+
+        <h3>
+          Capabilities
+        </h3>
+
+        <a href="#infrastructure-sectors">
+          Pipelines
+        </a>
+
+        <a href="#infrastructure-sectors">
+          Energy &amp; BESS
+        </a>
+
+        <a href="#infrastructure-sectors">
+          Railway Infrastructure
+        </a>
+
+        <a href="#infrastructure-sectors">
+          Metro &amp; Urban Transport
+        </a>
+
+        <a href="#infrastructure-sectors">
+          Roads &amp; Bridges
+        </a>
+
+        <a href="#infrastructure-sectors">
+          Data Centres
+        </a>
+
+      </div>
+
+
+
+      <!-- CONTACT -->
+
+      <div class="footer-column footer-contact">
+
+        <h3>
+          Get in Touch
+        </h3>
+
+        <span>
+          ⌖ &nbsp; Maharashtra, India
         </span>
 
-        <a href="contact.html">
-          Contact Us
+        <a href="tel:+919422556347">
+          ☎ &nbsp; +91 94225 56347
         </a>
 
-        <a href="mailto:info@arcsons.com">
-          info@arcsons.com
+        <a href="mailto:contact@arcsons.com">
+          ✉ &nbsp; contact@arcsons.com
         </a>
 
       </div>
+
 
     </div>
 
 
+
+    <!-- FOOTER BOTTOM -->
+
     <div class="container footer-bottom">
 
-      <p>
-        © 2026 ARCSONS Infratech Private Limited.
+      <span>
+        ©
+        <span id="currentYear"></span>
+        ARCSONS INFRATECH PRIVATE LIMITED.
         All rights reserved.
-      </p>
+      </span>
 
-      <p class="footer-credit">
+
+      <div>
+
+        <a href="#">
+          Privacy Policy
+        </a>
+
+        <i></i>
+
+        <a href="#">
+          Terms &amp; Conditions
+        </a>
+
+        <i></i>
+
+        <a href="#">
+          Disclaimer
+        </a>
+
+      </div>
+
+
+      <span class="credit">
+
         Design and develop by
+
         <a
           href="https://kalachakrastudio.in"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
-          Kalachakra Studio
+          Kalachakra Studio ↗
         </a>
-      </p>
+
+      </span>
 
     </div>
 
   </footer>
 
 
+
   <!-- =========================================================
-       JAVASCRIPT
+       PAGE JAVASCRIPT
        ========================================================= -->
 
-  <script>
-
-    const menuToggle = document.querySelector(".menu-toggle");
-    const mainNav = document.querySelector(".main-nav");
-
-    if (menuToggle && mainNav) {
-
-      menuToggle.addEventListener("click", () => {
-
-        const isOpen =
-          menuToggle.getAttribute("aria-expanded") === "true";
-
-        menuToggle.setAttribute(
-          "aria-expanded",
-          String(!isOpen)
-        );
-
-        mainNav.classList.toggle("nav-open");
-
-      });
-
-    }
-
-  </script>
+  <script src="../js/capabilities.js"></script>
 
 </body>
+
 </html>
