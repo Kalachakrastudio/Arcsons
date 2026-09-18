@@ -703,75 +703,10 @@ h2 em {
   font-weight: 400;
 }
 
-/* Sectors */
+/* Sectors / Industries */
 .sectors {
+  padding: 100px 0;
   background: #fff;
-}
-
-.sector-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.sector-card {
-  position: relative;
-  height: 185px;
-  overflow: hidden;
-  border-radius: 4px;
-  background: #17212a;
-}
-
-.sector-card::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, rgba(8, 14, 20, 0.88), transparent 65%);
-  content: "";
-}
-
-.sector-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.sector-card:hover img {
-  transform: scale(1.06);
-}
-
-.sector-card > span {
-  position: absolute;
-  right: 14px;
-  bottom: 13px;
-  left: 14px;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.sector-card b {
-  color: var(--orange);
-}
-
-.sector-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 30px;
-  margin-top: 28px;
-  color: #68737c;
-  font-size: 12px;
-}
-
-.sector-tags span::before {
-  margin-right: 9px;
-  color: var(--orange);
-  content: "✳";
 }
 
 /* Trust */
@@ -1384,117 +1319,12 @@ h2 em {
     font-size: 9px;
     white-space: normal;
   }
-
-  .sector-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .sector-card {
-    height: 150px;
-  }
-  
-  .sector-card {
-    min-height: 160px;
-    padding: 21px;
-  }
-
-  .sector-card-title {
-    margin: 22px 0;
-    font-size: 22px;
-  }
-
-  .sector-tags {
-    gap: 8px;
-    margin-top: 20px;
-  }
-
-  .sector-tags span {
-    padding: 8px 10px;
-    font-size: 10px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .sector-card,
   .sector-card-bottom b {
     transition: none;
-  }
-}
-  .sector-card > span {
-    right: 10px;
-    left: 10px;
-    font-size: 11px;
-  }
-
-  .sector-tags {
-    gap: 10px 18px;
-    font-size: 11px;
-  }
-
-  .trust-points {
-    gap: 22px 14px;
-  }
-
-  .trust-points > div {
-    grid-template-columns: 29px 1fr;
-    column-gap: 8px;
-  }
-
-  .trust-icon {
-    width: 28px;
-    height: 28px;
-  }
-
-  .trust-points strong {
-    font-size: 11px;
-  }
-
-  .trust-points small {
-    font-size: 10px;
-  }
-
-  .trust-image {
-    height: 220px;
-  }
-
-  .cta-inner {
-    padding-top: 52px;
-    padding-bottom: 52px;
-  }
-
-  .cta-inner h2 {
-    font-size: 34px;
-  }
-
-  .footer-main {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px 20px;
-    padding-top: 45px;
-    padding-bottom: 35px;
-  }
-
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
-
-  .footer-column {
-    padding-left: 14px;
-  }
-
-  .footer-contact {
-    grid-column: 1 / -1;
-  }
-
-  .footer-bottom {
-    align-items: flex-start;
-    flex-direction: column;
-    padding-top: 18px;
-    padding-bottom: 20px;
-  }
-
-  .footer-bottom > div {
-    gap: 8px;
   }
 }
 
@@ -1505,11 +1335,6 @@ h2 em {
   color: var(--ink);
 }
 
-@media (max-width: 560px) {
-  .industries-section {
-    padding: 68px 0;
-  }
-}
 .industries-heading {
   max-width: 650px;
   margin-bottom: 38px;
@@ -1590,7 +1415,19 @@ h2 em {
 
 @media (max-width: 700px) {
   .industries-section {
-    padding: 60px 0;
+    padding: 68px 0;
+  }
+
+  .industries-heading {
+    margin-bottom: 30px;
+  }
+
+  .industries-heading h2 {
+    font-size: 30px;
+  }
+
+  .industries-heading p {
+    font-size: 13px;
   }
 
   .industries-list {
@@ -1603,6 +1440,26 @@ h2 em {
   }
 
   .industry-number {
-    flex-basis: 32px;
+    flex: 0 0 32px;
+    font-size: 12px;
+  }
+
+  .industry-item h3 {
+    margin-bottom: 6px;
+    font-size: 17px;
+  }
+
+  .industry-item p {
+    font-size: 13px;
+  }
+
+  .industries-tags {
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  .industries-tags span {
+    padding: 8px 12px;
+    font-size: 11px;
   }
 }
