@@ -1,3 +1,4 @@
+```css
 /* =========================================================
    ARCSONS — ABOUT US PAGE
    Premium Corporate / Engineering Layout
@@ -18,7 +19,6 @@
   overflow: hidden;
 
   background: #0b1218;
-
   color: #fff;
 }
 
@@ -46,13 +46,19 @@
 
   background-size: 70px 70px;
 
-  mask-image:
-    linear-gradient(
-      90deg,
-      black 0%,
-      black 58%,
-      transparent 100%
-    );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    #000 0%,
+    #000 58%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    90deg,
+    #000 0%,
+    #000 58%,
+    transparent 100%
+  );
 
   pointer-events: none;
 }
@@ -121,7 +127,6 @@
   opacity: 0.55;
 }
 
-
 .structure-line-1 {
   width: 720px;
 
@@ -130,7 +135,6 @@
 
   transform: rotate(-27deg);
 }
-
 
 .structure-line-2 {
   width: 580px;
@@ -143,7 +147,6 @@
   opacity: 0.4;
 }
 
-
 .structure-line-3 {
   width: 470px;
 
@@ -154,7 +157,6 @@
 
   opacity: 0.28;
 }
-
 
 .structure-line-4 {
   width: 350px;
@@ -182,7 +184,6 @@
   border-radius: 50%;
 }
 
-
 .structure-ring-1 {
   width: 390px;
   height: 390px;
@@ -192,7 +193,6 @@
 
   transform: translateY(-50%);
 }
-
 
 .structure-ring-2 {
   width: 245px;
@@ -226,18 +226,15 @@
     0 0 18px rgba(244, 119, 33, 0.45);
 }
 
-
 .structure-node-1 {
   right: 248px;
   top: 31%;
 }
 
-
 .structure-node-2 {
   right: 430px;
   top: 57%;
 }
-
 
 .structure-node-3 {
   right: 175px;
@@ -247,6 +244,11 @@
 
 /* =========================================================
    HERO CONTENT
+
+   IMPORTANT:
+   Do NOT add left/right padding here.
+
+   The global .container controls the horizontal alignment.
    ========================================================= */
 
 .about-hero-content {
@@ -255,14 +257,6 @@
   z-index: 5;
 
   width: 100%;
-
-  /*
-   * IMPORTANT:
-   * No left/right padding here.
-   *
-   * The global .container controls the horizontal
-   * spacing exactly like the other ARCSONS pages.
-   */
 
   padding-top: 82px;
   padding-bottom: 105px;
@@ -279,11 +273,11 @@
   align-items: center;
   justify-content: space-between;
 
+  width: 100%;
   max-width: 920px;
 
   margin-bottom: 27px;
 }
-
 
 .about-hero-code {
   color: rgba(255, 255, 255, 0.38);
@@ -331,14 +325,12 @@
   line-height: 1;
 }
 
-
 .about-hero h1 em {
   color: var(--orange);
 
   font-family: var(--serif);
 
   font-style: normal;
-
   font-weight: 400;
 }
 
@@ -372,7 +364,6 @@
   gap: 14px;
 }
 
-
 .about-hero .button span {
   font-size: 17px;
 }
@@ -403,7 +394,6 @@
   line-height: 0.8;
 
   pointer-events: none;
-
   user-select: none;
 }
 
@@ -428,20 +418,18 @@
 
   gap: 20px;
 
-  /*
-   * Same horizontal alignment as the main .container.
-   */
+  width: 100%;
 
-  padding:
-    17px
-    max(36px, calc((100vw - var(--max-width)) / 2));
+  padding: 17px max(
+    36px,
+    calc((100vw - var(--max-width)) / 2)
+  );
 
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 
   color: #bfc7cc;
 
   font-size: 9px;
-
   font-weight: 700;
 
   letter-spacing: 0.13em;
@@ -456,7 +444,6 @@
   background: #fff;
 }
 
-
 .about-intro-grid {
   display: grid;
 
@@ -464,7 +451,6 @@
 
   gap: 85px;
 }
-
 
 .about-intro-heading h2 {
   margin: 18px 0 22px;
@@ -480,17 +466,14 @@
   line-height: 1.15;
 }
 
-
 .about-intro-heading h2 em {
   color: var(--orange);
 
   font-family: var(--serif);
 
   font-style: normal;
-
   font-weight: 400;
 }
-
 
 .about-heading-rule {
   width: 58px;
@@ -498,7 +481,6 @@
 
   background: var(--orange);
 }
-
 
 .about-intro-note {
   max-width: 330px;
@@ -512,11 +494,9 @@
   line-height: 1.65;
 }
 
-
 .about-intro-copy {
   padding-top: 24px;
 }
-
 
 .about-intro-copy p {
   margin: 0 0 18px;
@@ -528,12 +508,10 @@
   line-height: 1.85;
 }
 
-
 .about-intro-copy p:first-child {
   color: var(--ink);
 
   font-size: 18px;
-
   font-weight: 500;
 
   line-height: 1.65;
@@ -550,7 +528,6 @@
   background: #f5f6f6;
 }
 
-
 .about-lifecycle-inner {
   display: grid;
 
@@ -561,17 +538,14 @@
   gap: 65px;
 }
 
-
 .about-section-index {
   color: var(--orange-dark);
 
   font-size: 9px;
-
   font-weight: 700;
 
   letter-spacing: 0.13em;
 }
-
 
 .about-lifecycle h2 {
   margin: 13px 0 0;
@@ -587,17 +561,14 @@
   line-height: 1.2;
 }
 
-
 .about-lifecycle h2 em {
   color: var(--orange);
 
   font-family: var(--serif);
 
   font-style: normal;
-
   font-weight: 400;
 }
-
 
 .about-lifecycle-steps {
   display: grid;
@@ -608,7 +579,6 @@
 
   border-top: 1px solid #dfe3e5;
 }
-
 
 .about-lifecycle-steps div {
   display: flex;
@@ -622,19 +592,15 @@
   border-bottom: 1px solid #dfe3e5;
 }
 
-
 .about-lifecycle-steps span {
   color: var(--orange-dark);
 
   font-size: 10px;
-
   font-weight: 700;
 }
 
-
 .about-lifecycle-steps strong {
   font-size: 12px;
-
   font-weight: 600;
 }
 
@@ -647,11 +613,9 @@
   background: #fff;
 }
 
-
 .about-section-heading {
   margin-bottom: 38px;
 }
-
 
 .about-section-heading h2 {
   margin: 15px 0 0;
@@ -667,17 +631,14 @@
   line-height: 1.16;
 }
 
-
 .about-section-heading h2 em {
   color: var(--orange);
 
   font-family: var(--serif);
 
   font-style: normal;
-
   font-weight: 400;
 }
-
 
 .about-section-heading > p {
   max-width: 370px;
@@ -691,7 +652,6 @@
   line-height: 1.7;
 }
 
-
 .vision-mission-grid {
   display: grid;
 
@@ -699,7 +659,6 @@
 
   gap: 20px;
 }
-
 
 .vm-card {
   min-height: 340px;
@@ -711,18 +670,15 @@
   border-radius: 4px;
 }
 
-
 .vm-vision {
   background: #f7f7f6;
 }
-
 
 .vm-mission {
   background: #101820;
 
   color: #fff;
 }
-
 
 .vm-card-top {
   display: flex;
@@ -733,17 +689,14 @@
   margin-bottom: 32px;
 }
 
-
 .vm-number {
   color: #89929a;
 
   font-size: 11px;
-
   font-weight: 700;
 
   letter-spacing: 0.1em;
 }
-
 
 .vm-symbol {
   display: grid;
@@ -762,17 +715,14 @@
   font-size: 20px;
 }
 
-
 .vm-label {
   color: var(--orange-dark);
 
   font-size: 10px;
-
   font-weight: 700;
 
   letter-spacing: 0.14em;
 }
-
 
 .vm-card h3 {
   margin: 12px 0 17px;
@@ -788,17 +738,14 @@
   line-height: 1.2;
 }
 
-
 .vm-card h3 em {
   color: var(--orange);
 
   font-family: var(--serif);
 
   font-style: normal;
-
   font-weight: 400;
 }
-
 
 .vm-card p {
   max-width: 520px;
@@ -811,7 +758,6 @@
 
   line-height: 1.8;
 }
-
 
 .vm-mission p {
   color: #c1c9ce;
@@ -828,7 +774,6 @@
   color: #fff;
 }
 
-
 .mission-principles-grid {
   display: grid;
 
@@ -837,7 +782,6 @@
   gap: 85px;
 }
 
-
 .mission-principles-intro {
   position: sticky;
 
@@ -845,7 +789,6 @@
 
   align-self: start;
 }
-
 
 .mission-principles h2 {
   margin: 18px 0;
@@ -861,17 +804,14 @@
   line-height: 1.15;
 }
 
-
 .mission-principles h2 em {
   color: var(--orange);
 
   font-family: var(--serif);
 
   font-style: normal;
-
   font-weight: 400;
 }
-
 
 .mission-principles-intro > p {
   max-width: 350px;
@@ -883,11 +823,9 @@
   line-height: 1.8;
 }
 
-
 .mission-list {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
-
 
 .mission-item {
   display: grid;
@@ -903,17 +841,14 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-
 .mission-item span {
   padding-top: 3px;
 
   color: var(--orange);
 
   font-size: 11px;
-
   font-weight: 700;
 }
-
 
 .mission-item p {
   margin: 0;
@@ -934,7 +869,6 @@
   background: #f5f6f6;
 }
 
-
 .values-grid {
   display: grid;
 
@@ -942,7 +876,6 @@
 
   gap: 14px;
 }
-
 
 .value-card {
   position: relative;
@@ -962,13 +895,11 @@
     border-color 0.25s ease;
 }
 
-
 .value-card:hover {
   transform: translateY(-4px);
 
   border-color: rgba(244, 119, 33, 0.6);
 }
-
 
 .value-index {
   position: absolute;
@@ -979,10 +910,8 @@
   color: #9aa2a8;
 
   font-size: 10px;
-
   font-weight: 700;
 }
-
 
 .value-icon {
   display: grid;
@@ -1003,17 +932,14 @@
   font-size: 21px;
 }
 
-
 .value-card h3 {
   margin: 0 0 9px;
 
   font-family: "Manrope", sans-serif;
 
   font-size: 18px;
-
   font-weight: 700;
 }
-
 
 .value-card p {
   margin: 0;
@@ -1024,7 +950,6 @@
 
   line-height: 1.7;
 }
-
 
 .value-card-wide {
   grid-column: 1 / -1;
@@ -1038,13 +963,11 @@
   min-height: 130px;
 }
 
-
 .value-card-wide .value-icon {
   flex-shrink: 0;
 
   margin: 0;
 }
-
 
 .value-card-wide h3 {
   margin-bottom: 6px;
@@ -1065,7 +988,6 @@
   color: #fff;
 }
 
-
 .about-cta-pattern {
   position: absolute;
 
@@ -1084,7 +1006,6 @@
   background-size: 75px 75px;
 }
 
-
 .about-cta-inner {
   position: relative;
 
@@ -1101,7 +1022,6 @@
   padding-bottom: 65px;
 }
 
-
 .about-cta h2 {
   margin: 14px 0;
 
@@ -1116,17 +1036,14 @@
   line-height: 1.15;
 }
 
-
 .about-cta h2 em {
   color: #fff;
 
   font-family: var(--serif);
 
   font-style: normal;
-
   font-weight: 400;
 }
-
 
 .about-cta p {
   max-width: 620px;
@@ -1140,7 +1057,6 @@
   line-height: 1.75;
 }
 
-
 .about-cta .button {
   flex-shrink: 0;
 }
@@ -1152,82 +1068,45 @@
 
 @media (max-width: 900px) {
 
-  /* -------------------------------------------------------
-     HERO
-     ------------------------------------------------------- */
-
   .about-hero {
     min-height: 590px;
   }
-
 
   .about-hero-content {
     padding-top: 75px;
     padding-bottom: 100px;
   }
 
-
   .about-hero-watermark {
     right: -50px;
   }
 
-
-  /* -------------------------------------------------------
-     INTRO
-     ------------------------------------------------------- */
-
-  .about-intro-grid {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-  }
-
-
-  .about-intro-copy {
-    padding-top: 0;
-  }
-
-
-  /* -------------------------------------------------------
-     LIFECYCLE
-     ------------------------------------------------------- */
-
-  .about-lifecycle-inner {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-  }
-
-
-  .about-lifecycle-steps {
-    max-width: 650px;
-  }
-
-
-  /* -------------------------------------------------------
-     MISSION
-     ------------------------------------------------------- */
-
+  .about-intro-grid,
+  .about-lifecycle-inner,
   .mission-principles-grid {
     grid-template-columns: 1fr;
 
     gap: 35px;
   }
 
+  .about-intro-copy {
+    padding-top: 0;
+  }
 
   .mission-principles-intro {
     position: static;
   }
 
-
-  /* -------------------------------------------------------
-     VALUES
-     ------------------------------------------------------- */
-
-  .values-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .about-lifecycle-steps {
+    max-width: 650px;
   }
 
+  .values-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  }
 
   .value-card-wide {
     grid-column: 1 / -1;
@@ -1241,14 +1120,9 @@
 
 @media (max-width: 620px) {
 
-  /* -------------------------------------------------------
-     HERO
-     ------------------------------------------------------- */
-
   .about-hero {
     min-height: 610px;
   }
-
 
   .about-hero-grid {
     background-size: 50px 50px;
@@ -1256,10 +1130,10 @@
     opacity: 0.25;
   }
 
-
   /*
-     Horizontal spacing continues to come from
-     the global .container.
+    IMPORTANT:
+    No horizontal padding here.
+    The global .container controls it.
   */
 
   .about-hero-content {
@@ -1267,18 +1141,15 @@
     padding-bottom: 100px;
   }
 
-
   .about-hero-top {
     align-items: flex-start;
 
     margin-bottom: 24px;
   }
 
-
   .about-hero-code {
     font-size: 8px;
   }
-
 
   .about-hero-kicker {
     margin-bottom: 10px;
@@ -1286,15 +1157,17 @@
     font-size: 11px;
   }
 
-
   .about-hero h1 {
     max-width: 370px;
 
-    font-size: clamp(42px, 12vw, 57px);
+    font-size: clamp(
+      42px,
+      12vw,
+      57px
+    );
 
     line-height: 1.01;
   }
-
 
   .about-hero-description {
     max-width: 100%;
@@ -1306,7 +1179,6 @@
     line-height: 1.75;
   }
 
-
   .about-hero-watermark {
     right: -45px;
 
@@ -1315,14 +1187,12 @@
     font-size: 70px;
   }
 
-
   .about-hero-glow {
     width: 500px;
     height: 500px;
 
     right: -280px;
   }
-
 
   .structure-ring-1 {
     width: 300px;
@@ -1331,7 +1201,6 @@
     right: -50px;
   }
 
-
   .structure-ring-2 {
     width: 190px;
     height: 190px;
@@ -1339,13 +1208,11 @@
     right: 5px;
   }
 
-
   .structure-line-1 {
     width: 470px;
 
     right: -130px;
   }
-
 
   .structure-line-2 {
     width: 410px;
@@ -1353,27 +1220,22 @@
     right: -150px;
   }
 
-
   .structure-line-3,
   .structure-line-4 {
     display: none;
   }
 
-
   .structure-node-1 {
     right: 170px;
   }
-
 
   .structure-node-2 {
     right: 260px;
   }
 
-
   .structure-node-3 {
     right: 95px;
   }
-
 
   .about-hero-bottom {
     flex-direction: column;
@@ -1382,28 +1244,19 @@
 
     gap: 6px;
 
-    padding:
-      13px
-      18px;
+    padding: 13px 18px;
 
     font-size: 8px;
   }
-
-
-  /* -------------------------------------------------------
-     INTRO
-     ------------------------------------------------------- */
 
   .about-intro {
     padding-top: 70px;
     padding-bottom: 70px;
   }
 
-
   .about-intro-grid {
     gap: 15px;
   }
-
 
   .about-intro-heading h2 {
     margin-top: 15px;
@@ -1411,16 +1264,13 @@
     font-size: 37px;
   }
 
-
   .about-intro-copy {
     padding-top: 0;
   }
 
-
   .about-intro-copy p:first-child {
     font-size: 16px;
   }
-
 
   .about-intro-copy p {
     font-size: 14px;
@@ -1428,29 +1278,17 @@
     line-height: 1.8;
   }
 
-
-  /* -------------------------------------------------------
-     LIFECYCLE
-     ------------------------------------------------------- */
-
   .about-lifecycle {
     padding: 45px 0;
   }
-
 
   .about-lifecycle-steps {
     grid-template-columns: 1fr;
   }
 
-
-  /* -------------------------------------------------------
-     VISION / MISSION
-     ------------------------------------------------------- */
-
   .vision-mission-grid {
     grid-template-columns: 1fr;
   }
-
 
   .vm-card {
     min-height: auto;
@@ -1458,15 +1296,9 @@
     padding: 25px;
   }
 
-
   .vm-card-top {
     margin-bottom: 25px;
   }
-
-
-  /* -------------------------------------------------------
-     MISSION
-     ------------------------------------------------------- */
 
   .mission-item {
     grid-template-columns: 30px 1fr;
@@ -1476,20 +1308,13 @@
     padding: 18px 0;
   }
 
-
   .mission-item p {
     font-size: 13px;
   }
 
-
-  /* -------------------------------------------------------
-     VALUES
-     ------------------------------------------------------- */
-
   .values-grid {
     grid-template-columns: 1fr;
   }
-
 
   .value-card,
   .value-card-wide {
@@ -1498,17 +1323,11 @@
     min-height: auto;
   }
 
-
   .value-card-wide {
     align-items: flex-start;
 
     padding: 25px;
   }
-
-
-  /* -------------------------------------------------------
-     CTA
-     ------------------------------------------------------- */
 
   .about-cta-inner {
     align-items: flex-start;
@@ -1521,11 +1340,9 @@
     padding-bottom: 52px;
   }
 
-
   .about-cta h2 {
     font-size: 34px;
   }
-
 
   .about-cta .button {
     width: 100%;
@@ -1543,12 +1360,10 @@
     min-height: 620px;
   }
 
-
   .about-hero-content {
     padding-top: 58px;
     padding-bottom: 105px;
   }
-
 
   .about-hero h1 {
     font-size: 43px;
@@ -1556,16 +1371,13 @@
     letter-spacing: -0.055em;
   }
 
-
   .about-hero-description {
     font-size: 13px;
   }
 
-
   .about-hero-top {
     margin-bottom: 20px;
   }
-
 
   .about-hero-code {
     font-size: 7px;
@@ -1573,27 +1385,22 @@
     letter-spacing: 0.12em;
   }
 
-
   .about-hero-bottom {
     padding-left: 18px;
     padding-right: 18px;
   }
 
-
   .about-intro-heading h2 {
     font-size: 34px;
   }
-
 
   .about-section-heading h2 {
     font-size: 32px;
   }
 
-
   .mission-principles h2 {
     font-size: 34px;
   }
-
 
   .about-cta h2 {
     font-size: 32px;
