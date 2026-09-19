@@ -254,8 +254,6 @@
 
   z-index: 5;
 
-  width: 100%;
-
   /*
    * IMPORTANT:
    * No left/right padding here.
@@ -264,8 +262,7 @@
    * spacing exactly like the other ARCSONS pages.
    */
 
-  padding: 72px;
-   padding-top: 92px;
+  padding-top: 92px;
   padding-bottom: 96px;
 }
 
