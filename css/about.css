@@ -264,7 +264,8 @@
    * spacing exactly like the other ARCSONS pages.
    */
 
-  padding: 92px;
+  padding: 72px;
+   padding-top: 92px;
   padding-bottom: 96px;
 }
 
