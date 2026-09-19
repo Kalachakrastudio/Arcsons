@@ -1,0 +1,1171 @@
+/* =========================================================
+   ARCSONS — MACHINERY & TECHNOLOGY
+   Page-specific styles
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.machinery-hero {
+  position: relative;
+  min-height: 610px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background: #0b1218;
+  color: #fff;
+}
+
+.machinery-hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -4;
+  opacity: 0.42;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 70px 70px;
+  mask-image: linear-gradient(
+    to right,
+    black,
+    transparent 82%
+  );
+}
+
+.machinery-hero-glow {
+  position: absolute;
+  z-index: -3;
+  top: 50%;
+  right: -180px;
+  width: 540px;
+  height: 540px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: rgba(240, 120, 46, 0.11);
+  filter: blur(3px);
+}
+
+.machinery-hero-structure {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.structure-line {
+  position: absolute;
+  display: block;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.09);
+  transform-origin: left center;
+}
+
+.structure-line-1 {
+  width: 520px;
+  top: 25%;
+  right: 3%;
+  transform: rotate(-32deg);
+}
+
+.structure-line-2 {
+  width: 460px;
+  top: 56%;
+  right: -2%;
+  transform: rotate(28deg);
+}
+
+.structure-line-3 {
+  width: 380px;
+  top: 75%;
+  right: 8%;
+  transform: rotate(-17deg);
+}
+
+.structure-ring {
+  position: absolute;
+  display: block;
+  border: 1px solid rgba(240, 120, 46, 0.24);
+  border-radius: 50%;
+}
+
+.structure-ring-1 {
+  width: 390px;
+  height: 390px;
+  right: -70px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.structure-ring-2 {
+  width: 220px;
+  height: 220px;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.structure-node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #f0782e;
+  background: #0b1218;
+  transform: rotate(45deg);
+}
+
+.structure-node-1 {
+  right: 31%;
+  top: 25%;
+}
+
+.structure-node-2 {
+  right: 13%;
+  top: 51%;
+}
+
+.structure-node-3 {
+  right: 28%;
+  bottom: 19%;
+}
+
+
+/* Hero inner */
+
+.machinery-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: 92px;
+  padding-bottom: 96px;
+}
+
+.machinery-hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.machinery-hero-code {
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.machinery-hero-content {
+  max-width: 850px;
+}
+
+.machinery-hero-kicker {
+  margin: 25px 0 14px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.machinery-hero h1 {
+  max-width: 850px;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.machinery-hero h1 em {
+  color: #f0782e;
+  font-style: normal;
+}
+
+.machinery-hero-description {
+  max-width: 610px;
+  margin: 28px 0 31px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.8;
+}
+
+.machinery-hero-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 max(24px, calc((100vw - 1200px) / 2));
+  color: rgba(255, 255, 255, 0.32);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+
+/* =========================================================
+   CATEGORY INDEX
+========================================================= */
+
+.machinery-index {
+  background: #f5f5f3;
+  border-bottom: 1px solid #e4e5e3;
+}
+
+.machinery-index-inner {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.machinery-index-label {
+  flex: 0 0 auto;
+  color: #73777b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.machinery-index-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.machinery-index-links a {
+  color: #242c32;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.machinery-index-links a:hover,
+.machinery-index-links a:focus-visible {
+  color: #e96f2b;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.machinery-intro {
+  background: #fff;
+}
+
+.machinery-intro-heading {
+  margin-bottom: 0;
+}
+
+.machinery-intro-heading h2 {
+  margin-top: 14px;
+}
+
+.machinery-intro-heading h2 em {
+  color: #f0782e;
+  font-style: normal;
+}
+
+.machinery-intro-heading > p {
+  max-width: 450px;
+}
+
+
+/* =========================================================
+   EQUIPMENT GRID
+========================================================= */
+
+.equipment-section {
+  padding: 0 0 clamp(75px, 9vw, 120px);
+  background: #fff;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid #e3e4e2;
+  border-left: 1px solid #e3e4e2;
+}
+
+.equipment-card {
+  position: relative;
+  min-height: 355px;
+  padding: 34px 35px 31px;
+  overflow: hidden;
+  background: #fff;
+  border-right: 1px solid #e3e4e2;
+  border-bottom: 1px solid #e3e4e2;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.equipment-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background: #f0782e;
+  transition: width 0.3s ease;
+}
+
+.equipment-card:hover {
+  background: #fafaf8;
+}
+
+.equipment-card:hover::before {
+  width: 100%;
+}
+
+.equipment-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.equipment-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #f0782e;
+  border-radius: 50%;
+  color: #e96f2b;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.equipment-code {
+  color: #a2a6a8;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.equipment-overline {
+  display: block;
+  margin-top: 24px;
+  color: #e96f2b;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.equipment-card h3 {
+  max-width: 430px;
+  margin: 9px 0 12px;
+  color: #141c22;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(21px, 2.1vw, 28px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.equipment-card p {
+  max-width: 520px;
+  margin: 0;
+  color: #697178;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.equipment-tag {
+  position: absolute;
+  right: 30px;
+  bottom: 29px;
+  color: #c4c7c8;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   TECHNICAL ICONS
+========================================================= */
+
+.equipment-icon {
+  position: absolute;
+  right: 35px;
+  top: 105px;
+  width: 105px;
+  height: 75px;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.equipment-icon span,
+.equipment-icon i {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+
+
+/* HDD */
+
+.equipment-icon-drill span:first-child {
+  left: 8px;
+  top: 30px;
+  width: 70px;
+  height: 14px;
+  border: 2px solid #d9dcdb;
+  border-radius: 4px;
+  transform: rotate(-12deg);
+}
+
+.equipment-icon-drill i {
+  right: 5px;
+  top: 19px;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #f0782e;
+  border-radius: 50%;
+}
+
+.equipment-icon-drill i::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: -13px;
+  width: 2px;
+  height: 54px;
+  background: #f0782e;
+  transform: rotate(45deg);
+}
+
+
+/* Scanner */
+
+.equipment-icon-scan span:nth-child(1) {
+  left: 12px;
+  top: 12px;
+  width: 64px;
+  height: 48px;
+  border: 2px solid #d7dad9;
+  border-radius: 5px;
+}
+
+.equipment-icon-scan span:nth-child(2) {
+  left: 23px;
+  top: 25px;
+  width: 40px;
+  height: 2px;
+  background: #f0782e;
+  box-shadow:
+    0 9px 0 #f0782e,
+    0 18px 0 #f0782e;
+}
+
+.equipment-icon-scan i {
+  right: 8px;
+  top: 21px;
+  width: 23px;
+  height: 23px;
+  border: 2px solid #f0782e;
+  border-radius: 50%;
+}
+
+
+/* Excavator */
+
+.equipment-icon-excavator span {
+  left: 15px;
+  bottom: 15px;
+  width: 55px;
+  height: 27px;
+  border: 2px solid #d7dad9;
+}
+
+.equipment-icon-excavator i {
+  left: 48px;
+  top: 9px;
+  width: 35px;
+  height: 46px;
+  border-left: 2px solid #f0782e;
+  border-top: 2px solid #f0782e;
+  transform: skewX(-28deg);
+}
+
+
+/* Trench */
+
+.equipment-icon-trench span {
+  left: 8px;
+  bottom: 13px;
+  width: 88px;
+  height: 27px;
+  border-top: 2px solid #d7dad9;
+  border-bottom: 2px solid #d7dad9;
+}
+
+.equipment-icon-trench i {
+  left: 20px;
+  top: 12px;
+  width: 2px;
+  height: 48px;
+  background: #f0782e;
+  box-shadow: 23px 0 0 #f0782e;
+}
+
+
+/* Cable */
+
+.equipment-icon-cable span:nth-child(1) {
+  left: 8px;
+  top: 25px;
+  width: 85px;
+  height: 28px;
+  border: 2px solid #d8dbda;
+  border-radius: 50%;
+}
+
+.equipment-icon-cable span:nth-child(2) {
+  left: 29px;
+  top: 35px;
+  width: 43px;
+  height: 9px;
+  border-bottom: 2px solid #f0782e;
+}
+
+.equipment-icon-cable i {
+  right: 2px;
+  top: 29px;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #f0782e;
+  border-radius: 50%;
+}
+
+
+/* Fusion */
+
+.equipment-icon-fusion span {
+  left: 15px;
+  top: 17px;
+  width: 70px;
+  height: 45px;
+  border: 2px solid #d8dbda;
+  border-radius: 4px;
+}
+
+.equipment-icon-fusion i {
+  left: 36px;
+  top: 29px;
+  width: 27px;
+  height: 20px;
+  border: 2px solid #f0782e;
+}
+
+
+/* OTDR */
+
+.equipment-icon-otdr span:nth-child(1) {
+  left: 10px;
+  top: 18px;
+  width: 72px;
+  height: 45px;
+  border: 2px solid #d8dbda;
+  border-radius: 4px;
+}
+
+.equipment-icon-otdr span:nth-child(2) {
+  left: 22px;
+  top: 34px;
+  width: 46px;
+  height: 2px;
+  background: #f0782e;
+  transform: rotate(-20deg);
+}
+
+.equipment-icon-otdr i {
+  right: 4px;
+  top: 37px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #f0782e;
+  border-radius: 50%;
+}
+
+
+/* Air */
+
+.equipment-icon-air span {
+  left: 15px;
+  top: 20px;
+  width: 60px;
+  height: 50px;
+  border: 2px solid #d8dbda;
+  border-radius: 50%;
+}
+
+.equipment-icon-air i {
+  right: 10px;
+  top: 32px;
+  width: 30px;
+  height: 16px;
+  border: 2px solid #f0782e;
+  border-left: 0;
+}
+
+
+/* Welding */
+
+.equipment-icon-weld span {
+  left: 14px;
+  top: 19px;
+  width: 55px;
+  height: 42px;
+  border: 2px solid #d8dbda;
+}
+
+.equipment-icon-weld i {
+  right: 11px;
+  top: 13px;
+  width: 24px;
+  height: 52px;
+  border-right: 2px solid #f0782e;
+  transform: rotate(24deg);
+}
+
+
+/* Pressure */
+
+.equipment-icon-pressure span:nth-child(1) {
+  left: 11px;
+  top: 30px;
+  width: 68px;
+  height: 25px;
+  border: 2px solid #d8dbda;
+}
+
+.equipment-icon-pressure span:nth-child(2) {
+  left: 42px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #f0782e;
+  border-radius: 50%;
+}
+
+.equipment-icon-pressure i {
+  left: 53px;
+  top: 16px;
+  width: 2px;
+  height: 13px;
+  background: #f0782e;
+}
+
+
+/* Meter */
+
+.equipment-icon-meter span {
+  left: 17px;
+  top: 10px;
+  width: 62px;
+  height: 55px;
+  border: 2px solid #d8dbda;
+  border-radius: 50%;
+}
+
+.equipment-icon-meter i {
+  left: 46px;
+  top: 24px;
+  width: 22px;
+  height: 2px;
+  background: #f0782e;
+  transform: rotate(-35deg);
+}
+
+
+/* Survey */
+
+.equipment-icon-survey span:nth-child(1) {
+  left: 20px;
+  top: 9px;
+  width: 55px;
+  height: 55px;
+  border: 2px solid #d8dbda;
+  transform: rotate(45deg);
+}
+
+.equipment-icon-survey span:nth-child(2) {
+  left: 39px;
+  top: 27px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #f0782e;
+  border-radius: 50%;
+}
+
+.equipment-icon-survey i {
+  left: 50px;
+  top: 43px;
+  width: 2px;
+  height: 27px;
+  background: #f0782e;
+}
+
+
+/* Material handling */
+
+.equipment-icon-lift span {
+  left: 12px;
+  bottom: 14px;
+  width: 68px;
+  height: 45px;
+  border: 2px solid #d8dbda;
+}
+
+.equipment-icon-lift i {
+  right: 7px;
+  top: 12px;
+  width: 22px;
+  height: 50px;
+  border-left: 2px solid #f0782e;
+}
+
+
+/* Safety */
+
+.equipment-icon-safety span {
+  left: 20px;
+  top: 13px;
+  width: 55px;
+  height: 45px;
+  border: 2px solid #f0782e;
+  border-radius: 28px 28px 8px 8px;
+}
+
+.equipment-icon-safety i {
+  left: 30px;
+  top: 34px;
+  width: 35px;
+  height: 2px;
+  background: #d8dbda;
+}
+
+
+/* =========================================================
+   EXECUTION SECTION
+========================================================= */
+
+.execution-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #101820;
+  color: #fff;
+}
+
+.execution-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  opacity: 0.45;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 75px 75px;
+}
+
+.execution-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(400px, 0.9fr);
+  gap: clamp(50px, 8vw, 110px);
+  padding-top: clamp(75px, 9vw, 120px);
+  padding-bottom: clamp(75px, 9vw, 120px);
+}
+
+.execution-heading {
+  align-self: center;
+}
+
+.execution-kicker {
+  margin: 22px 0 13px;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.execution-heading h2 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.execution-heading h2 em {
+  color: #f0782e;
+  font-style: normal;
+}
+
+.execution-description {
+  max-width: 530px;
+  margin: 25px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.execution-principles {
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.execution-principle {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.execution-principle > span {
+  color: #f0782e;
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.execution-principle h3 {
+  margin: 0 0 7px;
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.execution-principle p {
+  max-width: 440px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.machinery-cta {
+  position: relative;
+  overflow: hidden;
+  background: #0b1218;
+  color: #fff;
+}
+
+.machinery-cta::after {
+  content: "";
+  position: absolute;
+  top: -130px;
+  right: -80px;
+  width: 350px;
+  height: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 60px rgba(255, 255, 255, 0.025),
+    0 0 0 120px rgba(255, 255, 255, 0.015);
+  pointer-events: none;
+}
+
+.machinery-cta-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: clamp(60px, 8vw, 95px);
+  padding-bottom: clamp(60px, 8vw, 95px);
+}
+
+.machinery-cta h2 {
+  margin: 16px 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(31px, 4.5vw, 53px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.machinery-cta h2 em {
+  color: #f0782e;
+  font-style: normal;
+}
+
+.machinery-cta p {
+  max-width: 550px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.machinery-cta .button {
+  flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .machinery-hero-inner {
+    padding-top: 78px;
+    padding-bottom: 82px;
+  }
+
+  .equipment-card {
+    min-height: 370px;
+  }
+
+  .execution-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .execution-heading {
+    max-width: 750px;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .machinery-index-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .machinery-hero-bottom {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .machinery-hero {
+    min-height: auto;
+  }
+
+  .machinery-hero-inner {
+    padding-top: 65px;
+    padding-bottom: 72px;
+  }
+
+  .machinery-hero-top {
+    align-items: flex-start;
+  }
+
+  .machinery-hero-code {
+    margin-top: 3px;
+  }
+
+  .machinery-hero-kicker {
+    margin-top: 22px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .machinery-hero h1 {
+    font-size: clamp(43px, 12vw, 65px);
+  }
+
+  .machinery-hero-description {
+    margin-top: 23px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .machinery-hero-glow {
+    right: -250px;
+  }
+
+  .machinery-hero-structure {
+    opacity: 0.7;
+  }
+
+  .structure-ring-1 {
+    width: 300px;
+    height: 300px;
+    right: -150px;
+  }
+
+  .structure-ring-2 {
+    width: 170px;
+    height: 170px;
+    right: -85px;
+  }
+
+
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-card {
+    min-height: 345px;
+    padding: 29px 25px;
+  }
+
+  .equipment-icon {
+    right: 25px;
+    top: 99px;
+    transform: scale(0.82);
+    transform-origin: top right;
+  }
+
+  .equipment-card h3 {
+    max-width: 70%;
+  }
+
+  .equipment-card p {
+    max-width: 100%;
+  }
+
+  .equipment-tag {
+    right: 25px;
+    bottom: 24px;
+  }
+
+
+  .execution-inner {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .execution-principle {
+    grid-template-columns: 35px 1fr;
+    gap: 15px;
+  }
+
+
+  .machinery-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .machinery-hero-inner {
+    padding-top: 58px;
+    padding-bottom: 72px;
+  }
+
+  .machinery-hero-top {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .machinery-hero-code {
+    order: -1;
+    align-self: flex-end;
+  }
+
+  .machinery-hero-kicker {
+    margin-top: 18px;
+    max-width: 300px;
+  }
+
+  .machinery-index-inner {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+
+  .machinery-index-links {
+    gap: 9px 13px;
+  }
+
+  .machinery-index-links a {
+    font-size: 11px;
+  }
+
+  .equipment-card {
+    min-height: 365px;
+  }
+
+  .equipment-card h3 {
+    max-width: 100%;
+    padding-right: 10px;
+  }
+
+  .equipment-icon {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 22px 0 0 auto;
+    transform: scale(0.68);
+    transform-origin: right center;
+    margin-bottom: -15px;
+  }
+
+  .equipment-overline {
+    margin-top: 12px;
+  }
+
+  .equipment-card p {
+    font-size: 12px;
+  }
+
+  .equipment-tag {
+    display: none;
+  }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .machinery-index-links a,
+  .equipment-card,
+  .equipment-card::before {
+    transition: none;
+  }
+
+}
