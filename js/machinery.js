@@ -1,115 +1,108 @@
-(() => {
-  "use strict";
+/* ============================================================
+   ARCSONS — MACHINERY PAGE JS
+   ============================================================ */
 
-  /* =========================================================
-     ELEMENTS
+
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  /* ==========================================================
+     MOBILE NAVIGATION
   ========================================================== */
 
   const menuToggle = document.getElementById("menuToggle");
   const mainNav = document.getElementById("mainNav");
-  const currentYear = document.getElementById("currentYear");
 
-
-  /* =========================================================
-     CURRENT YEAR
-  ========================================================== */
-
-  if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
-  }
-
-
-  /* =========================================================
-     MOBILE NAVIGATION
-  ========================================================== */
 
   if (menuToggle && mainNav) {
 
-    const closeMenu = () => {
-      mainNav.classList.remove("open");
-      menuToggle.classList.remove("active");
-
-      menuToggle.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-      menuToggle.setAttribute(
-        "aria-label",
-        "Open navigation"
-      );
-    };
-
-
     menuToggle.addEventListener("click", () => {
 
-      const isOpen = mainNav.classList.toggle("open");
+      const isOpen =
+        menuToggle.getAttribute("aria-expanded") === "true";
 
-      menuToggle.classList.toggle(
-        "active",
-        isOpen
-      );
 
       menuToggle.setAttribute(
         "aria-expanded",
-        String(isOpen)
+        String(!isOpen)
       );
+
 
       menuToggle.setAttribute(
         "aria-label",
         isOpen
-          ? "Close navigation"
-          : "Open navigation"
+          ? "Open navigation"
+          : "Close navigation"
+      );
+
+
+      mainNav.classList.toggle(
+        "nav-open",
+        !isOpen
       );
 
     });
 
 
-    mainNav.querySelectorAll("a").forEach((link) => {
+    /* Close menu after clicking a link */
 
-      link.addEventListener(
-        "click",
-        closeMenu
-      );
+    mainNav
+      .querySelectorAll("a")
+      .forEach((link) => {
 
-    });
+        link.addEventListener("click", () => {
 
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
 
-    document.addEventListener(
-      "keydown",
-      (event) => {
+          menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation"
+          );
 
-        if (event.key === "Escape") {
-          closeMenu();
-        }
+          mainNav.classList.remove(
+            "nav-open"
+          );
 
-      }
-    );
+        });
 
-
-    window.addEventListener(
-      "resize",
-      () => {
-
-        if (window.innerWidth > 900) {
-          closeMenu();
-        }
-
-      }
-    );
+      });
 
   }
 
 
-  /* =========================================================
+
+  /* ==========================================================
+     CURRENT YEAR
+  ========================================================== */
+
+  const currentYear =
+    document.getElementById("currentYear");
+
+
+  if (currentYear) {
+
+    currentYear.textContent =
+      new Date().getFullYear();
+
+  }
+
+
+
+  /* ==========================================================
      SCROLL REVEAL
   ========================================================== */
 
-  const revealItems =
+  const revealElements =
     document.querySelectorAll(".reveal");
 
 
-  if ("IntersectionObserver" in window) {
+  if (
+    "IntersectionObserver" in window &&
+    revealElements.length
+  ) {
 
     const revealObserver =
       new IntersectionObserver(
@@ -133,22 +126,23 @@
 
         },
         {
-          threshold: 0.12
+          threshold: 0.12,
+          rootMargin: "0px 0px -40px 0px"
         }
       );
 
 
-    revealItems.forEach((item) => {
+    revealElements.forEach((element) => {
 
-      revealObserver.observe(item);
+      revealObserver.observe(element);
 
     });
 
   } else {
 
-    revealItems.forEach((item) => {
+    revealElements.forEach((element) => {
 
-      item.classList.add(
+      element.classList.add(
         "is-visible"
       );
 
@@ -157,34 +151,13 @@
   }
 
 
-  /* =========================================================
-     EQUIPMENT CARD STAGGER
-  ========================================================== */
 
-  const equipmentCards =
-    document.querySelectorAll(
-      ".equipment-card"
-    );
-
-
-  equipmentCards.forEach(
-    (card, index) => {
-
-      card.style.transitionDelay =
-        `${Math.min(index * 35, 350)}ms`;
-
-    }
-  );
-
-
-  /* =========================================================
+  /* ==========================================================
      SMOOTH ANCHOR SCROLL
   ========================================================== */
 
   document
-    .querySelectorAll(
-      'a[href^="#"]'
-    )
+    .querySelectorAll('a[href^="#"]')
     .forEach((link) => {
 
       link.addEventListener(
@@ -193,6 +166,7 @@
 
           const targetId =
             link.getAttribute("href");
+
 
           if (
             !targetId ||
@@ -203,9 +177,8 @@
 
 
           const target =
-            document.querySelector(
-              targetId
-            );
+            document.querySelector(targetId);
+
 
           if (!target) {
             return;
@@ -215,13 +188,23 @@
           event.preventDefault();
 
 
-          const headerOffset = 105;
+          const header =
+            document.querySelector(
+              ".site-header"
+            );
+
+
+          const headerHeight =
+            header
+              ? header.offsetHeight
+              : 0;
+
 
           const targetPosition =
-            target.getBoundingClientRect()
-              .top +
+            target.getBoundingClientRect().top +
             window.scrollY -
-            headerOffset;
+            headerHeight -
+            20;
 
 
           window.scrollTo({
@@ -234,4 +217,44 @@
 
     });
 
-})();
+
+
+  /* ==========================================================
+     IMAGE FALLBACK
+  ========================================================== */
+
+  const equipmentImages =
+    document.querySelectorAll(
+      ".equipment-image img"
+    );
+
+
+  equipmentImages.forEach((image) => {
+
+    image.addEventListener(
+      "error",
+      () => {
+
+        image.style.display = "none";
+
+        const parent =
+          image.closest(
+            ".equipment-image"
+          );
+
+
+        if (parent) {
+
+          parent.classList.add(
+            "image-fallback"
+          );
+
+        }
+
+      }
+    );
+
+  });
+
+
+});
