@@ -1,144 +1,165 @@
-/* ============================================================
+/* =========================================================
    ARCSONS — MACHINERY & TECHNOLOGY
-   ============================================================ */
+   Page-specific stylesheet
+========================================================= */
 
 
-/* ============================================================
+/* =========================================================
    HERO
-   ============================================================ */
+========================================================= */
 
 .machinery-hero {
   position: relative;
-  min-height: 610px;
+  min-height: min(760px, 82vh);
   display: flex;
   align-items: center;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(
-      circle at 78% 48%,
-      rgba(240, 120, 46, 0.10),
-      transparent 30%
-    ),
-    #0b1218;
+  background: #101820;
   color: #fff;
+}
+
+
+.machinery-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: -4;
+}
+
+
+.machinery-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: saturate(0.7) contrast(1.05);
+  transform: scale(1.03);
+}
+
+
+.machinery-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(16, 24, 32, 0.98) 0%,
+      rgba(16, 24, 32, 0.92) 30%,
+      rgba(16, 24, 32, 0.68) 58%,
+      rgba(16, 24, 32, 0.42) 100%
+    );
+}
+
+
+.machinery-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16, 24, 32, 0.35),
+      transparent 40%,
+      rgba(16, 24, 32, 0.75)
+    );
 }
 
 
 .machinery-hero-grid {
   position: absolute;
   inset: 0;
-  z-index: -5;
-  opacity: 0.48;
+  z-index: -1;
+  opacity: 0.17;
+  pointer-events: none;
 
   background-image:
     linear-gradient(
-      rgba(255, 255, 255, 0.035) 1px,
+      rgba(255,255,255,0.06) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.035) 1px,
+      rgba(255,255,255,0.06) 1px,
       transparent 1px
     );
 
-  background-size: 72px 72px;
+  background-size: 70px 70px;
 
   mask-image:
     linear-gradient(
       90deg,
-      black 0%,
-      black 42%,
-      transparent 82%
+      transparent,
+      #000 45%,
+      #000
     );
 }
 
-
-.machinery-hero-glow {
-  position: absolute;
-  width: 620px;
-  height: 620px;
-  right: -120px;
-  top: 50%;
-  transform: translateY(-50%);
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(240, 120, 46, 0.12),
-      transparent 65%
-    );
-
-  filter: blur(20px);
-  pointer-events: none;
-}
-
-
-/* ============================================================
-   HERO INNER
-   Same padding as other pages
-   ============================================================ */
 
 .machinery-hero-inner {
   position: relative;
-  z-index: 5;
   width: 100%;
-
-  padding-top: 92px;
-  padding-bottom: 96px;
-}
-
-
-.machinery-hero-top {
+  min-height: min(760px, 82vh);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  margin-bottom: 42px;
-}
-
-
-.machinery-hero-code {
-  font-family: "DM Sans", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.20em;
-  color: rgba(255, 255, 255, 0.42);
+  justify-content: space-between;
+  gap: 70px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 
 .machinery-hero-content {
-  max-width: 720px;
+  max-width: 800px;
+}
+
+
+.machinery-hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+
+  color: #f0782e;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+
+.machinery-hero-label::before {
+  content: "";
+  width: 38px;
+  height: 1px;
+  background: #f0782e;
 }
 
 
 .machinery-hero-kicker {
-  margin: 0 0 18px;
+  margin-bottom: 14px;
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 12px;
+  color: rgba(255,255,255,0.72);
+  font-size: 14px;
   font-weight: 700;
-  line-height: 1.5;
-
-  letter-spacing: 0.18em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
-
-  color: #f0782e;
 }
 
 
 .machinery-hero h1 {
+  max-width: 800px;
   margin: 0;
 
   font-family: "Manrope", sans-serif;
-  font-size: clamp(52px, 6.2vw, 92px);
-  font-weight: 700;
-  line-height: 0.98;
-  letter-spacing: -0.055em;
-
-  max-width: 760px;
+  font-size: clamp(52px, 8vw, 104px);
+  font-weight: 800;
+  line-height: 0.94;
+  letter-spacing: -0.065em;
 }
 
 
@@ -149,481 +170,260 @@
 
 
 .machinery-hero-description {
-  max-width: 620px;
-
+  max-width: 650px;
   margin: 30px 0 34px;
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 17px;
-  line-height: 1.75;
-
-  color: rgba(255, 255, 255, 0.67);
+  color: rgba(255,255,255,0.76);
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.8;
 }
 
 
-.machinery-hero .button {
+.machinery-hero-btn {
   display: inline-flex;
   align-items: center;
-  gap: 22px;
+  gap: 20px;
+
+  min-height: 54px;
+  padding: 0 22px;
+
+  border: 1px solid rgba(255,255,255,0.28);
+
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 
-.machinery-hero .button span {
+.machinery-hero-btn span {
+  color: #f0782e;
   font-size: 18px;
 }
 
 
-/* ============================================================
-   HERO META
-   ============================================================ */
+.machinery-hero-btn:hover {
+  background: #f0782e;
+  border-color: #f0782e;
+  transform: translateY(-2px);
+}
 
-.machinery-hero-meta {
-  position: absolute;
 
-  left: 50%;
-  bottom: 28px;
+.machinery-hero-btn:hover span {
+  color: #fff;
+}
 
-  transform: translateX(-50%);
 
-  width: min(100% - 48px, 1250px);
+.machinery-hero-side {
+  width: 190px;
+  flex: 0 0 190px;
 
   display: flex;
-  align-items: center;
-  gap: 18px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 9px;
-  font-weight: 700;
+  padding-left: 22px;
 
-  letter-spacing: 0.18em;
-  color: rgba(255, 255, 255, 0.34);
+  border-left: 1px solid rgba(255,255,255,0.3);
 }
 
 
-.hero-meta-line {
-  height: 1px;
-  width: 48px;
-  background: rgba(255, 255, 255, 0.15);
-}
-
-
-/* ============================================================
-   CSS MACHINE VISUAL
-   ============================================================ */
-
-.machinery-hero-visual {
-  position: absolute;
-
-  right: -40px;
-  top: 50%;
-
-  width: 52%;
-  height: 540px;
-
-  transform: translateY(-50%);
-
-  pointer-events: none;
-}
-
-
-.machine-frame {
-  position: absolute;
-
-  width: 600px;
-  height: 420px;
-
-  right: 5%;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.025),
-      transparent
-    );
-
-  box-shadow:
-    inset 0 0 80px rgba(255, 255, 255, 0.02);
-}
-
-
-.machine-corner {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-}
-
-
-.machine-corner-tl {
-  top: -1px;
-  left: -1px;
-
-  border-top: 2px solid #f0782e;
-  border-left: 2px solid #f0782e;
-}
-
-
-.machine-corner-tr {
-  top: -1px;
-  right: -1px;
-
-  border-top: 2px solid rgba(240, 120, 46, 0.6);
-  border-right: 2px solid rgba(240, 120, 46, 0.6);
-}
-
-
-.machine-corner-bl {
-  bottom: -1px;
-  left: -1px;
-
-  border-bottom: 2px solid rgba(240, 120, 46, 0.5);
-  border-left: 2px solid rgba(240, 120, 46, 0.5);
-}
-
-
-.machine-corner-br {
-  bottom: -1px;
-  right: -1px;
-
-  border-bottom: 2px solid rgba(240, 120, 46, 0.5);
-  border-right: 2px solid rgba(240, 120, 46, 0.5);
-}
-
-
-/* Machine body */
-
-.machine-body {
-  position: absolute;
-
-  left: 50%;
-  top: 50%;
-
-  width: 330px;
-  height: 200px;
-
-  transform: translate(-50%, -50%);
-}
-
-
-.machine-body-top {
-  position: absolute;
-
-  width: 150px;
-  height: 38px;
-
-  left: 80px;
-  top: 20px;
-
-  background: #17232c;
-
-  border: 1px solid rgba(255, 255, 255, 0.12);
-
-  transform: skewX(-18deg);
-}
-
-
-.machine-body-main {
-  position: absolute;
-
-  width: 260px;
-  height: 100px;
-
-  left: 25px;
-  top: 55px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #1b2933,
-      #0e171e
-    );
-
-  border: 1px solid rgba(255, 255, 255, 0.12);
-
-  box-shadow:
-    inset 0 0 35px rgba(240, 120, 46, 0.04);
-}
-
-
-.machine-body-main::before {
-  content: "";
-
-  position: absolute;
-
-  width: 75px;
-  height: 55px;
-
-  right: 18px;
-  top: 20px;
-
-  border: 1px solid rgba(240, 120, 46, 0.45);
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(240, 120, 46, 0.10),
-      transparent
-    );
-}
-
-
-.machine-body-main::after {
-  content: "ARCSONS";
-
-  position: absolute;
-
-  left: 20px;
-  bottom: 15px;
-
-  font-family: "DM Sans", sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-
-  letter-spacing: 0.25em;
-
-  color: rgba(255, 255, 255, 0.26);
-}
-
-
-.machine-body-base {
-  position: absolute;
-
-  left: 5px;
-  bottom: 10px;
-
-  width: 290px;
-  height: 28px;
-
-  background: #111b22;
-
-  border:
-    1px solid rgba(255, 255, 255, 0.10);
-}
-
-
-/* Wheels */
-
-.machine-wheel {
-  position: absolute;
-
-  width: 54px;
-  height: 54px;
-
-  bottom: -15px;
-
-  border-radius: 50%;
-
-  border: 8px solid #111a21;
-
-  background: #17242d;
-
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.12);
-}
-
-
-.machine-wheel::after {
-  content: "";
-
-  position: absolute;
-
-  inset: 14px;
-
-  border-radius: 50%;
-
+.hero-side-line {
+  width: 42px;
+  height: 2px;
+  margin-bottom: 16px;
   background: #f0782e;
 }
 
 
-.machine-wheel-left {
-  left: 42px;
-}
-
-
-.machine-wheel-right {
-  right: 42px;
-}
-
-
-/* Arm */
-
-.machine-arm {
-  position: absolute;
-
-  width: 155px;
-  height: 17px;
-
-  right: -75px;
-  top: 72px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #273842,
-      #111a20
-    );
-
-  border:
-    1px solid rgba(255, 255, 255, 0.14);
-
-  transform:
-    rotate(-28deg)
-    skewX(-10deg);
-
-  transform-origin: left center;
-}
-
-
-.machine-arm-joint {
-  position: absolute;
-
-  width: 30px;
-  height: 30px;
-
-  right: 20px;
-  top: 45px;
-
-  border-radius: 50%;
-
-  background: #17242d;
-
-  border: 4px solid #f0782e;
-
-  box-shadow:
-    0 0 0 8px rgba(240, 120, 46, 0.06);
-}
-
-
-.machine-bit {
-  position: absolute;
-
-  width: 28px;
-  height: 14px;
-
-  right: -113px;
-  top: 126px;
-
-  background: #f0782e;
-
-  clip-path: polygon(
-    0 0,
-    100% 50%,
-    0 100%
-  );
-
-  transform: rotate(-28deg);
-}
-
-
-/* Measurements */
-
-.machine-measure {
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-
-  gap: 10px;
-
-  font-family: "DM Sans", sans-serif;
-
-  color: rgba(255, 255, 255, 0.25);
-}
-
-
-.machine-measure span {
-  display: block;
-
-  width: 35px;
-  height: 1px;
-
-  background: rgba(255, 255, 255, 0.18);
-}
-
-
-.machine-measure b {
-  font-size: 8px;
+.machinery-hero-side span {
+  color: rgba(255,255,255,0.55);
+  font-size: 10px;
   font-weight: 700;
+  letter-spacing: 0.2em;
+}
 
+
+.machinery-hero-side strong {
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+}
+
+
+.machinery-hero-side small {
+  margin-top: 12px;
+
+  color: rgba(255,255,255,0.38);
+  font-size: 9px;
   letter-spacing: 0.18em;
 }
 
 
-.measure-horizontal {
-  left: 80px;
-  bottom: 50px;
+/* =========================================================
+   INDEX
+========================================================= */
+
+.machinery-index {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border-bottom: 1px solid #e7e9eb;
 }
 
 
-.measure-vertical {
-  right: 22px;
-  top: 80px;
-
-  transform: rotate(90deg);
+.machinery-index-inner {
+  display: flex;
+  align-items: stretch;
 }
 
 
-/* ============================================================
+.machinery-index-label {
+  display: flex;
+  align-items: center;
+
+  width: 190px;
+  flex: 0 0 190px;
+
+  padding: 22px 20px;
+
+  border-right: 1px solid #e7e9eb;
+
+  color: #101820;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  line-height: 1.5;
+}
+
+
+.machinery-index-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+
+
+.machinery-index-links a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 65px;
+  padding: 0 19px;
+
+  border-right: 1px solid #e7e9eb;
+
+  color: #4f5962;
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.machinery-index-links a:hover {
+  color: #101820;
+  background: #f6f7f8;
+}
+
+
+.machinery-index-links a::after {
+  content: "↘";
+
+  margin-left: 9px;
+
+  color: #f0782e;
+  font-size: 12px;
+
+  transition: transform 0.25s ease;
+}
+
+
+.machinery-index-links a:hover::after {
+  transform: translate(2px, 2px);
+}
+
+
+/* =========================================================
    INTRO
-   ============================================================ */
+========================================================= */
 
 .machinery-intro {
-  background: #fff;
+  padding: clamp(80px, 9vw, 125px) 0 75px;
+  background: #f5f6f7;
 }
 
 
 .machinery-intro-grid {
   display: grid;
-
-  grid-template-columns:
-    minmax(0, 0.9fr)
-    minmax(0, 1.1fr);
-
-  gap: 100px;
-
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
+  gap: 90px;
   align-items: start;
 }
 
 
-.section-heading h2,
-.machinery-intro h2 {
-  margin: 18px 0 0;
+.section-overline {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: #f0782e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+
+.machinery-intro-heading h2 {
+  max-width: 650px;
+  margin: 0;
 
   font-family: "Manrope", sans-serif;
-  font-size: clamp(38px, 4.5vw, 62px);
-
-  line-height: 1.04;
-  letter-spacing: -0.045em;
-
+  font-size: clamp(38px, 5vw, 65px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.055em;
   color: #101820;
 }
 
 
-.machinery-intro h2 em {
+.machinery-intro-heading h2 em {
   color: #f0782e;
   font-style: normal;
 }
 
 
 .machinery-intro-copy {
-  padding-top: 12px;
+  padding-top: 28px;
 }
 
 
 .machinery-intro-copy p {
-  margin: 0 0 24px;
+  max-width: 590px;
+  margin: 0 0 22px;
 
-  max-width: 650px;
-
-  font-family: "DM Sans", sans-serif;
-  font-size: 17px;
-  line-height: 1.8;
-
-  color: #5d646a;
+  color: #5c6670;
+  font-size: 16px;
+  line-height: 1.85;
 }
 
 
@@ -632,394 +432,178 @@
 }
 
 
-/* ============================================================
-   EQUIPMENT INDEX
-   ============================================================ */
+/* =========================================================
+   MACHINERY LIST
+========================================================= */
 
-.equipment-index {
-  padding: 105px 0;
-
-  background: #f4f5f3;
-
-  border-top: 1px solid #e2e3e1;
-  border-bottom: 1px solid #e2e3e1;
+.machinery-list {
+  padding: 0 0 40px;
+  background: #f5f6f7;
 }
 
 
-.equipment-index-header {
+.machinery-detail {
+  padding: 100px 0;
+
+  border-top: 1px solid #dfe2e5;
+}
+
+
+.machinery-detail:first-child {
+  border-top: 0;
+}
+
+
+.machinery-detail-heading {
   display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(280px, 0.55fr);
-
-  gap: 80px;
-
-  align-items: end;
-
-  margin-bottom: 55px;
-}
-
-
-.equipment-index-header h2 {
-  margin: 18px 0 0;
-
-  font-family: "Manrope", sans-serif;
-  font-size: clamp(38px, 4.5vw, 60px);
-
-  line-height: 1.02;
-  letter-spacing: -0.045em;
-
-  color: #101820;
-}
-
-
-.equipment-index-header h2 em {
-  color: #f0782e;
-  font-style: normal;
-}
-
-
-.equipment-index-header > p {
-  margin: 0;
-
-  font-family: "DM Sans", sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-
-  color: #6b7176;
-}
-
-
-.equipment-index-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  border-top: 1px solid #d7d9d7;
-  border-left: 1px solid #d7d9d7;
-}
-
-
-.equipment-index-item {
-  position: relative;
-
-  min-height: 130px;
-
-  padding: 25px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  border-right: 1px solid #d7d9d7;
-  border-bottom: 1px solid #d7d9d7;
-
-  text-decoration: none;
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease;
-}
-
-
-.equipment-index-item span {
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: 0.16em;
-
-  color: #9a9fa2;
-}
-
-
-.equipment-index-item strong {
-  max-width: 180px;
-
-  font-family: "Manrope", sans-serif;
-
-  font-size: 17px;
-  line-height: 1.3;
-
-  color: #101820;
-}
-
-
-.equipment-index-item i {
-  position: absolute;
-
-  right: 22px;
-  bottom: 22px;
-
-  font-style: normal;
-
-  font-size: 17px;
-
-  color: #f0782e;
-
-  transition:
-    transform 0.3s ease;
-}
-
-
-.equipment-index-item:hover {
-  background: #101820;
-}
-
-
-.equipment-index-item:hover strong {
-  color: #fff;
-}
-
-
-.equipment-index-item:hover span {
-  color: rgba(255, 255, 255, 0.42);
-}
-
-
-.equipment-index-item:hover i {
-  transform: translate(3px, -3px);
-}
-
-
-/* ============================================================
-   EQUIPMENT SECTION
-   ============================================================ */
-
-.equipment-section {
-  background: #fff;
-}
-
-
-.equipment-group {
-  padding-bottom: 110px;
-
-  margin-bottom: 110px;
-
-  border-bottom: 1px solid #e1e2e0;
-}
-
-
-.equipment-group:last-child {
-  margin-bottom: 0;
-  border-bottom: 0;
-}
-
-
-.equipment-group-heading {
-  display: grid;
-
-  grid-template-columns: 85px 1fr;
-
-  gap: 25px;
-
+  grid-template-columns: 105px minmax(0, 850px);
+  gap: 35px;
   align-items: start;
 
-  margin-bottom: 42px;
+  margin-bottom: 48px;
 }
 
 
-.equipment-group-number {
-  font-family: "DM Sans", sans-serif;
+.machinery-number {
+  font-family: "Manrope", sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.06em;
 
-  font-size: 12px;
-  font-weight: 700;
-
-  letter-spacing: 0.12em;
-
-  color: #f0782e;
+  color: rgba(16,24,32,0.16);
 }
 
 
-.equipment-group-label {
+.machinery-overline {
   display: block;
 
-  margin-bottom: 9px;
+  margin-bottom: 11px;
 
-  font-family: "DM Sans", sans-serif;
-
+  color: #f0782e;
   font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: 0.18em;
-
-  color: #8b9195;
+  font-weight: 800;
+  letter-spacing: 0.16em;
 }
 
 
-.equipment-group-heading h2 {
+.machinery-detail-heading h3 {
   margin: 0;
 
   font-family: "Manrope", sans-serif;
-
-  font-size: clamp(32px, 3.5vw, 50px);
-
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  font-size: clamp(31px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.055em;
 
   color: #101820;
 }
 
 
-.equipment-cards {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, 1fr);
-
-  gap: 28px;
+.machinery-detail-heading h3 em {
+  color: #f0782e;
+  font-style: normal;
 }
 
 
-.equipment-cards-three {
-  grid-template-columns:
-    repeat(3, 1fr);
+.machinery-detail-heading p {
+  max-width: 650px;
+  margin: 18px 0 0;
+
+  color: #69737d;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   EQUIPMENT CARDS
+========================================================= */
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+
+.equipment-grid-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 
 .equipment-card {
-  background: #f4f5f3;
-
-  border: 1px solid #e1e3e1;
-
   overflow: hidden;
+
+  background: #fff;
+  border: 1px solid #e1e4e7;
 
   transition:
     transform 0.35s ease,
-    box-shadow 0.35s ease;
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 
 .equipment-card:hover {
-  transform: translateY(-7px);
+  transform: translateY(-6px);
+
+  border-color: rgba(240,120,46,0.38);
 
   box-shadow:
-    0 25px 55px rgba(16, 24, 32, 0.11);
+    0 18px 45px rgba(16,24,32,0.09);
 }
 
 
-/* ============================================================
-   EQUIPMENT IMAGE
-   ============================================================ */
-
 .equipment-image {
   position: relative;
-
-  height: 330px;
-
+  height: 290px;
   overflow: hidden;
 
-  background: #17232c;
+  background: #1a252e;
 }
 
 
 .equipment-image img {
   width: 100%;
   height: 100%;
-
+  object-fit: cover;
   display: block;
 
-  object-fit: cover;
-
-  transition:
-    transform 0.7s ease,
-    filter 0.7s ease;
+  filter: saturate(0.78);
+  transition: transform 0.6s ease;
 }
 
 
 .equipment-card:hover .equipment-image img {
-  transform: scale(1.06);
-
-  filter:
-    saturate(1.08)
-    contrast(1.04);
+  transform: scale(1.055);
 }
 
-
-.equipment-image::after {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(16, 24, 32, 0.03) 30%,
-      rgba(16, 24, 32, 0.62) 100%
-    );
-
-  pointer-events: none;
-}
-
-
-.equipment-image-number {
-  position: absolute;
-
-  top: 20px;
-  left: 20px;
-
-  z-index: 2;
-
-  display: inline-flex;
-
-  width: 42px;
-  height: 42px;
-
-  align-items: center;
-  justify-content: center;
-
-  background: #f0782e;
-
-  color: #fff;
-
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: 0.08em;
-}
-
-
-/* ============================================================
-   EQUIPMENT CARD BODY
-   ============================================================ */
 
 .equipment-card-body {
-  padding: 28px 28px 32px;
+  padding: 27px 28px 30px;
 }
 
 
 .equipment-card-body > span {
   display: block;
 
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 9px;
-  font-weight: 700;
-
-  letter-spacing: 0.17em;
-
-  color: #a0a5a8;
+  color: #f0782e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
 }
 
 
-.equipment-card-body h3 {
-  margin: 0 0 13px;
+.equipment-card-body h4 {
+  margin: 0 0 12px;
 
   font-family: "Manrope", sans-serif;
-
-  font-size: 23px;
+  font-size: 21px;
+  font-weight: 800;
   line-height: 1.2;
-
-  letter-spacing: -0.025em;
 
   color: #101820;
 }
@@ -1028,516 +612,1168 @@
 .equipment-card-body p {
   margin: 0;
 
-  font-family: "DM Sans", sans-serif;
-
+  color: #68727b;
   font-size: 14px;
   line-height: 1.75;
-
-  color: #666d72;
 }
 
 
-/* ============================================================
-   EXECUTION SUPPORT
-   ============================================================ */
+/* =========================================================
+   TECHNICAL VISUALS
+========================================================= */
 
-.execution-section {
-  position: relative;
-
-  overflow: hidden;
-
-  padding: 110px 0;
-
-  background: #101820;
-
-  color: #fff;
+.equipment-technical,
+.trench-visual,
+.fibre-visual,
+.splice-visual,
+.otdr-visual,
+.compressor-visual,
+.pipeline-visual,
+.electrical-visual,
+.welding-visual,
+.survey-spec-panel {
+  background:
+    linear-gradient(
+      135deg,
+      #101820 0%,
+      #17242d 55%,
+      #0d151c 100%
+    );
 }
 
 
-.execution-grid {
+.equipment-technical::before,
+.trench-visual::before,
+.fibre-visual::before,
+.splice-visual::before,
+.otdr-visual::before,
+.compressor-visual::before,
+.pipeline-visual::before,
+.electrical-visual::before,
+.welding-visual::before,
+.survey-spec-panel::before {
+  content: "";
+
   position: absolute;
-
   inset: 0;
 
-  opacity: 0.35;
+  opacity: 0.15;
 
   background-image:
     linear-gradient(
-      rgba(255, 255, 255, 0.035) 1px,
+      rgba(255,255,255,0.12) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.035) 1px,
+      rgba(255,255,255,0.12) 1px,
       transparent 1px
     );
 
-  background-size: 70px 70px;
+  background-size: 35px 35px;
 }
 
 
-.execution-inner {
-  position: relative;
-  z-index: 2;
+/* HDD LOCATOR */
+
+.technical-visual {
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(240,120,46,0.55);
+  border-radius: 50%;
 }
 
 
-.execution-heading {
-  max-width: 760px;
+.technical-visual::before,
+.technical-visual::after {
+  content: "";
 
-  margin-bottom: 70px;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
 }
 
 
-.execution-heading h2 {
-  margin: 20px 0 24px;
-
-  font-family: "Manrope", sans-serif;
-
-  font-size: clamp(40px, 5vw, 68px);
-
-  line-height: 1.02;
-
-  letter-spacing: -0.045em;
+.technical-visual::before {
+  width: 125px;
+  height: 125px;
 }
 
 
-.execution-heading h2 em {
-  color: #f0782e;
-  font-style: normal;
+.technical-visual::after {
+  width: 58px;
+  height: 58px;
 }
 
 
-.execution-heading p {
-  max-width: 620px;
+.technical-visual span {
+  position: absolute;
 
-  margin: 0;
+  width: 9px;
+  height: 9px;
 
-  font-family: "DM Sans", sans-serif;
+  top: 50%;
+  left: 50%;
 
-  font-size: 16px;
-  line-height: 1.75;
+  background: #f0782e;
+  border-radius: 50%;
 
-  color: rgba(255, 255, 255, 0.56);
+  transform: translate(-50%, -50%);
+
+  box-shadow:
+    0 0 0 8px rgba(240,120,46,0.13),
+    0 0 35px rgba(240,120,46,0.45);
 }
 
 
-.execution-pillars {
-  display: grid;
+.technical-visual i {
+  position: absolute;
 
-  grid-template-columns:
-    repeat(4, 1fr);
+  width: 1px;
+  height: 100%;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.13);
-  border-left: 1px solid rgba(255, 255, 255, 0.13);
+  left: 50%;
+  top: 0;
+
+  background: rgba(255,255,255,0.16);
 }
 
 
-.execution-pillar {
-  min-height: 265px;
+.technical-visual b {
+  position: absolute;
 
-  padding: 30px;
+  width: 100%;
+  height: 1px;
 
-  border-right: 1px solid rgba(255, 255, 255, 0.13);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  left: 0;
+  top: 50%;
+
+  background: rgba(255,255,255,0.16);
 }
 
 
-.execution-pillar > span {
+/* TRENCH */
+
+.trench-lines {
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+
+.trench-lines span {
   display: block;
 
-  margin-bottom: 65px;
+  height: 26px;
 
-  font-family: "DM Sans", sans-serif;
+  margin: 17px 0;
 
-  font-size: 10px;
-  font-weight: 700;
+  border: 1px solid rgba(255,255,255,0.16);
 
-  letter-spacing: 0.18em;
-
-  color: #f0782e;
+  transform: skewX(-28deg);
 }
 
 
-.execution-pillar h3 {
-  margin: 0 0 13px;
+.trench-lines span:nth-child(2) {
+  border-color: rgba(240,120,46,0.6);
+}
 
-  font-family: "Manrope", sans-serif;
 
-  font-size: 21px;
+/* FIBRE */
+
+.fibre-cable-visual {
+  position: absolute;
+
+  left: 10%;
+  right: 10%;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+
+.fibre-cable-visual span {
+  display: block;
+
+  width: 100%;
+  height: 4px;
+
+  margin: 24px 0;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.28);
+}
+
+
+.fibre-cable-visual span:nth-child(2) {
+  background: #f0782e;
+}
+
+
+/* SPLICE */
+
+.splice-box {
+  position: absolute;
+
+  width: 220px;
+  height: 120px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+}
+
+
+.splice-box span {
+  position: absolute;
+
+  width: 100%;
+  height: 1px;
+
+  top: 50%;
+
+  background: rgba(255,255,255,0.2);
+}
+
+
+.splice-box i {
+  position: absolute;
+
+  width: 45px;
+  height: 45px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid #f0782e;
+  border-radius: 50%;
+}
+
+
+/* OTDR */
+
+.instrument-screen {
+  position: absolute;
+
+  width: 190px;
+  height: 125px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 7px;
+}
+
+
+.instrument-screen::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 14px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+
+.instrument-screen span {
+  position: absolute;
+
+  width: 105px;
+  height: 1px;
+
+  top: 65px;
+  left: 35px;
+
+  background: #f0782e;
+
+  transform: rotate(-13deg);
+}
+
+
+.instrument-screen i {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  top: 51px;
+  left: 68px;
+
+  background: #f0782e;
+  border-radius: 50%;
+}
+
+
+.instrument-screen b {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  top: 71px;
+  right: 37px;
+
+  background: #f0782e;
+  border-radius: 50%;
+}
+
+
+/* COMPRESSOR */
+
+.compressor {
+  position: absolute;
+
+  width: 230px;
+  height: 120px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.compressor span {
+  position: absolute;
+
+  width: 120px;
+  height: 78px;
+
+  left: 20px;
+  top: 25px;
+
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 7px;
+}
+
+
+.compressor i {
+  position: absolute;
+
+  width: 58px;
+  height: 58px;
+
+  right: 15px;
+  top: 35px;
+
+  border: 2px solid #f0782e;
+  border-radius: 50%;
+}
+
+
+.compressor i::after {
+  content: "";
+
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: #f0782e;
+  border-radius: 50%;
+}
+
+
+.compressor b {
+  position: absolute;
+
+  width: 80px;
+  height: 4px;
+
+  left: 42px;
+  bottom: 3px;
+
+  background: rgba(255,255,255,0.18);
+}
+
+
+/* PIPELINE */
+
+.pipeline-diagram {
+  position: absolute;
+
+  left: 12%;
+  right: 12%;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+
+.pipeline-diagram span {
+  display: block;
+
+  height: 25px;
+
+  margin: 18px 0;
+
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 20px;
+}
+
+
+.pipeline-diagram span:nth-child(2) {
+  border-color: #f0782e;
+}
+
+
+.pipeline-diagram i {
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  right: 17%;
+  top: 50%;
+
+  background: #f0782e;
+  border-radius: 50%;
+
+  transform: translateY(-50%);
+}
+
+
+/* ELECTRICAL */
+
+.meter {
+  position: absolute;
+
+  width: 170px;
+  height: 205px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 10px;
+}
+
+
+.meter span {
+  position: absolute;
+
+  width: 105px;
+  height: 105px;
+
+  left: 50%;
+  top: 42px;
+
+  transform: translateX(-50%);
+
+  border: 2px solid rgba(255,255,255,0.18);
+  border-radius: 50%;
+}
+
+
+.meter i {
+  position: absolute;
+
+  width: 43px;
+  height: 1px;
+
+  left: 50%;
+  top: 94px;
+
+  background: #f0782e;
+
+  transform-origin: left center;
+  transform: rotate(-38deg);
+}
+
+
+.meter b {
+  position: absolute;
+
+  width: 9px;
+  height: 9px;
+
+  left: 50%;
+  top: 94px;
+
+  background: #f0782e;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+/* WELDING */
+
+.welding-effect {
+  position: absolute;
+
+  width: 230px;
+  height: 150px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.welding-effect::before {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 4px;
+
+  left: 20px;
+  top: 82px;
+
+  background: rgba(255,255,255,0.25);
+}
+
+
+.welding-effect span {
+  position: absolute;
+
+  width: 5px;
+  height: 100px;
+
+  left: 115px;
+  top: 20px;
+
+  background: #f0782e;
+
+  transform: rotate(20deg);
+
+  box-shadow:
+    0 0 25px rgba(240,120,46,0.55);
+}
+
+
+.welding-effect i,
+.welding-effect b {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  background: #f0782e;
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 15px rgba(240,120,46,0.7);
+}
+
+
+.welding-effect i {
+  left: 70px;
+  top: 65px;
+}
+
+
+.welding-effect b {
+  left: 157px;
+  top: 58px;
+}
+
+
+/* =========================================================
+   WIDE CARD
+========================================================= */
+
+.equipment-wide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+
+.equipment-card-wide {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+
+.equipment-card-wide .equipment-image {
+  height: 370px;
+}
+
+
+.equipment-card-wide .equipment-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 45px;
+}
+
+
+/* =========================================================
+   SURVEY PANEL
+========================================================= */
+
+.survey-spec-panel {
+  position: relative;
+  min-height: 290px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 27px;
+  overflow: hidden;
 
   color: #fff;
 }
 
 
-.execution-pillar p {
-  margin: 0;
+.spec-panel-top,
+.spec-panel-bottom {
+  position: relative;
+  z-index: 2;
 
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 13px;
-
-  line-height: 1.7;
-
-  color: rgba(255, 255, 255, 0.47);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
 }
 
 
-/* ============================================================
+.spec-panel-top {
+  color: rgba(255,255,255,0.55);
+}
+
+
+.spec-panel-bottom {
+  color: #f0782e;
+}
+
+
+.crosshair {
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 50%;
+}
+
+
+.crosshair::before,
+.crosshair::after {
+  content: "";
+
+  position: absolute;
+
+  background: rgba(255,255,255,0.18);
+}
+
+
+.crosshair::before {
+  width: 1px;
+  height: 100%;
+
+  left: 50%;
+  top: 0;
+}
+
+
+.crosshair::after {
+  width: 100%;
+  height: 1px;
+
+  left: 0;
+  top: 50%;
+}
+
+
+.crosshair span {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid #f0782e;
+  border-radius: 50%;
+}
+
+
+.crosshair i {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: #f0782e;
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   EXECUTION STATEMENT
+========================================================= */
+
+.machinery-execution {
+  padding: 100px 0;
+
+  background: #101820;
+  color: #fff;
+}
+
+
+.machinery-execution-inner {
+  position: relative;
+
+  padding: 60px 70px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.025),
+      transparent
+    );
+}
+
+
+.machinery-execution-inner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  right: 40px;
+  top: 40px;
+
+  border-top: 1px solid rgba(240,120,46,0.55);
+  border-right: 1px solid rgba(240,120,46,0.55);
+}
+
+
+.execution-label {
+  margin-bottom: 20px;
+
+  color: #f0782e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+
+.machinery-execution h2 {
+  max-width: 950px;
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(30px, 4.3vw, 55px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+
+.machinery-execution h2 span {
+  color: #f0782e;
+  padding: 0 8px;
+}
+
+
+.machinery-execution p {
+  max-width: 700px;
+  margin: 25px 0 0;
+
+  color: rgba(255,255,255,0.62);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
    CTA
-   ============================================================ */
+========================================================= */
 
 .machinery-cta {
-  background: #f4f5f3;
+  padding: 90px 0;
+
+  background: #f0782e;
 }
 
 
 .machinery-cta-inner {
   display: flex;
-
-  justify-content: space-between;
   align-items: center;
-
-  gap: 60px;
-
-  padding: 75px 80px;
-
-  background: #fff;
-
-  border: 1px solid #e0e2e0;
-
-  box-shadow:
-    0 20px 70px rgba(16, 24, 32, 0.06);
+  justify-content: space-between;
+  gap: 50px;
 }
 
 
-.machinery-cta-inner h2 {
-  max-width: 700px;
+.machinery-cta .section-overline {
+  margin-bottom: 14px;
 
-  margin: 18px 0 18px;
-
-  font-family: "Manrope", sans-serif;
-
-  font-size: clamp(36px, 4vw, 55px);
-
-  line-height: 1.04;
-
-  letter-spacing: -0.045em;
-
-  color: #101820;
+  color: rgba(16,24,32,0.65);
 }
 
 
-.machinery-cta-inner h2 em {
-  color: #f0782e;
-  font-style: normal;
-}
-
-
-.machinery-cta-inner p {
-  max-width: 610px;
-
+.machinery-cta h2 {
   margin: 0;
 
-  font-family: "DM Sans", sans-serif;
+  color: #101820;
 
-  font-size: 15px;
-  line-height: 1.75;
-
-  color: #697076;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(40px, 5vw, 65px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.055em;
 }
 
 
-.machinery-cta-inner .button {
+.machinery-cta h2 em {
+  font-style: normal;
+  color: #fff;
+}
+
+
+.machinery-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+
   flex-shrink: 0;
 
-  white-space: nowrap;
+  min-height: 58px;
+  padding: 0 25px;
+
+  border: 1px solid rgba(16,24,32,0.35);
+
+  color: #101820;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+.machinery-cta-button span {
+  font-size: 17px;
+}
+
+
+.machinery-cta-button:hover {
+  background: #101820;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+}
+
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1100px
+========================================================= */
 
 @media (max-width: 1100px) {
 
-  .machinery-hero-visual {
-    right: -180px;
-    opacity: 0.75;
+  .machinery-hero-side {
+    display: none;
   }
-
 
   .machinery-intro-grid {
     gap: 55px;
   }
 
-
-  .equipment-cards-three {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-
-  .execution-pillars {
-    grid-template-columns:
-      repeat(2, 1fr);
+  .equipment-grid-three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
 }
 
 
-@media (max-width: 1000px) {
+/* =========================================================
+   RESPONSIVE — 900px
+========================================================= */
 
-  /* Same hero padding as other pages */
+@media (max-width: 900px) {
+
+  .machinery-hero {
+    min-height: 690px;
+  }
 
   .machinery-hero-inner {
-    padding-top: 78px;
-    padding-bottom: 82px;
+    min-height: 690px;
+    padding-top: 65px;
+    padding-bottom: 65px;
   }
 
-
-  .machinery-hero-visual {
-    right: -240px;
-    opacity: 0.48;
+  .machinery-hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(16,24,32,0.97),
+        rgba(16,24,32,0.78)
+      );
   }
 
-
-  .machinery-hero-content {
-    max-width: 650px;
+  .machinery-index-inner {
+    display: block;
   }
 
+  .machinery-index-label {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid #e7e9eb;
+  }
+
+  .machinery-index-links a {
+    min-height: 58px;
+  }
 
   .machinery-intro-grid {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 20px;
   }
 
+  .machinery-intro-copy {
+    padding-top: 0;
+  }
 
-  .equipment-index-header {
-    grid-template-columns: 1fr;
+  .machinery-detail {
+    padding: 80px 0;
+  }
+
+  .machinery-detail-heading {
+    grid-template-columns: 75px minmax(0, 1fr);
     gap: 25px;
   }
 
-
-  .equipment-index-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
+  .machinery-number {
+    font-size: 40px;
   }
 
+  .equipment-card-wide {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-card-wide .equipment-image {
+    height: 330px;
+  }
+
+  .machinery-execution-inner {
+    padding: 45px;
+  }
 
   .machinery-cta-inner {
-    padding: 60px;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
 }
 
 
-@media (max-width: 700px) {
+/* =========================================================
+   RESPONSIVE — 600px
+========================================================= */
 
-  /* Same hero padding as other pages */
+@media (max-width: 600px) {
 
   .machinery-hero {
-    min-height: auto;
+    min-height: 650px;
   }
-
 
   .machinery-hero-inner {
-    padding-top: 65px;
-    padding-bottom: 72px;
+    min-height: 650px;
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
-
-
-  .machinery-hero-top {
-    margin-bottom: 35px;
-  }
-
-
-  .machinery-hero-code {
-    display: none;
-  }
-
-
-  .machinery-hero-kicker {
-    font-size: 10px;
-    letter-spacing: 0.14em;
-  }
-
 
   .machinery-hero h1 {
-    font-size: clamp(46px, 14vw, 65px);
+    font-size: clamp(46px, 14vw, 70px);
   }
 
-
   .machinery-hero-description {
+    margin-top: 24px;
     font-size: 15px;
     line-height: 1.7;
-
-    margin-top: 25px;
   }
 
-
-  .machinery-hero-visual {
-    right: -300px;
-    width: 650px;
-
-    opacity: 0.18;
+  .machinery-hero-btn {
+    min-height: 52px;
   }
 
+  .machinery-index-links {
+    display: block;
+  }
 
-  .machinery-hero-meta {
-    position: relative;
-
-    left: auto;
-    bottom: auto;
-
-    transform: none;
-
+  .machinery-index-links a {
     width: 100%;
-
-    padding: 0 20px 25px;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    font-size: 8px;
+    min-height: 53px;
+    border-right: 0;
+    border-bottom: 1px solid #e7e9eb;
   }
 
+  .machinery-intro {
+    padding: 70px 0 50px;
+  }
 
-  .hero-meta-line {
+  .machinery-intro-heading h2 {
+    font-size: 39px;
+  }
+
+  .machinery-detail {
+    padding: 65px 0;
+  }
+
+  .machinery-detail-heading {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 32px;
+  }
+
+  .machinery-number {
+    font-size: 32px;
+  }
+
+  .machinery-detail-heading h3 {
+    font-size: 34px;
+  }
+
+  .equipment-grid,
+  .equipment-grid-three {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-image {
+    height: 250px;
+  }
+
+  .equipment-card-body {
+    padding: 24px 22px 27px;
+  }
+
+  .equipment-card-body h4 {
+    font-size: 19px;
+  }
+
+  .equipment-card-wide .equipment-image {
+    height: 250px;
+  }
+
+  .equipment-card-wide .equipment-card-body {
+    padding: 30px 24px;
+  }
+
+  .survey-spec-panel {
+    min-height: 250px;
+  }
+
+  .machinery-execution {
+    padding: 70px 0;
+  }
+
+  .machinery-execution-inner {
+    padding: 35px 25px;
+  }
+
+  .machinery-execution-inner::before {
+    width: 55px;
+    height: 55px;
+    right: 20px;
+    top: 20px;
+  }
+
+  .machinery-execution h2 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .machinery-execution h2 span {
     display: none;
   }
 
-
-  .machinery-intro,
-  .equipment-section,
-  .machinery-cta {
-    padding-top: 75px;
-    padding-bottom: 75px;
-  }
-
-
-  .equipment-index {
-    padding: 75px 0;
-  }
-
-
-  .equipment-index-grid {
-    grid-template-columns: 1fr;
-  }
-
-
-  .equipment-index-item {
-    min-height: 105px;
-  }
-
-
-  .equipment-group {
-    padding-bottom: 75px;
-    margin-bottom: 75px;
-  }
-
-
-  .equipment-group-heading {
-    grid-template-columns: 45px 1fr;
-    gap: 15px;
-  }
-
-
-  .equipment-cards,
-  .equipment-cards-three {
-    grid-template-columns: 1fr;
-  }
-
-
-  .equipment-image {
-    height: 260px;
-  }
-
-
-  .execution-section {
-    padding: 75px 0;
-  }
-
-
-  .execution-heading {
-    margin-bottom: 45px;
-  }
-
-
-  .execution-pillars {
-    grid-template-columns: 1fr;
-  }
-
-
-  .execution-pillar {
-    min-height: auto;
-    padding: 27px;
-  }
-
-
-  .execution-pillar > span {
-    margin-bottom: 35px;
-  }
-
-
-  .machinery-cta-inner {
-    flex-direction: column;
-    align-items: flex-start;
-
-    padding: 45px 30px;
-  }
-
-}
-
-
-@media (max-width: 420px) {
-
-  /* Same small-mobile hero padding */
-
-  .machinery-hero-inner {
-    padding-top: 58px;
-    padding-bottom: 72px;
-  }
-
-
-  .machinery-hero h1 {
-    font-size: 45px;
-  }
-
-
-  .machinery-hero-description {
+  .machinery-execution p {
     font-size: 14px;
   }
 
-
-  .machinery-hero .button {
-    width: 100%;
-    justify-content: center;
+  .machinery-cta {
+    padding: 70px 0;
   }
 
-
-  .equipment-image {
-    height: 225px;
+  .machinery-cta h2 {
+    font-size: 42px;
   }
 
-
-  .equipment-card-body {
-    padding: 24px;
-  }
-
-
-  .equipment-card-body h3 {
-    font-size: 21px;
-  }
-
-
-  .machinery-cta-inner {
-    padding: 35px 24px;
-  }
-
-
-  .machinery-cta-inner .button {
+  .machinery-cta-button {
     width: 100%;
     justify-content: center;
   }
@@ -1545,15 +1781,22 @@
 }
 
 
-/* ============================================================
+/* =========================================================
    REDUCED MOTION
-   ============================================================ */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
   .equipment-card,
   .equipment-image img,
-  .equipment-index-item i {
+  .machinery-hero-btn,
+  .machinery-cta-button {
     transition: none;
   }
 
