@@ -1,7 +1,24 @@
 /* =========================================================
    ARCSONS — MACHINERY & TECHNOLOGY
-   Page-specific stylesheet
+   Page-specific styles
 ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+  --mach-orange: #f0782e;
+  --mach-orange-dark: #d95d19;
+  --mach-dark: #101820;
+  --mach-dark-2: #151f28;
+  --mach-text: #18212a;
+  --mach-muted: #69747d;
+  --mach-light: #f5f6f7;
+  --mach-border: #e2e6e9;
+  --mach-white: #ffffff;
+}
 
 
 /* =========================================================
@@ -10,13 +27,14 @@
 
 .machinery-hero {
   position: relative;
-  min-height: min(760px, 82vh);
-  display: flex;
-  align-items: center;
   overflow: hidden;
   isolation: isolate;
-  background: #101820;
+
+  /* SAME PADDING AS SERVICES PAGE */
+  padding: clamp(76px, 10vw, 142px) 0 clamp(72px, 9vw, 120px);
+
   color: #fff;
+  background: #101820;
 }
 
 
@@ -24,17 +42,14 @@
   position: absolute;
   inset: 0;
   z-index: -4;
-}
 
+  background-image:
+    url("https://images.unsplash.com/photo-1580901368919-773e9c1c8c7a?auto=format&fit=crop&w=2200&q=88");
 
-.machinery-hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  filter: saturate(0.7) contrast(1.05);
-  transform: scale(1.03);
+  background-size: cover;
+  background-position: center 55%;
+
+  transform: scale(1.02);
 }
 
 
@@ -47,26 +62,9 @@
     linear-gradient(
       90deg,
       rgba(16, 24, 32, 0.98) 0%,
-      rgba(16, 24, 32, 0.92) 30%,
-      rgba(16, 24, 32, 0.68) 58%,
-      rgba(16, 24, 32, 0.42) 100%
-    );
-}
-
-
-.machinery-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(16, 24, 32, 0.35),
-      transparent 40%,
-      rgba(16, 24, 32, 0.75)
+      rgba(16, 24, 32, 0.91) 35%,
+      rgba(16, 24, 32, 0.67) 62%,
+      rgba(16, 24, 32, 0.43) 100%
     );
 }
 
@@ -74,292 +72,225 @@
 .machinery-hero-grid {
   position: absolute;
   inset: 0;
-  z-index: -1;
-  opacity: 0.17;
-  pointer-events: none;
+  z-index: -2;
+
+  opacity: 0.14;
 
   background-image:
     linear-gradient(
-      rgba(255,255,255,0.06) 1px,
+      rgba(255, 255, 255, 0.16) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(255,255,255,0.06) 1px,
+      rgba(255, 255, 255, 0.16) 1px,
       transparent 1px
     );
 
-  background-size: 70px 70px;
+  background-size: 80px 80px;
 
   mask-image:
     linear-gradient(
       90deg,
-      transparent,
-      #000 45%,
-      #000
+      #000 0%,
+      rgba(0, 0, 0, 0.65) 55%,
+      transparent 100%
     );
 }
 
 
 .machinery-hero-inner {
   position: relative;
-  width: 100%;
-  min-height: min(760px, 82vh);
-  display: flex;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
   align-items: center;
-  justify-content: space-between;
-  gap: 70px;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  gap: 60px;
 }
 
 
 .machinery-hero-content {
-  max-width: 800px;
+  max-width: 820px;
 }
 
 
-.machinery-hero-label {
-  display: inline-flex;
+.eyebrow {
+  display: flex;
   align-items: center;
   gap: 12px;
+
   margin-bottom: 24px;
 
-  color: #f0782e;
+  color: rgba(255, 255, 255, 0.72);
+
   font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-}
-
-
-.machinery-hero-label::before {
-  content: "";
-  width: 38px;
-  height: 1px;
-  background: #f0782e;
-}
-
-
-.machinery-hero-kicker {
-  margin-bottom: 14px;
-
-  color: rgba(255,255,255,0.72);
-  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+
+.eyebrow span {
+  width: 34px;
+  height: 2px;
+
+  display: inline-block;
+
+  background: var(--mach-orange);
+}
+
+
+.hero-kicker {
+  margin: 0 0 13px;
+
+  color: var(--mach-orange);
+
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(13px, 1.3vw, 16px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 
 .machinery-hero h1 {
-  max-width: 800px;
   margin: 0;
 
+  max-width: 850px;
+
   font-family: "Manrope", sans-serif;
-  font-size: clamp(52px, 8vw, 104px);
+  font-size: clamp(48px, 7vw, 92px);
   font-weight: 800;
-  line-height: 0.94;
-  letter-spacing: -0.065em;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
 }
 
 
 .machinery-hero h1 em {
-  color: #f0782e;
+  color: var(--mach-orange);
   font-style: normal;
 }
 
 
-.machinery-hero-description {
-  max-width: 650px;
-  margin: 30px 0 34px;
+.hero-description {
+  max-width: 670px;
 
-  color: rgba(255,255,255,0.76);
-  font-size: clamp(15px, 1.5vw, 18px);
-  line-height: 1.8;
+  margin: 30px 0 0;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.75;
 }
 
 
-.machinery-hero-btn {
+.hero-button {
   display: inline-flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 
-  min-height: 54px;
-  padding: 0 22px;
+  margin-top: 36px;
+  padding: 15px 20px 15px 22px;
 
-  border: 1px solid rgba(255,255,255,0.28);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 
   color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+
   font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.13em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
   text-transform: uppercase;
 
-  text-decoration: none;
+  backdrop-filter: blur(10px);
 
   transition:
-    background 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.25s ease;
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 
-.machinery-hero-btn span {
-  color: #f0782e;
+.hero-button span {
+  color: var(--mach-orange);
   font-size: 18px;
 }
 
 
-.machinery-hero-btn:hover {
-  background: #f0782e;
-  border-color: #f0782e;
+.hero-button:hover {
+  border-color: var(--mach-orange);
+  background: var(--mach-orange);
   transform: translateY(-2px);
 }
 
 
-.machinery-hero-btn:hover span {
+.hero-button:hover span {
   color: #fff;
 }
 
 
 .machinery-hero-side {
-  width: 190px;
-  flex: 0 0 190px;
+  align-self: stretch;
 
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
+  align-items: flex-end;
+  justify-content: flex-end;
 
-  padding-left: 22px;
-
-  border-left: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 10px;
 }
 
 
 .hero-side-line {
-  width: 42px;
-  height: 2px;
-  margin-bottom: 16px;
-  background: #f0782e;
+  width: 1px;
+  height: 150px;
+
+  margin-right: 22px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      var(--mach-orange)
+    );
 }
 
 
-.machinery-hero-side span {
-  color: rgba(255,255,255,0.55);
+.hero-side-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  max-width: 170px;
+}
+
+
+.hero-side-copy span {
+  color: var(--mach-orange);
+
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.2em;
 }
 
 
-.machinery-hero-side strong {
+.hero-side-copy strong {
   color: #fff;
+
   font-family: "Manrope", sans-serif;
-  font-size: 13px;
-  line-height: 1.4;
-  letter-spacing: 0.05em;
-}
-
-
-.machinery-hero-side small {
-  margin-top: 12px;
-
-  color: rgba(255,255,255,0.38);
-  font-size: 9px;
-  letter-spacing: 0.18em;
-}
-
-
-/* =========================================================
-   INDEX
-========================================================= */
-
-.machinery-index {
-  position: relative;
-  z-index: 2;
-  background: #fff;
-  border-bottom: 1px solid #e7e9eb;
-}
-
-
-.machinery-index-inner {
-  display: flex;
-  align-items: stretch;
-}
-
-
-.machinery-index-label {
-  display: flex;
-  align-items: center;
-
-  width: 190px;
-  flex: 0 0 190px;
-
-  padding: 22px 20px;
-
-  border-right: 1px solid #e7e9eb;
-
-  color: #101820;
-  font-size: 10px;
+  font-size: 21px;
   font-weight: 800;
-  letter-spacing: 0.15em;
-  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 
-.machinery-index-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0;
-  width: 100%;
-}
+.hero-side-copy small {
+  margin-top: 8px;
 
+  color: rgba(255, 255, 255, 0.55);
 
-.machinery-index-links a {
-  position: relative;
-
-  display: inline-flex;
-  align-items: center;
-
-  min-height: 65px;
-  padding: 0 19px;
-
-  border-right: 1px solid #e7e9eb;
-
-  color: #4f5962;
   font-size: 12px;
-  font-weight: 700;
-
-  text-decoration: none;
-
-  transition:
-    color 0.25s ease,
-    background 0.25s ease;
-}
-
-
-.machinery-index-links a:hover {
-  color: #101820;
-  background: #f6f7f8;
-}
-
-
-.machinery-index-links a::after {
-  content: "↘";
-
-  margin-left: 9px;
-
-  color: #f0782e;
-  font-size: 12px;
-
-  transition: transform 0.25s ease;
-}
-
-
-.machinery-index-links a:hover::after {
-  transform: translate(2px, 2px);
+  line-height: 1.55;
 }
 
 
@@ -368,67 +299,149 @@
 ========================================================= */
 
 .machinery-intro {
-  padding: clamp(80px, 9vw, 125px) 0 75px;
-  background: #f5f6f7;
+  padding: clamp(80px, 10vw, 135px) 0 50px;
+
+  background: var(--mach-light);
 }
 
 
-.machinery-intro-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
-  gap: 90px;
-  align-items: start;
-}
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
+  margin-bottom: 30px;
 
-.section-overline {
-  display: inline-block;
+  color: var(--mach-orange);
 
-  margin-bottom: 18px;
-
-  color: #f0782e;
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.17em;
 }
 
 
-.machinery-intro-heading h2 {
-  max-width: 650px;
+.section-label span {
+  color: #929ba1;
+}
+
+
+.heading-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
+  gap: 80px;
+  align-items: end;
+}
+
+
+.heading-layout h2 {
   margin: 0;
 
+  color: var(--mach-dark);
+
   font-family: "Manrope", sans-serif;
-  font-size: clamp(38px, 5vw, 65px);
+  font-size: clamp(34px, 4.7vw, 64px);
   font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.055em;
-  color: #101820;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
 }
 
 
-.machinery-intro-heading h2 em {
-  color: #f0782e;
-  font-style: normal;
+.heading-layout h2 span {
+  color: var(--mach-orange);
 }
 
 
-.machinery-intro-copy {
-  padding-top: 28px;
-}
+.heading-layout p {
+  margin: 0;
 
+  color: var(--mach-muted);
 
-.machinery-intro-copy p {
-  max-width: 590px;
-  margin: 0 0 22px;
-
-  color: #5c6670;
   font-size: 16px;
-  line-height: 1.85;
+  line-height: 1.8;
 }
 
 
-.machinery-intro-copy p:last-child {
-  margin-bottom: 0;
+/* =========================================================
+   EQUIPMENT INDEX
+========================================================= */
+
+.equipment-index {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+
+  margin-top: 70px;
+
+  border-top: 1px solid var(--mach-border);
+  border-bottom: 1px solid var(--mach-border);
+}
+
+
+.equipment-index a {
+  position: relative;
+
+  min-height: 130px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 18px 18px 20px;
+
+  border-right: 1px solid var(--mach-border);
+
+  color: var(--mach-dark);
+
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.equipment-index a:first-child {
+  border-left: 1px solid var(--mach-border);
+}
+
+
+.equipment-index a span {
+  color: #9ba3a8;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+.equipment-index a b {
+  align-self: flex-end;
+
+  color: var(--mach-orange);
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.equipment-index a:hover {
+  color: #fff;
+  background: var(--mach-dark);
+}
+
+
+.equipment-index a:hover span {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+.equipment-index a:hover b {
+  transform: translate(3px, -3px);
 }
 
 
@@ -437,97 +450,86 @@
 ========================================================= */
 
 .machinery-list {
-  padding: 0 0 40px;
-  background: #f5f6f7;
+  padding: 30px 0 0;
+
+  background: var(--mach-light);
 }
 
 
-.machinery-detail {
+.equipment-group {
   padding: 100px 0;
 
-  border-top: 1px solid #dfe2e5;
+  border-bottom: 1px solid var(--mach-border);
 }
 
 
-.machinery-detail:first-child {
-  border-top: 0;
-}
-
-
-.machinery-detail-heading {
+.equipment-group-header {
   display: grid;
-  grid-template-columns: 105px minmax(0, 850px);
-  gap: 35px;
+  grid-template-columns: 75px minmax(280px, 1fr) minmax(250px, 420px);
+  gap: 30px;
   align-items: start;
 
-  margin-bottom: 48px;
+  margin-bottom: 55px;
 }
 
 
-.machinery-number {
+.group-number {
+  color: var(--mach-orange);
+
   font-family: "Manrope", sans-serif;
-  font-size: 52px;
+  font-size: 13px;
   font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.06em;
-
-  color: rgba(16,24,32,0.16);
 }
 
 
-.machinery-overline {
+.equipment-group-header > div:nth-child(2) span {
   display: block;
 
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 
-  color: #f0782e;
+  color: #8a949a;
+
   font-size: 10px;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.15em;
 }
 
 
-.machinery-detail-heading h3 {
+.equipment-group-header h2 {
   margin: 0;
 
+  color: var(--mach-dark);
+
   font-family: "Manrope", sans-serif;
-  font-size: clamp(31px, 4vw, 52px);
+  font-size: clamp(30px, 3.4vw, 46px);
   font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.055em;
-
-  color: #101820;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
 }
 
 
-.machinery-detail-heading h3 em {
-  color: #f0782e;
-  font-style: normal;
-}
+.equipment-group-header > p {
+  margin: 3px 0 0;
 
+  color: var(--mach-muted);
 
-.machinery-detail-heading p {
-  max-width: 650px;
-  margin: 18px 0 0;
-
-  color: #69737d;
   font-size: 15px;
   line-height: 1.75;
 }
 
 
 /* =========================================================
-   EQUIPMENT CARDS
+   EQUIPMENT GRID
 ========================================================= */
 
 .equipment-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  gap: 24px;
 }
 
 
-.equipment-grid-three {
+.equipment-grid-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -536,7 +538,8 @@
   overflow: hidden;
 
   background: #fff;
-  border: 1px solid #e1e4e7;
+
+  border: 1px solid var(--mach-border);
 
   transition:
     transform 0.35s ease,
@@ -546,810 +549,122 @@
 
 
 .equipment-card:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(240,120,46,0.38);
+  border-color: rgba(240, 120, 46, 0.45);
 
   box-shadow:
-    0 18px 45px rgba(16,24,32,0.09);
+    0 20px 55px rgba(16, 24, 32, 0.10);
+
+  transform: translateY(-5px);
 }
 
 
 .equipment-image {
   position: relative;
-  height: 290px;
+
+  height: 330px;
+
   overflow: hidden;
 
-  background: #1a252e;
+  background: #dce1e4;
+}
+
+
+.equipment-grid-3 .equipment-image {
+  height: 270px;
+}
+
+
+.equipment-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(16, 24, 32, 0.54),
+      transparent 50%
+    );
 }
 
 
 .equipment-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+
   display: block;
 
-  filter: saturate(0.78);
-  transition: transform 0.6s ease;
+  object-fit: cover;
+
+  transition:
+    transform 0.65s ease,
+    filter 0.65s ease;
 }
 
 
 .equipment-card:hover .equipment-image img {
   transform: scale(1.055);
+
+  filter: saturate(1.06);
 }
 
 
-.equipment-card-body {
+.equipment-number {
+  position: absolute;
+  left: 20px;
+  bottom: 18px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 39px;
+  height: 39px;
+
+  color: #fff;
+  background: var(--mach-orange);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+.equipment-card-content {
   padding: 27px 28px 30px;
 }
 
 
-.equipment-card-body > span {
-  display: block;
+.equipment-card-content > span {
+  color: var(--mach-orange);
 
-  margin-bottom: 10px;
-
-  color: #f0782e;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.14em;
 }
 
 
-.equipment-card-body h4 {
-  margin: 0 0 12px;
+.equipment-card-content h3 {
+  margin: 9px 0 12px;
+
+  color: var(--mach-dark);
 
   font-family: "Manrope", sans-serif;
-  font-size: 21px;
+  font-size: 23px;
   font-weight: 800;
-  line-height: 1.2;
-
-  color: #101820;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
 }
 
 
-.equipment-card-body p {
+.equipment-card-content p {
   margin: 0;
 
-  color: #68727b;
+  color: var(--mach-muted);
+
   font-size: 14px;
   line-height: 1.75;
-}
-
-
-/* =========================================================
-   TECHNICAL VISUALS
-========================================================= */
-
-.equipment-technical,
-.trench-visual,
-.fibre-visual,
-.splice-visual,
-.otdr-visual,
-.compressor-visual,
-.pipeline-visual,
-.electrical-visual,
-.welding-visual,
-.survey-spec-panel {
-  background:
-    linear-gradient(
-      135deg,
-      #101820 0%,
-      #17242d 55%,
-      #0d151c 100%
-    );
-}
-
-
-.equipment-technical::before,
-.trench-visual::before,
-.fibre-visual::before,
-.splice-visual::before,
-.otdr-visual::before,
-.compressor-visual::before,
-.pipeline-visual::before,
-.electrical-visual::before,
-.welding-visual::before,
-.survey-spec-panel::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  opacity: 0.15;
-
-  background-image:
-    linear-gradient(
-      rgba(255,255,255,0.12) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,0.12) 1px,
-      transparent 1px
-    );
-
-  background-size: 35px 35px;
-}
-
-
-/* HDD LOCATOR */
-
-.technical-visual {
-  position: absolute;
-
-  width: 190px;
-  height: 190px;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  border: 1px solid rgba(240,120,46,0.55);
-  border-radius: 50%;
-}
-
-
-.technical-visual::before,
-.technical-visual::after {
-  content: "";
-
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 50%;
-
-  transform: translate(-50%, -50%);
-}
-
-
-.technical-visual::before {
-  width: 125px;
-  height: 125px;
-}
-
-
-.technical-visual::after {
-  width: 58px;
-  height: 58px;
-}
-
-
-.technical-visual span {
-  position: absolute;
-
-  width: 9px;
-  height: 9px;
-
-  top: 50%;
-  left: 50%;
-
-  background: #f0782e;
-  border-radius: 50%;
-
-  transform: translate(-50%, -50%);
-
-  box-shadow:
-    0 0 0 8px rgba(240,120,46,0.13),
-    0 0 35px rgba(240,120,46,0.45);
-}
-
-
-.technical-visual i {
-  position: absolute;
-
-  width: 1px;
-  height: 100%;
-
-  left: 50%;
-  top: 0;
-
-  background: rgba(255,255,255,0.16);
-}
-
-
-.technical-visual b {
-  position: absolute;
-
-  width: 100%;
-  height: 1px;
-
-  left: 0;
-  top: 50%;
-
-  background: rgba(255,255,255,0.16);
-}
-
-
-/* TRENCH */
-
-.trench-lines {
-  position: absolute;
-  left: 14%;
-  right: 14%;
-  top: 50%;
-
-  transform: translateY(-50%);
-}
-
-
-.trench-lines span {
-  display: block;
-
-  height: 26px;
-
-  margin: 17px 0;
-
-  border: 1px solid rgba(255,255,255,0.16);
-
-  transform: skewX(-28deg);
-}
-
-
-.trench-lines span:nth-child(2) {
-  border-color: rgba(240,120,46,0.6);
-}
-
-
-/* FIBRE */
-
-.fibre-cable-visual {
-  position: absolute;
-
-  left: 10%;
-  right: 10%;
-  top: 50%;
-
-  transform: translateY(-50%);
-}
-
-
-.fibre-cable-visual span {
-  display: block;
-
-  width: 100%;
-  height: 4px;
-
-  margin: 24px 0;
-
-  border-radius: 50%;
-
-  background: rgba(255,255,255,0.28);
-}
-
-
-.fibre-cable-visual span:nth-child(2) {
-  background: #f0782e;
-}
-
-
-/* SPLICE */
-
-.splice-box {
-  position: absolute;
-
-  width: 220px;
-  height: 120px;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 8px;
-}
-
-
-.splice-box span {
-  position: absolute;
-
-  width: 100%;
-  height: 1px;
-
-  top: 50%;
-
-  background: rgba(255,255,255,0.2);
-}
-
-
-.splice-box i {
-  position: absolute;
-
-  width: 45px;
-  height: 45px;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  border: 1px solid #f0782e;
-  border-radius: 50%;
-}
-
-
-/* OTDR */
-
-.instrument-screen {
-  position: absolute;
-
-  width: 190px;
-  height: 125px;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  border: 2px solid rgba(255,255,255,0.25);
-  border-radius: 7px;
-}
-
-
-.instrument-screen::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 14px;
-
-  border: 1px solid rgba(255,255,255,0.12);
-}
-
-
-.instrument-screen span {
-  position: absolute;
-
-  width: 105px;
-  height: 1px;
-
-  top: 65px;
-  left: 35px;
-
-  background: #f0782e;
-
-  transform: rotate(-13deg);
-}
-
-
-.instrument-screen i {
-  position: absolute;
-
-  width: 7px;
-  height: 7px;
-
-  top: 51px;
-  left: 68px;
-
-  background: #f0782e;
-  border-radius: 50%;
-}
-
-
-.instrument-screen b {
-  position: absolute;
-
-  width: 7px;
-  height: 7px;
-
-  top: 71px;
-  right: 37px;
-
-  background: #f0782e;
-  border-radius: 50%;
-}
-
-
-/* COMPRESSOR */
-
-.compressor {
-  position: absolute;
-
-  width: 230px;
-  height: 120px;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-}
-
-
-.compressor span {
-  position: absolute;
-
-  width: 120px;
-  height: 78px;
-
-  left: 20px;
-  top: 25px;
-
-  border: 2px solid rgba(255,255,255,0.25);
-  border-radius: 7px;
-}
-
-
-.compressor i {
-  position: absolute;
-
-  width: 58px;
-  height: 58px;
-
-  right: 15px;
-  top: 35px;
-
-  border: 2px solid #f0782e;
-  border-radius: 50%;
-}
-
-
-.compressor i::after {
-  content: "";
-
-  position: absolute;
-
-  width: 18px;
-  height: 18px;
-
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  background: #f0782e;
-  border-radius: 50%;
-}
-
-
-.compressor b {
-  position: absolute;
-
-  width: 80px;
-  height: 4px;
-
-  left: 42px;
-  bottom: 3px;
-
-  background: rgba(255,255,255,0.18);
-}
-
-
-/* PIPELINE */
-
-.pipeline-diagram {
-  position: absolute;
-
-  left: 12%;
-  right: 12%;
-  top: 50%;
-
-  transform: translateY(-50%);
-}
-
-
-.pipeline-diagram span {
-  display: block;
-
-  height: 25px;
-
-  margin: 18px 0;
-
-  border: 1px solid rgba(255,255,255,0.22);
-  border-radius: 20px;
-}
-
-
-.pipeline-diagram span:nth-child(2) {
-  border-color: #f0782e;
-}
-
-
-.pipeline-diagram i {
-  position: absolute;
-
-  width: 12px;
-  height: 12px;
-
-  right: 17%;
-  top: 50%;
-
-  background: #f0782e;
-  border-radius: 50%;
-
-  transform: translateY(-50%);
-}
-
-
-/* ELECTRICAL */
-
-.meter {
-  position: absolute;
-
-  width: 170px;
-  height: 205px;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  border: 2px solid rgba(255,255,255,0.25);
-  border-radius: 10px;
-}
-
-
-.meter span {
-  position: absolute;
-
-  width: 105px;
-  height: 105px;
-
-  left: 50%;
-  top: 42px;
-
-  transform: translateX(-50%);
-
-  border: 2px solid rgba(255,255,255,0.18);
-  border-radius: 50%;
-}
-
-
-.meter i {
-  position: absolute;
-
-  width: 43px;
-  height: 1px;
-
-  left: 50%;
-  top: 94px;
-
-  background: #f0782e;
-
-  transform-origin: left center;
-  transform: rotate(-38deg);
-}
-
-
-.meter b {
-  position: absolute;
-
-  width: 9px;
-  height: 9px;
-
-  left: 50%;
-  top: 94px;
-
-  background: #f0782e;
-  border-radius: 50%;
-
-  transform: translate(-50%, -50%);
-}
-
-
-/* WELDING */
-
-.welding-effect {
-  position: absolute;
-
-  width: 230px;
-  height: 150px;
-
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-}
-
-
-.welding-effect::before {
-  content: "";
-
-  position: absolute;
-
-  width: 190px;
-  height: 4px;
-
-  left: 20px;
-  top: 82px;
-
-  background: rgba(255,255,255,0.25);
-}
-
-
-.welding-effect span {
-  position: absolute;
-
-  width: 5px;
-  height: 100px;
-
-  left: 115px;
-  top: 20px;
-
-  background: #f0782e;
-
-  transform: rotate(20deg);
-
-  box-shadow:
-    0 0 25px rgba(240,120,46,0.55);
-}
-
-
-.welding-effect i,
-.welding-effect b {
-  position: absolute;
-
-  width: 7px;
-  height: 7px;
-
-  background: #f0782e;
-  border-radius: 50%;
-
-  box-shadow:
-    0 0 15px rgba(240,120,46,0.7);
-}
-
-
-.welding-effect i {
-  left: 70px;
-  top: 65px;
-}
-
-
-.welding-effect b {
-  left: 157px;
-  top: 58px;
-}
-
-
-/* =========================================================
-   WIDE CARD
-========================================================= */
-
-.equipment-wide {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-}
-
-
-.equipment-card-wide {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-}
-
-
-.equipment-card-wide .equipment-image {
-  height: 370px;
-}
-
-
-.equipment-card-wide .equipment-card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding: 45px;
-}
-
-
-/* =========================================================
-   SURVEY PANEL
-========================================================= */
-
-.survey-spec-panel {
-  position: relative;
-  min-height: 290px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  padding: 27px;
-  overflow: hidden;
-
-  color: #fff;
-}
-
-
-.spec-panel-top,
-.spec-panel-bottom {
-  position: relative;
-  z-index: 2;
-
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.17em;
-}
-
-
-.spec-panel-top {
-  color: rgba(255,255,255,0.55);
-}
-
-
-.spec-panel-bottom {
-  color: #f0782e;
-}
-
-
-.crosshair {
-  position: absolute;
-
-  width: 190px;
-  height: 190px;
-
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 50%;
-}
-
-
-.crosshair::before,
-.crosshair::after {
-  content: "";
-
-  position: absolute;
-
-  background: rgba(255,255,255,0.18);
-}
-
-
-.crosshair::before {
-  width: 1px;
-  height: 100%;
-
-  left: 50%;
-  top: 0;
-}
-
-
-.crosshair::after {
-  width: 100%;
-  height: 1px;
-
-  left: 0;
-  top: 50%;
-}
-
-
-.crosshair span {
-  position: absolute;
-
-  width: 18px;
-  height: 18px;
-
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  border: 1px solid #f0782e;
-  border-radius: 50%;
-}
-
-
-.crosshair i {
-  position: absolute;
-
-  width: 5px;
-  height: 5px;
-
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  background: #f0782e;
-  border-radius: 50%;
 }
 
 
@@ -1357,81 +672,96 @@
    EXECUTION STATEMENT
 ========================================================= */
 
-.machinery-execution {
-  padding: 100px 0;
+.execution-section {
+  position: relative;
 
-  background: #101820;
+  overflow: hidden;
+
+  padding: clamp(90px, 12vw, 170px) 0;
+
   color: #fff;
+  background: var(--mach-dark);
 }
 
 
-.machinery-execution-inner {
-  position: relative;
-
-  padding: 60px 70px;
-
-  border: 1px solid rgba(255,255,255,0.12);
+.execution-background {
+  position: absolute;
+  inset: 0;
 
   background:
     linear-gradient(
-      135deg,
-      rgba(255,255,255,0.025),
-      transparent
-    );
+      90deg,
+      rgba(16, 24, 32, 0.98),
+      rgba(16, 24, 32, 0.86)
+    ),
+    url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2200&q=85");
+
+  background-size: cover;
+  background-position: center;
 }
 
 
-.machinery-execution-inner::before {
+.execution-section::after {
   content: "";
 
   position: absolute;
+  right: -120px;
+  top: 50%;
 
-  width: 90px;
-  height: 90px;
+  width: 450px;
+  height: 450px;
 
-  right: 40px;
-  top: 40px;
+  border: 1px solid rgba(240, 120, 46, 0.22);
+  border-radius: 50%;
 
-  border-top: 1px solid rgba(240,120,46,0.55);
-  border-right: 1px solid rgba(240,120,46,0.55);
+  transform: translateY(-50%);
+}
+
+
+.execution-content {
+  position: relative;
+  z-index: 2;
 }
 
 
 .execution-label {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
-  color: #f0782e;
-  font-size: 10px;
+  color: var(--mach-orange);
+
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.17em;
 }
 
 
-.machinery-execution h2 {
-  max-width: 950px;
+.execution-content h2 {
   margin: 0;
 
   font-family: "Manrope", sans-serif;
-  font-size: clamp(30px, 4.3vw, 55px);
+  font-size: clamp(42px, 6vw, 78px);
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 0.98;
   letter-spacing: -0.05em;
 }
 
 
-.machinery-execution h2 span {
-  color: #f0782e;
-  padding: 0 8px;
+.execution-content p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+
+  margin: 35px 0 0;
+
+  color: rgba(255, 255, 255, 0.67);
+
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 
-.machinery-execution p {
-  max-width: 700px;
-  margin: 25px 0 0;
-
-  color: rgba(255,255,255,0.62);
-  font-size: 15px;
-  line-height: 1.8;
+.execution-content p span {
+  color: var(--mach-orange);
 }
 
 
@@ -1440,9 +770,9 @@
 ========================================================= */
 
 .machinery-cta {
-  padding: 90px 0;
+  padding: 35px 0 100px;
 
-  background: #f0782e;
+  background: var(--mach-dark);
 }
 
 
@@ -1451,59 +781,73 @@
   align-items: center;
   justify-content: space-between;
   gap: 50px;
+
+  padding: 55px 60px;
+
+  border: 1px solid rgba(255, 255, 255, 0.11);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.015)
+    );
 }
 
 
-.machinery-cta .section-overline {
-  margin-bottom: 14px;
+.machinery-cta-inner > div > span {
+  display: block;
 
-  color: rgba(16,24,32,0.65);
+  margin-bottom: 12px;
+
+  color: var(--mach-orange);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
 }
 
 
-.machinery-cta h2 {
+.machinery-cta-inner h2 {
   margin: 0;
 
-  color: #101820;
+  color: #fff;
 
   font-family: "Manrope", sans-serif;
-  font-size: clamp(40px, 5vw, 65px);
+  font-size: clamp(30px, 4vw, 52px);
   font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.055em;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
 }
 
 
-.machinery-cta h2 em {
+.machinery-cta-inner h2 em {
+  color: var(--mach-orange);
   font-style: normal;
-  color: #fff;
 }
 
 
 .machinery-cta-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 22px;
-
   flex-shrink: 0;
 
-  min-height: 58px;
-  padding: 0 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
 
-  border: 1px solid rgba(16,24,32,0.35);
+  padding: 17px 21px;
 
-  color: #101820;
+  color: #fff;
+  background: var(--mach-orange);
+
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.13em;
+  text-decoration: none;
   text-transform: uppercase;
 
-  text-decoration: none;
-
   transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 
@@ -1513,19 +857,19 @@
 
 
 .machinery-cta-button:hover {
-  background: #101820;
-  color: #fff;
+  background: var(--mach-orange-dark);
   transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   REVEAL
+   REVEAL ANIMATION
 ========================================================= */
 
 .reveal {
   opacity: 0;
-  transform: translateY(25px);
+
+  transform: translateY(28px);
 
   transition:
     opacity 0.75s ease,
@@ -1535,25 +879,56 @@
 
 .reveal.is-visible {
   opacity: 1;
+
   transform: translateY(0);
 }
 
 
 /* =========================================================
-   RESPONSIVE — 1100px
+   TABLET
 ========================================================= */
 
 @media (max-width: 1100px) {
 
-  .machinery-hero-side {
-    display: none;
+  .machinery-hero-inner {
+    grid-template-columns: minmax(0, 1fr) 190px;
+    gap: 40px;
   }
 
-  .machinery-intro-grid {
-    gap: 55px;
+
+  .heading-layout {
+    grid-template-columns: 1fr 350px;
+    gap: 50px;
   }
 
-  .equipment-grid-three {
+
+  .equipment-index {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
+  .equipment-index a:nth-child(4) {
+    border-right: 0;
+  }
+
+
+  .equipment-index a:nth-child(n + 5) {
+    border-top: 1px solid var(--mach-border);
+  }
+
+
+  .equipment-group-header {
+    grid-template-columns: 60px 1fr;
+  }
+
+
+  .equipment-group-header > p {
+    grid-column: 2;
+    max-width: 600px;
+  }
+
+
+  .equipment-grid-3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1561,221 +936,258 @@
 
 
 /* =========================================================
-   RESPONSIVE — 900px
+   MOBILE
 ========================================================= */
 
 @media (max-width: 900px) {
 
   .machinery-hero {
-    min-height: 690px;
+    padding:
+      clamp(76px, 10vw, 110px)
+      0
+      clamp(72px, 9vw, 95px);
   }
+
 
   .machinery-hero-inner {
-    min-height: 690px;
-    padding-top: 65px;
-    padding-bottom: 65px;
-  }
-
-  .machinery-hero-overlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(16,24,32,0.97),
-        rgba(16,24,32,0.78)
-      );
-  }
-
-  .machinery-index-inner {
     display: block;
   }
 
-  .machinery-index-label {
-    width: 100%;
+
+  .machinery-hero-side {
+    display: none;
+  }
+
+
+  .machinery-hero h1 {
+    font-size: clamp(46px, 12vw, 72px);
+  }
+
+
+  .heading-layout {
+    display: block;
+  }
+
+
+  .heading-layout p {
+    max-width: 620px;
+
+    margin-top: 28px;
+  }
+
+
+  .equipment-index {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .equipment-index a {
+    min-height: 110px;
+  }
+
+
+  .equipment-index a:nth-child(4) {
+    border-right: 1px solid var(--mach-border);
+  }
+
+
+  .equipment-index a:nth-child(even) {
     border-right: 0;
-    border-bottom: 1px solid #e7e9eb;
   }
 
-  .machinery-index-links a {
-    min-height: 58px;
+
+  .equipment-index a:nth-child(n + 3) {
+    border-top: 1px solid var(--mach-border);
   }
 
-  .machinery-intro-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
 
-  .machinery-intro-copy {
-    padding-top: 0;
-  }
-
-  .machinery-detail {
+  .equipment-group {
     padding: 80px 0;
   }
 
-  .machinery-detail-heading {
-    grid-template-columns: 75px minmax(0, 1fr);
-    gap: 25px;
-  }
 
-  .machinery-number {
-    font-size: 40px;
-  }
-
-  .equipment-card-wide {
+  .equipment-grid,
+  .equipment-grid-3 {
     grid-template-columns: 1fr;
   }
 
-  .equipment-card-wide .equipment-image {
+
+  .equipment-image,
+  .equipment-grid-3 .equipment-image {
     height: 330px;
   }
 
-  .machinery-execution-inner {
-    padding: 45px;
-  }
 
   .machinery-cta-inner {
     align-items: flex-start;
     flex-direction: column;
+
+    padding: 45px 35px;
   }
 
 }
 
 
 /* =========================================================
-   RESPONSIVE — 600px
+   SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
 
   .machinery-hero {
-    min-height: 650px;
+    padding:
+      76px 0
+      72px;
   }
 
-  .machinery-hero-inner {
-    min-height: 650px;
-    padding-top: 55px;
-    padding-bottom: 55px;
-  }
 
   .machinery-hero h1 {
-    font-size: clamp(46px, 14vw, 70px);
+    font-size: clamp(43px, 14vw, 62px);
   }
 
-  .machinery-hero-description {
-    margin-top: 24px;
+
+  .hero-description {
+    margin-top: 23px;
+
     font-size: 15px;
     line-height: 1.7;
   }
 
-  .machinery-hero-btn {
-    min-height: 52px;
+
+  .hero-button {
+    margin-top: 29px;
   }
 
-  .machinery-index-links {
-    display: block;
-  }
-
-  .machinery-index-links a {
-    width: 100%;
-    min-height: 53px;
-    border-right: 0;
-    border-bottom: 1px solid #e7e9eb;
-  }
 
   .machinery-intro {
-    padding: 70px 0 50px;
+    padding:
+      75px 0
+      20px;
   }
 
-  .machinery-intro-heading h2 {
-    font-size: 39px;
+
+  .section-label {
+    margin-bottom: 22px;
   }
 
-  .machinery-detail {
-    padding: 65px 0;
+
+  .heading-layout h2 {
+    font-size: 36px;
   }
 
-  .machinery-detail-heading {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin-bottom: 32px;
-  }
 
-  .machinery-number {
-    font-size: 32px;
-  }
-
-  .machinery-detail-heading h3 {
-    font-size: 34px;
-  }
-
-  .equipment-grid,
-  .equipment-grid-three {
-    grid-template-columns: 1fr;
-  }
-
-  .equipment-image {
-    height: 250px;
-  }
-
-  .equipment-card-body {
-    padding: 24px 22px 27px;
-  }
-
-  .equipment-card-body h4 {
-    font-size: 19px;
-  }
-
-  .equipment-card-wide .equipment-image {
-    height: 250px;
-  }
-
-  .equipment-card-wide .equipment-card-body {
-    padding: 30px 24px;
-  }
-
-  .survey-spec-panel {
-    min-height: 250px;
-  }
-
-  .machinery-execution {
-    padding: 70px 0;
-  }
-
-  .machinery-execution-inner {
-    padding: 35px 25px;
-  }
-
-  .machinery-execution-inner::before {
-    width: 55px;
-    height: 55px;
-    right: 20px;
-    top: 20px;
-  }
-
-  .machinery-execution h2 {
-    font-size: 32px;
-    line-height: 1.15;
-  }
-
-  .machinery-execution h2 span {
-    display: none;
-  }
-
-  .machinery-execution p {
+  .heading-layout p {
     font-size: 14px;
   }
 
-  .machinery-cta {
+
+  .equipment-index {
+    margin-top: 48px;
+  }
+
+
+  .equipment-index a {
+    min-height: 105px;
+
+    padding:
+      15px
+      14px
+      17px;
+
+    font-size: 12px;
+  }
+
+
+  .equipment-group {
     padding: 70px 0;
   }
 
-  .machinery-cta h2 {
-    font-size: 42px;
+
+  .equipment-group-header {
+    display: block;
+
+    margin-bottom: 38px;
   }
+
+
+  .group-number {
+    margin-bottom: 18px;
+  }
+
+
+  .equipment-group-header > p {
+    margin-top: 22px;
+
+    font-size: 14px;
+  }
+
+
+  .equipment-group-header h2 {
+    font-size: 31px;
+  }
+
+
+  .equipment-image,
+  .equipment-grid-3 .equipment-image {
+    height: 250px;
+  }
+
+
+  .equipment-card-content {
+    padding: 24px 22px 27px;
+  }
+
+
+  .equipment-card-content h3 {
+    font-size: 21px;
+  }
+
+
+  .equipment-card-content p {
+    font-size: 13px;
+  }
+
+
+  .execution-section {
+    padding: 90px 0;
+  }
+
+
+  .execution-content h2 {
+    font-size: 43px;
+  }
+
+
+  .execution-content p {
+    display: block;
+
+    font-size: 13px;
+  }
+
+
+  .execution-content p span {
+    margin: 0 5px;
+  }
+
+
+  .machinery-cta {
+    padding-bottom: 75px;
+  }
+
+
+  .machinery-cta-inner {
+    padding: 38px 25px;
+  }
+
+
+  .machinery-cta-inner h2 {
+    font-size: 34px;
+  }
+
 
   .machinery-cta-button {
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
   }
 
 }
@@ -1790,12 +1202,14 @@
   .reveal {
     opacity: 1;
     transform: none;
+
     transition: none;
   }
 
+
   .equipment-card,
   .equipment-image img,
-  .machinery-hero-btn,
+  .hero-button,
   .machinery-cta-button {
     transition: none;
   }
