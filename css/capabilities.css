@@ -1,7 +1,7 @@
 /* =========================================================
    ARCSONS — CAPABILITIES PAGE
    PAGE 4 — EXTENDED EPC CAPABILITIES
-   ========================================================= */
+========================================================= */
 
 
 /* =========================================================
@@ -155,12 +155,6 @@
    HERO CONTENT
 ========================================================= */
 
-/*
-   IMPORTANT:
-   Uses the existing global .container.
-   This keeps the hero aligned with Services/About pages.
-*/
-
 .capabilities-hero-inner {
   position: relative;
   z-index: 2;
@@ -168,7 +162,6 @@
   padding-top: 92px;
   padding-bottom: 96px;
 }
-
 
 .capabilities-hero-top {
   display: flex;
@@ -179,7 +172,6 @@
   margin-bottom: 26px;
 }
 
-
 .capabilities-hero-code {
   color: rgba(255, 255, 255, 0.4);
 
@@ -188,7 +180,6 @@
 
   letter-spacing: 0.16em;
 }
-
 
 .capabilities-hero-kicker {
   margin: 0 0 14px;
@@ -200,7 +191,6 @@
 
   letter-spacing: 0.07em;
 }
-
 
 .capabilities-hero h1 {
   max-width: 850px;
@@ -216,7 +206,6 @@
   line-height: 0.99;
 }
 
-
 .capabilities-hero h1 em {
   color: var(--orange);
 
@@ -224,7 +213,6 @@
   font-style: normal;
   font-weight: 400;
 }
-
 
 .capabilities-hero-description {
   max-width: 610px;
@@ -236,7 +224,6 @@
   font-size: 15px;
   line-height: 1.8;
 }
-
 
 .capabilities-hero .button {
   margin-top: 4px;
@@ -272,7 +259,6 @@
   background: #fff;
 }
 
-
 .capabilities-intro-grid {
   display: grid;
 
@@ -280,7 +266,6 @@
 
   gap: 90px;
 }
-
 
 .capabilities-intro-heading h2 {
   max-width: 500px;
@@ -296,7 +281,6 @@
   line-height: 1.1;
 }
 
-
 .capabilities-intro-heading h2 em {
   color: var(--orange);
 
@@ -305,7 +289,6 @@
   font-weight: 400;
 }
 
-
 .capabilities-rule {
   width: 58px;
   height: 3px;
@@ -313,11 +296,9 @@
   background: var(--orange);
 }
 
-
 .capabilities-intro-copy {
   padding-top: 35px;
 }
-
 
 .capabilities-intro-copy p {
   max-width: 670px;
@@ -329,7 +310,6 @@
   font-size: 15px;
   line-height: 1.85;
 }
-
 
 .capabilities-intro-copy .intro-lead {
   color: var(--ink);
@@ -351,7 +331,6 @@
   background: #f5f6f6;
 }
 
-
 .capability-section-heading {
   display: grid;
 
@@ -363,7 +342,6 @@
 
   margin-bottom: 50px;
 }
-
 
 .capability-section-heading h2 {
   max-width: 620px;
@@ -379,7 +357,6 @@
   line-height: 1.1;
 }
 
-
 .capability-section-heading h2 em {
   color: var(--orange);
 
@@ -387,7 +364,6 @@
   font-style: normal;
   font-weight: 400;
 }
-
 
 .capability-section-heading > p {
   max-width: 410px;
@@ -413,7 +389,6 @@
   border-top: 1px solid #dfe3e5;
   border-left: 1px solid #dfe3e5;
 }
-
 
 .capability-card {
   position: relative;
@@ -441,7 +416,6 @@
     border-color 0.28s ease;
 }
 
-
 .capability-card::before {
   content: "";
 
@@ -458,7 +432,6 @@
   transition: height 0.28s ease;
 }
 
-
 .capability-card:hover {
   z-index: 2;
 
@@ -469,7 +442,6 @@
   box-shadow:
     0 18px 40px rgba(16, 24, 32, 0.09);
 }
-
 
 .capability-card:hover::before {
   height: 100%;
@@ -488,7 +460,6 @@
 
   padding-top: 2px;
 }
-
 
 .capability-card-number::after {
   content: "";
@@ -510,7 +481,6 @@
   padding-right: 25px;
 }
 
-
 .capability-category {
   display: block;
 
@@ -527,7 +497,6 @@
   text-transform: uppercase;
 }
 
-
 .capability-card h3 {
   max-width: 410px;
 
@@ -543,7 +512,6 @@
   letter-spacing: -0.035em;
   line-height: 1.22;
 }
-
 
 .capability-card p {
   max-width: 450px;
@@ -586,7 +554,6 @@
     border-color 0.25s ease;
 }
 
-
 .capability-card:hover .capability-arrow {
   border-color: var(--orange);
 
@@ -611,7 +578,6 @@
 
   color: #fff;
 }
-
 
 .delivery-models::before {
   content: "";
@@ -638,12 +604,10 @@
   pointer-events: none;
 }
 
-
 .delivery-models > .container {
   position: relative;
   z-index: 1;
 }
-
 
 .delivery-heading {
   display: grid;
@@ -656,7 +620,6 @@
 
   margin-bottom: 48px;
 }
-
 
 .delivery-heading h2 {
   max-width: 620px;
@@ -672,7 +635,6 @@
   line-height: 1.08;
 }
 
-
 .delivery-heading h2 em {
   color: var(--orange);
 
@@ -680,7 +642,6 @@
   font-style: normal;
   font-weight: 400;
 }
-
 
 .delivery-heading > p {
   max-width: 420px;
@@ -705,7 +666,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   border-left: 1px solid rgba(255, 255, 255, 0.12);
 }
-
 
 .delivery-model {
   min-height: 105px;
@@ -734,7 +694,6 @@
     color 0.25s ease;
 }
 
-
 .delivery-model:hover {
   background: rgba(244, 119, 33, 0.1);
 
@@ -757,7 +716,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-
 .delivery-disclaimer > span {
   flex: 0 0 auto;
 
@@ -768,7 +726,6 @@
 
   letter-spacing: 0.15em;
 }
-
 
 .delivery-disclaimer p {
   max-width: 850px;
@@ -790,7 +747,6 @@
   background: #fff;
 }
 
-
 .engineering-grid {
   display: grid;
 
@@ -799,7 +755,6 @@
   gap: 90px;
 }
 
-
 .engineering-intro {
   position: sticky;
 
@@ -807,7 +762,6 @@
 
   align-self: start;
 }
-
 
 .engineering-intro h2 {
   max-width: 450px;
@@ -823,7 +777,6 @@
   line-height: 1.08;
 }
 
-
 .engineering-intro h2 em {
   color: var(--orange);
 
@@ -831,7 +784,6 @@
   font-style: normal;
   font-weight: 400;
 }
-
 
 .engineering-intro p {
   max-width: 370px;
@@ -856,7 +808,6 @@
   border-left: 1px solid #dfe3e5;
 }
 
-
 .engineering-item {
   display: grid;
 
@@ -876,13 +827,11 @@
     padding-left 0.25s ease;
 }
 
-
 .engineering-item:hover {
   padding-left: 25px;
 
   background: #f5f6f6;
 }
-
 
 .engineering-item span {
   color: var(--orange);
@@ -891,7 +840,6 @@
 
   font-size: 13px;
 }
-
 
 .engineering-item strong {
   color: var(--ink);
@@ -913,13 +861,11 @@
   background: #f5f6f6;
 }
 
-
 .qhs-heading {
   max-width: 780px;
 
   margin-bottom: 50px;
 }
-
 
 .qhs-heading h2 {
   margin: 16px 0 17px;
@@ -933,7 +879,6 @@
   line-height: 1.08;
 }
 
-
 .qhs-heading h2 em {
   color: var(--orange);
 
@@ -941,7 +886,6 @@
   font-style: normal;
   font-weight: 400;
 }
-
 
 .qhs-heading p {
   max-width: 650px;
@@ -965,7 +909,6 @@
   gap: 22px;
 }
 
-
 .qhs-card {
   position: relative;
 
@@ -976,7 +919,6 @@
   border: 1px solid #dfe3e5;
 }
 
-
 .qhs-card-top {
   display: flex;
 
@@ -986,7 +928,6 @@
   margin-bottom: 38px;
 }
 
-
 .qhs-number {
   color: var(--orange);
 
@@ -994,7 +935,6 @@
 
   font-size: 23px;
 }
-
 
 .qhs-label {
   color: #8a9399;
@@ -1006,7 +946,6 @@
 
   text-transform: uppercase;
 }
-
 
 .qhs-card h3 {
   margin: 0 0 28px;
@@ -1030,7 +969,6 @@
   border-top: 1px solid #e1e4e6;
 }
 
-
 .qhs-list div {
   position: relative;
 
@@ -1043,7 +981,6 @@
   font-size: 12px;
   line-height: 1.5;
 }
-
 
 .qhs-list div::before {
   content: "";
@@ -1070,21 +1007,17 @@
   color: #fff;
 }
 
-
 .safety-card .qhs-label {
   color: rgba(255, 255, 255, 0.4);
 }
-
 
 .safety-card h3 {
   color: #fff;
 }
 
-
 .safety-card .qhs-list {
   border-color: rgba(255, 255, 255, 0.12);
 }
-
 
 .safety-card .qhs-list div {
   border-color: rgba(255, 255, 255, 0.12);
@@ -1111,7 +1044,6 @@
   border: 1px solid #dfe3e5;
 }
 
-
 .qhs-disclaimer span {
   flex: 0 0 auto;
 
@@ -1122,7 +1054,6 @@
 
   letter-spacing: 0.15em;
 }
-
 
 .qhs-disclaimer p {
   max-width: 900px;
@@ -1150,7 +1081,6 @@
   color: #fff;
 }
 
-
 .capabilities-cta-pattern {
   position: absolute;
 
@@ -1169,7 +1099,6 @@
   background-size: 75px 75px;
 }
 
-
 .capabilities-cta-inner {
   position: relative;
   z-index: 1;
@@ -1185,7 +1114,6 @@
   padding-bottom: 70px;
 }
 
-
 .capabilities-cta h2 {
   max-width: 650px;
 
@@ -1200,7 +1128,6 @@
   line-height: 1.1;
 }
 
-
 .capabilities-cta h2 em {
   color: #fff;
 
@@ -1208,7 +1135,6 @@
   font-style: normal;
   font-weight: 400;
 }
-
 
 .capabilities-cta p {
   max-width: 590px;
@@ -1232,7 +1158,6 @@
   align-items: center;
   gap: 14px;
 }
-
 
 .capabilities-hero .button-orange span,
 .capabilities-cta .button-white span {
@@ -1317,7 +1242,7 @@
 
 @media (max-width: 700px) {
 
-  /* Hero */
+  /* HERO */
 
   .capabilities-hero {
     min-height: auto;
@@ -1330,11 +1255,6 @@
     opacity: 0.26;
   }
 
-
-  /*
-     Same mobile container system as the other pages.
-     Do NOT create another width here.
-  */
 
   .capabilities-hero-inner {
     padding-top: 65px;
@@ -1417,7 +1337,7 @@
   }
 
 
-  /* Intro */
+  /* INTRO */
 
   .capabilities-intro {
     padding-top: 70px;
@@ -1444,7 +1364,7 @@
   }
 
 
-  /* Sectors */
+  /* SECTORS */
 
   .capability-sectors {
     padding-top: 70px;
@@ -1472,7 +1392,7 @@
   }
 
 
-  /* Cards */
+  /* CARDS */
 
   .capability-card {
     grid-template-columns: 40px 1fr;
@@ -1534,7 +1454,7 @@
   }
 
 
-  /* Delivery */
+  /* DELIVERY */
 
   .delivery-models {
     padding: 70px 0;
@@ -1567,7 +1487,7 @@
   }
 
 
-  /* Engineering */
+  /* ENGINEERING */
 
   .engineering-section {
     padding-top: 70px;
