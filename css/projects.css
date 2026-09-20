@@ -1,31 +1,70 @@
 /* =========================================================
    ARCSONS — PROJECTS & INDUSTRIES
+   TYPOGRAPHY + ALIGNMENT REFINED
+   ORIGINAL VISUAL STYLE PRESERVED
 ========================================================= */
+
+:root {
+
+  --orange: #f0782e;
+  --orange-dark: #d95d19;
+
+  --dark: #101820;
+  --dark-2: #151f28;
+  --dark-3: #1b2731;
+
+  --text: #18212a;
+  --muted: #69747d;
+
+  --light: #f5f6f7;
+  --white: #ffffff;
+
+  --border: #e2e6e9;
+
+  --container: 1240px;
+
+  --shadow:
+    0 25px 70px rgba(16, 24, 32, .10);
+}
 
 
 /* =========================================================
-   PAGE STRUCTURE
-   Shared style.css handles global reset/container
+   RESET
 ========================================================= */
 
-.projects-hero,
-.section-space,
-.project-section,
-.verification-section,
-.industries-section,
-.delivery-section,
-.project-cta {
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.projects-hero > .container,
-.section-space > .container,
-.project-section > .container,
-.verification-section > .container,
-.industries-section > .container,
-.delivery-section > .container,
-.project-cta > .container {
-  width: min(var(--max-width), calc(100% - 72px));
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(100% - 48px, var(--container));
   margin-inline: auto;
 }
 
@@ -93,8 +132,6 @@
   position: relative;
   z-index: 2;
 
-  width: 100%;
-
   min-height: 670px;
 
   display: grid;
@@ -111,7 +148,6 @@
 }
 
 .hero-copy {
-  width: 100%;
   max-width: 670px;
 }
 
@@ -124,8 +160,7 @@
 
   color: var(--orange);
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: .22em;
@@ -165,8 +200,7 @@
 
   color: #aeb8bf;
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.8;
 }
 
@@ -189,7 +223,6 @@
 
   padding: 0 22px;
 
-  font-family: "DM Sans", sans-serif;
   font-size: 12px;
   font-weight: 700;
 
@@ -214,26 +247,25 @@
 
 .btn-outline {
   border: 1px solid rgba(255,255,255,.25);
-
   color: var(--white);
 }
 
 .btn-outline:hover {
   border-color: var(--orange);
-
   color: var(--orange);
 }
 
 
 /* =========================================================
    HERO VISUAL
+   ORIGINAL PREMIUM VISUAL PRESERVED
 ========================================================= */
 
 .hero-visual {
   position: relative;
 
-  width: 100%;
   max-width: 570px;
+  width: 100%;
 
   margin-left: auto;
 }
@@ -241,7 +273,6 @@
 .hero-image-wrap {
   position: relative;
 
-  width: 100%;
   height: 450px;
 
   overflow: hidden;
@@ -290,8 +321,7 @@
 
   color: white;
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
 
   letter-spacing: .18em;
@@ -326,7 +356,6 @@
 
   margin-bottom: 12px;
 
-  font-family: "DM Sans", sans-serif;
   font-size: 10px;
 
   opacity: .7;
@@ -337,8 +366,7 @@
 
   font-family: "Manrope", sans-serif;
 
-  font-size: 19px;
-  font-weight: 600;
+  font-size: 18px;
   line-height: 1.1;
 }
 
@@ -347,7 +375,6 @@
 
   margin-top: 5px;
 
-  font-family: "DM Sans", sans-serif;
   font-size: 10px;
 
   opacity: .85;
@@ -359,7 +386,7 @@
 ========================================================= */
 
 .section-space {
-  padding: 120px 0;
+  padding: 100px 0;
 }
 
 .section-label {
@@ -367,7 +394,6 @@
   align-items: center;
   gap: 13px;
 
-  font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 
@@ -387,7 +413,6 @@
 
   color: var(--orange);
 
-  font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 
@@ -395,8 +420,6 @@
 }
 
 .section-heading {
-  width: 100%;
-
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -413,7 +436,6 @@
 
   color: var(--orange);
 
-  font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 
@@ -424,6 +446,7 @@
 .intro-content h2,
 .delivery-copy h2,
 .industry-heading h2 {
+
   font-family: "Manrope", sans-serif;
 
   font-size: clamp(30px, 3vw, 43px);
@@ -442,12 +465,10 @@
 }
 
 .section-heading-copy {
-  width: 100%;
   max-width: 430px;
 
   color: var(--muted);
 
-  font-family: "DM Sans", sans-serif;
   font-size: 14px;
   line-height: 1.8;
 }
@@ -458,8 +479,6 @@
 ========================================================= */
 
 .intro-grid {
-  width: 100%;
-
   display: grid;
 
   grid-template-columns:
@@ -467,12 +486,9 @@
     minmax(0, 1fr);
 
   gap: 80px;
-
-  align-items: start;
 }
 
 .intro-content {
-  width: 100%;
   max-width: 830px;
 }
 
@@ -482,7 +498,6 @@
 
 .intro-content h2 em {
   color: var(--orange);
-
   font-style: normal;
 }
 
@@ -493,7 +508,6 @@
 
   color: var(--muted);
 
-  font-family: "DM Sans", sans-serif;
   font-size: 14px;
   line-height: 1.85;
 }
@@ -504,29 +518,22 @@
 ========================================================= */
 
 .project-section {
-  padding: 120px 0;
+  padding: 100px 0;
 
   background: var(--light);
 }
 
 .project-grid {
-  width: 100%;
-
   display: grid;
 
   grid-template-columns:
     repeat(2, minmax(0, 1fr));
 
   gap: 22px;
-
-  align-items: stretch;
 }
 
 .project-card {
   position: relative;
-
-  width: 100%;
-  min-width: 0;
 
   overflow: hidden;
 
@@ -553,7 +560,6 @@
 .project-image {
   position: relative;
 
-  width: 100%;
   height: 290px;
 
   overflow: hidden;
@@ -576,7 +582,6 @@
 
 .project-card:hover .project-image img {
   transform: scale(1.05);
-
   filter: saturate(.95);
 }
 
@@ -609,14 +614,11 @@
 
   color: white;
 
-  font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 }
 
 .project-content {
-  width: 100%;
-
   padding: 28px;
 }
 
@@ -627,8 +629,7 @@
 
   color: var(--orange);
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
 
   letter-spacing: .15em;
@@ -637,8 +638,8 @@
 .project-content h3 {
   font-family: "Manrope", sans-serif;
 
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 20px;
+  line-height: 1.2;
 
   letter-spacing: -.025em;
 
@@ -650,9 +651,8 @@
 .project-content p {
   color: var(--muted);
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 12px;
-  line-height: 1.65;
+  font-size: 13px;
+  line-height: 1.7;
 }
 
 .project-scope {
@@ -671,7 +671,6 @@
 
   color: #59646d;
 
-  font-family: "DM Sans", sans-serif;
   font-size: 9px;
   font-weight: 600;
 }
@@ -757,8 +756,6 @@
 .verification-box {
   position: relative;
 
-  width: 100%;
-
   display: grid;
 
   grid-template-columns:
@@ -766,8 +763,6 @@
     minmax(0, 1fr);
 
   gap: 30px;
-
-  align-items: start;
 
   padding: 38px 42px;
 
@@ -796,16 +791,12 @@
   transform: rotate(45deg);
 }
 
-.verification-copy {
-  min-width: 0;
-}
-
 .verification-copy h3 {
   margin-bottom: 10px;
 
   font-family: "Manrope", sans-serif;
 
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
 
   letter-spacing: -.02em;
@@ -816,9 +807,8 @@
 
   color: var(--muted);
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 12px;
-  line-height: 1.65;
+  font-size: 13px;
+  line-height: 1.8;
 }
 
 .verification-line {
@@ -839,13 +829,13 @@
 ========================================================= */
 
 .industries-section {
-  position: relative;
-
-  padding: 120px 0;
+  padding: 100px 0;
 
   background: var(--dark);
 
   color: var(--white);
+
+  position: relative;
 
   overflow: hidden;
 }
@@ -869,8 +859,6 @@
 .industry-heading {
   position: relative;
 
-  width: 100%;
-
   display: grid;
 
   grid-template-columns:
@@ -878,8 +866,6 @@
     minmax(0, 1fr);
 
   gap: 80px;
-
-  align-items: start;
 
   margin-bottom: 70px;
 }
@@ -893,14 +879,11 @@
 }
 
 .industry-heading h2 {
-  width: 100%;
   max-width: 780px;
 }
 
 .industry-grid {
   position: relative;
-
-  width: 100%;
 
   display: grid;
 
@@ -912,8 +895,6 @@
 }
 
 .industry-item {
-  width: 100%;
-  min-width: 0;
   min-height: 130px;
 
   display: grid;
@@ -946,7 +927,6 @@
 .industry-number {
   color: var(--orange);
 
-  font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 }
@@ -963,7 +943,6 @@
 .industry-item p {
   color: #7f8a92;
 
-  font-family: "DM Sans", sans-serif;
   font-size: 11px;
   line-height: 1.5;
 }
@@ -988,14 +967,12 @@
 ========================================================= */
 
 .delivery-section {
-  padding: 120px 0;
+  padding: 100px 0;
 
   background: var(--white);
 }
 
 .delivery-grid {
-  width: 100%;
-
   display: grid;
 
   grid-template-columns:
@@ -1008,7 +985,6 @@
 }
 
 .delivery-copy {
-  width: 100%;
   max-width: 500px;
 }
 
@@ -1019,9 +995,8 @@
 .delivery-copy p {
   color: var(--muted);
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 12px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 .text-link {
@@ -1033,8 +1008,7 @@
 
   color: var(--dark);
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
 
   border-bottom: 1px solid var(--orange);
@@ -1047,8 +1021,6 @@
 }
 
 .delivery-steps {
-  width: 100%;
-
   display: grid;
 
   grid-template-columns:
@@ -1080,7 +1052,6 @@
 .delivery-step span {
   color: var(--orange);
 
-  font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 }
@@ -1128,20 +1099,13 @@
   position: relative;
   z-index: 2;
 
-  width: 100%;
-
   min-height: 360px;
 
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 
   gap: 50px;
-}
-
-.cta-inner > div {
-  min-width: 0;
 }
 
 .cta-inner .section-kicker {
@@ -1171,7 +1135,6 @@
 
   margin-top: 20px;
 
-  font-family: "DM Sans", sans-serif;
   font-size: 14px;
 
   line-height: 1.7;
@@ -1194,7 +1157,6 @@
 
   color: white;
 
-  font-family: "DM Sans", sans-serif;
   font-size: 12px;
   font-weight: 700;
 
@@ -1238,19 +1200,13 @@
 
 
 /* =========================================================
-   RESPONSIVE — 900
+   RESPONSIVE — 900px
 ========================================================= */
 
 @media (max-width: 900px) {
 
-  .projects-hero > .container,
-  .section-space > .container,
-  .project-section > .container,
-  .verification-section > .container,
-  .industries-section > .container,
-  .delivery-section > .container,
-  .project-cta > .container {
-    width: min(100% - 48px, var(--max-width));
+  .container {
+    width: min(100% - 48px, var(--container));
   }
 
 
@@ -1261,18 +1217,19 @@
 
     min-height: auto;
 
+    gap: 55px;
+
     padding-block: 80px 90px;
   }
 
   .hero-copy {
-    max-width: 670px;
+    max-width: 100%;
   }
 
   .hero-visual {
-    width: 100%;
-    max-width: 650px;
+    margin-inline: 0;
 
-    margin-left: 0;
+    max-width: 650px;
   }
 
   .hero-image-wrap {
@@ -1287,11 +1244,6 @@
     grid-template-columns: 1fr;
 
     gap: 30px;
-  }
-
-  .intro-content,
-  .industry-heading h2 {
-    max-width: 830px;
   }
 
 
@@ -1318,7 +1270,7 @@
   }
 
   .delivery-copy {
-    max-width: 650px;
+    max-width: 700px;
   }
 
 
@@ -1330,6 +1282,7 @@
     flex-direction: column;
 
     align-items: flex-start;
+
     justify-content: center;
   }
 
@@ -1337,19 +1290,13 @@
 
 
 /* =========================================================
-   RESPONSIVE — 600
+   RESPONSIVE — 600px
 ========================================================= */
 
 @media (max-width: 600px) {
 
-  .projects-hero > .container,
-  .section-space > .container,
-  .project-section > .container,
-  .verification-section > .container,
-  .industries-section > .container,
-  .delivery-section > .container,
-  .project-cta > .container {
-    width: min(100% - 36px, var(--max-width));
+  .container {
+    width: min(100% - 36px, var(--container));
   }
 
 
@@ -1362,16 +1309,14 @@
 
   .hero-inner {
     padding-block: 65px 75px;
-  }
 
-  .hero-copy,
-  .hero-visual {
-    width: 100%;
-    max-width: none;
+    gap: 45px;
   }
 
   .hero-copy h1 {
-    font-size: 30px;
+    font-size: clamp(38px, 12vw, 54px);
+
+    line-height: 1.05;
   }
 
   .hero-copy p {
@@ -1410,15 +1355,13 @@
   }
 
   .section-heading {
-    width: 100%;
-
     flex-direction: column;
 
     align-items: flex-start;
 
     gap: 25px;
 
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 
   .section-heading h2,
@@ -1426,35 +1369,22 @@
   .delivery-copy h2,
   .industry-heading h2 {
     font-size: 30px;
+
+    line-height: 1.16;
   }
-
-  .section-heading-copy {
-    max-width: 600px;
-  }
-
-
-  /* INTRO */
 
   .intro-grid {
-    grid-template-columns: 1fr;
-
     gap: 25px;
   }
 
-  .intro-content {
-    max-width: none;
+  .industry-heading {
+    gap: 25px;
+
+    margin-bottom: 45px;
   }
 
 
-  /* PROJECT */
-
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card {
-    width: 100%;
-  }
+  /* PROJECT CARDS */
 
   .project-image {
     height: 240px;
@@ -1465,7 +1395,7 @@
   }
 
   .project-content h3 {
-    font-size: 16px;
+    font-size: 19px;
   }
 
 
@@ -1483,20 +1413,12 @@
     gap: 20px;
   }
 
+  .verification-copy h3 {
+    font-size: 19px;
+  }
+
 
   /* INDUSTRIES */
-
-  .industry-heading {
-    grid-template-columns: 1fr;
-
-    gap: 25px;
-
-    margin-bottom: 45px;
-  }
-
-  .industry-grid {
-    grid-template-columns: 1fr;
-  }
 
   .industry-item {
     min-height: 110px;
@@ -1520,16 +1442,6 @@
 
   /* DELIVERY */
 
-  .delivery-grid {
-    grid-template-columns: 1fr;
-
-    gap: 45px;
-  }
-
-  .delivery-copy {
-    max-width: none;
-  }
-
   .delivery-steps {
     grid-template-columns: 1fr;
   }
@@ -1541,8 +1453,6 @@
     min-height: 390px;
 
     padding-block: 70px;
-
-    align-items: flex-start;
   }
 
   .cta-inner h2 {
@@ -1563,6 +1473,10 @@
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
 
   *,
   *::before,
