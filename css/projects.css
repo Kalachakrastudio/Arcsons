@@ -1,12 +1,11 @@
 /* =========================================================
    ARCSONS — PROJECTS & INDUSTRIES
-   STRUCTURE + ALIGNMENT
-   Visual design, colors and typography preserved
 ========================================================= */
 
 
 /* =========================================================
    PAGE STRUCTURE
+   Shared style.css handles global reset/container
 ========================================================= */
 
 .projects-hero,
@@ -95,6 +94,7 @@
   z-index: 2;
 
   width: 100%;
+
   min-height: 670px;
 
   display: grid;
@@ -124,6 +124,7 @@
 
   color: var(--orange);
 
+  font-family: "DM Sans", sans-serif;
   font-size: 11px;
   font-weight: 700;
 
@@ -142,13 +143,13 @@
 .hero-copy h1 {
   font-family: "Manrope", sans-serif;
 
-  font-size: clamp(48px, 6vw, 82px);
+  font-size: clamp(43px, 5.3vw, 76px);
 
-  line-height: .98;
+  line-height: 1.06;
 
   letter-spacing: -.055em;
 
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .hero-copy h1 span {
@@ -164,7 +165,8 @@
 
   color: #aeb8bf;
 
-  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
   line-height: 1.8;
 }
 
@@ -187,7 +189,8 @@
 
   padding: 0 22px;
 
-  font-size: 11px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
   font-weight: 700;
 
   letter-spacing: .05em;
@@ -217,6 +220,7 @@
 
 .btn-outline:hover {
   border-color: var(--orange);
+
   color: var(--orange);
 }
 
@@ -286,7 +290,8 @@
 
   color: white;
 
-  font-size: 9px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: .18em;
@@ -321,6 +326,7 @@
 
   margin-bottom: 12px;
 
+  font-family: "DM Sans", sans-serif;
   font-size: 10px;
 
   opacity: .7;
@@ -332,6 +338,7 @@
   font-family: "Manrope", sans-serif;
 
   font-size: 19px;
+  font-weight: 600;
   line-height: 1.1;
 }
 
@@ -340,6 +347,7 @@
 
   margin-top: 5px;
 
+  font-family: "DM Sans", sans-serif;
   font-size: 10px;
 
   opacity: .85;
@@ -359,6 +367,7 @@
   align-items: center;
   gap: 13px;
 
+  font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 
@@ -378,6 +387,7 @@
 
   color: var(--orange);
 
+  font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 
@@ -403,6 +413,7 @@
 
   color: var(--orange);
 
+  font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 
@@ -415,13 +426,13 @@
 .industry-heading h2 {
   font-family: "Manrope", sans-serif;
 
-  font-size: clamp(36px, 4vw, 58px);
+  font-size: clamp(30px, 3vw, 43px);
 
-  line-height: 1.05;
+  line-height: 1.16;
 
   letter-spacing: -.045em;
 
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .section-heading h2 span,
@@ -436,6 +447,7 @@
 
   color: var(--muted);
 
+  font-family: "DM Sans", sans-serif;
   font-size: 14px;
   line-height: 1.8;
 }
@@ -481,7 +493,8 @@
 
   color: var(--muted);
 
-  font-size: 15px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
   line-height: 1.85;
 }
 
@@ -596,6 +609,7 @@
 
   color: white;
 
+  font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 }
@@ -613,7 +627,8 @@
 
   color: var(--orange);
 
-  font-size: 9px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: .15em;
@@ -622,10 +637,12 @@
 .project-content h3 {
   font-family: "Manrope", sans-serif;
 
-  font-size: 25px;
-  line-height: 1.15;
+  font-size: 16px;
+  line-height: 1.25;
 
   letter-spacing: -.025em;
+
+  font-weight: 700;
 
   margin-bottom: 13px;
 }
@@ -633,8 +650,9 @@
 .project-content p {
   color: var(--muted);
 
-  font-size: 13px;
-  line-height: 1.7;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.65;
 }
 
 .project-scope {
@@ -653,6 +671,7 @@
 
   color: #59646d;
 
+  font-family: "DM Sans", sans-serif;
   font-size: 9px;
   font-weight: 600;
 }
@@ -786,7 +805,8 @@
 
   font-family: "Manrope", sans-serif;
 
-  font-size: 23px;
+  font-size: 16px;
+  font-weight: 700;
 
   letter-spacing: -.02em;
 }
@@ -796,8 +816,9 @@
 
   color: var(--muted);
 
-  font-size: 13px;
-  line-height: 1.8;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.65;
 }
 
 .verification-line {
@@ -925,6 +946,7 @@
 .industry-number {
   color: var(--orange);
 
+  font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 }
@@ -941,6 +963,7 @@
 .industry-item p {
   color: #7f8a92;
 
+  font-family: "DM Sans", sans-serif;
   font-size: 11px;
   line-height: 1.5;
 }
@@ -996,8 +1019,9 @@
 .delivery-copy p {
   color: var(--muted);
 
-  font-size: 14px;
-  line-height: 1.8;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
 }
 
 .text-link {
@@ -1009,7 +1033,8 @@
 
   color: var(--dark);
 
-  font-size: 11px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
   font-weight: 700;
 
   border-bottom: 1px solid var(--orange);
@@ -1055,6 +1080,7 @@
 .delivery-step span {
   color: var(--orange);
 
+  font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 700;
 }
@@ -1062,7 +1088,8 @@
 .delivery-step strong {
   font-family: "Manrope", sans-serif;
 
-  font-size: 17px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 
@@ -1102,6 +1129,7 @@
   z-index: 2;
 
   width: 100%;
+
   min-height: 360px;
 
   display: flex;
@@ -1128,6 +1156,8 @@
   line-height: .98;
 
   letter-spacing: -.05em;
+
+  font-weight: 600;
 }
 
 .cta-inner h2 span {
@@ -1141,6 +1171,7 @@
 
   margin-top: 20px;
 
+  font-family: "DM Sans", sans-serif;
   font-size: 14px;
 
   line-height: 1.7;
@@ -1163,7 +1194,8 @@
 
   color: white;
 
-  font-size: 11px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
   font-weight: 700;
 
   transition:
@@ -1243,6 +1275,10 @@
     margin-left: 0;
   }
 
+  .hero-image-wrap {
+    height: 400px;
+  }
+
 
   /* INTRO */
 
@@ -1259,7 +1295,7 @@
   }
 
 
-  /* PROJECTS */
+  /* PROJECT */
 
   .project-grid {
     grid-template-columns: 1fr;
@@ -1335,7 +1371,7 @@
   }
 
   .hero-copy h1 {
-    font-size: clamp(44px, 14vw, 62px);
+    font-size: 30px;
   }
 
   .hero-copy p {
@@ -1344,6 +1380,7 @@
 
   .hero-actions {
     flex-direction: column;
+
     align-items: stretch;
   }
 
@@ -1388,7 +1425,7 @@
   .intro-content h2,
   .delivery-copy h2,
   .industry-heading h2 {
-    font-size: 38px;
+    font-size: 30px;
   }
 
   .section-heading-copy {
@@ -1428,7 +1465,7 @@
   }
 
   .project-content h3 {
-    font-size: 22px;
+    font-size: 16px;
   }
 
 
@@ -1527,18 +1564,18 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-  .reveal {
-    opacity: 1;
-
-    transform: none;
-  }
-
   *,
   *::before,
   *::after {
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+
+    transform: none;
   }
 
 }
