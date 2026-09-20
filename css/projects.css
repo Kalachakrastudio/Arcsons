@@ -64,7 +64,7 @@ button {
 }
 
 .container {
-  width: min(100% - 48px, var(--container));
+  width: min(var(--container), calc(100% - 72px));
   margin-inline: auto;
 }
 
