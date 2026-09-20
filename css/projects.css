@@ -2,6 +2,8 @@
    ARCSONS — PROJECTS & INDUSTRIES
    ALIGNMENT + STRUCTURE REFINED
    ORIGINAL VISUAL STYLE PRESERVED
+
+   Shared navbar/footer/container styles remain in style.css
 ========================================================= */
 
 :root {
@@ -20,8 +22,6 @@
   --white: #ffffff;
 
   --border: #e2e6e9;
-
-  --container: 1240px;
 
   --shadow:
     0 25px 70px rgba(16, 24, 32, .10);
@@ -65,23 +65,11 @@ button {
 
 
 /* =========================================================
-   CONTAINER
-   ALIGNED WITH ARCSONS SHARED PAGE STRUCTURE
-========================================================= */
-
-.container {
-  width: min(var(--container), calc(100% - 72px));
-  margin-inline: auto;
-}
-
-
-/* =========================================================
    HERO
 ========================================================= */
 
 .projects-hero {
   position: relative;
-
   overflow: hidden;
   isolation: isolate;
 
@@ -266,6 +254,7 @@ button {
 
 /* =========================================================
    HERO VISUAL
+   ORIGINAL PREMIUM VISUAL PRESERVED
 ========================================================= */
 
 .hero-visual {
@@ -275,6 +264,7 @@ button {
   width: 100%;
 
   margin-left: auto;
+
   min-width: 0;
 }
 
@@ -537,6 +527,7 @@ button {
 
 .project-section {
   width: 100%;
+
   padding: 100px 0;
 
   background: var(--light);
@@ -774,6 +765,7 @@ button {
 
 .verification-section {
   width: 100%;
+
   padding: 75px 0;
 
   background: var(--white);
@@ -864,6 +856,7 @@ button {
 
 .industries-section {
   width: 100%;
+
   padding: 100px 0;
 
   background: var(--dark);
@@ -1013,6 +1006,7 @@ button {
 
 .delivery-section {
   width: 100%;
+
   padding: 100px 0;
 
   background: var(--white);
@@ -1159,6 +1153,7 @@ button {
   z-index: 2;
 
   width: 100%;
+
   min-height: 360px;
 
   display: flex;
@@ -1267,10 +1262,8 @@ button {
 
 @media (max-width: 900px) {
 
-  .container {
-    width: min(var(--container), calc(100% - 48px));
-    margin-inline: auto;
-  }
+  /* Shared .container from style.css controls
+     the page alignment, same as Services page. */
 
 
   /* HERO */
@@ -1360,10 +1353,8 @@ button {
 
 @media (max-width: 600px) {
 
-  .container {
-    width: min(var(--container), calc(100% - 36px));
-    margin-inline: auto;
-  }
+  /* Shared .container from style.css controls
+     the page alignment, same as Services page. */
 
 
   /* HERO */
