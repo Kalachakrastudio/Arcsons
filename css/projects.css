@@ -1,6 +1,6 @@
 /* =========================================================
    ARCSONS — PROJECTS & INDUSTRIES
-   TYPOGRAPHY + ALIGNMENT REFINED
+   ALIGNMENT + STRUCTURE REFINED
    ORIGINAL VISUAL STYLE PRESERVED
 ========================================================= */
 
@@ -62,6 +62,12 @@ a {
 button {
   font: inherit;
 }
+
+
+/* =========================================================
+   CONTAINER
+   ALIGNED WITH ARCSONS SHARED PAGE STRUCTURE
+========================================================= */
 
 .container {
   width: min(var(--container), calc(100% - 72px));
@@ -132,6 +138,7 @@ button {
   position: relative;
   z-index: 2;
 
+  width: 100%;
   min-height: 670px;
 
   display: grid;
@@ -149,6 +156,7 @@ button {
 
 .hero-copy {
   max-width: 670px;
+  min-width: 0;
 }
 
 .eyebrow {
@@ -258,7 +266,6 @@ button {
 
 /* =========================================================
    HERO VISUAL
-   ORIGINAL PREMIUM VISUAL PRESERVED
 ========================================================= */
 
 .hero-visual {
@@ -268,6 +275,7 @@ button {
   width: 100%;
 
   margin-left: auto;
+  min-width: 0;
 }
 
 .hero-image-wrap {
@@ -386,6 +394,7 @@ button {
 ========================================================= */
 
 .section-space {
+  width: 100%;
   padding: 100px 0;
 }
 
@@ -427,6 +436,8 @@ button {
   gap: 60px;
 
   margin-bottom: 55px;
+
+  min-width: 0;
 }
 
 .section-number {
@@ -471,6 +482,8 @@ button {
 
   font-size: 14px;
   line-height: 1.8;
+
+  min-width: 0;
 }
 
 
@@ -479,6 +492,8 @@ button {
 ========================================================= */
 
 .intro-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
@@ -486,10 +501,13 @@ button {
     minmax(0, 1fr);
 
   gap: 80px;
+
+  min-width: 0;
 }
 
 .intro-content {
   max-width: 830px;
+  min-width: 0;
 }
 
 .intro-content h2 {
@@ -518,24 +536,31 @@ button {
 ========================================================= */
 
 .project-section {
+  width: 100%;
   padding: 100px 0;
 
   background: var(--light);
 }
 
 .project-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
     repeat(2, minmax(0, 1fr));
 
   gap: 22px;
+
+  min-width: 0;
 }
 
 .project-card {
   position: relative;
 
   overflow: hidden;
+
+  min-width: 0;
 
   background: var(--white);
 
@@ -748,6 +773,7 @@ button {
 ========================================================= */
 
 .verification-section {
+  width: 100%;
   padding: 75px 0;
 
   background: var(--white);
@@ -755,6 +781,8 @@ button {
 
 .verification-box {
   position: relative;
+
+  width: 100%;
 
   display: grid;
 
@@ -765,6 +793,8 @@ button {
   gap: 30px;
 
   padding: 38px 42px;
+
+  min-width: 0;
 
   background: #f8f9fa;
 
@@ -789,6 +819,10 @@ button {
   border: 2px solid white;
 
   transform: rotate(45deg);
+}
+
+.verification-copy {
+  min-width: 0;
 }
 
 .verification-copy h3 {
@@ -829,6 +863,7 @@ button {
 ========================================================= */
 
 .industries-section {
+  width: 100%;
   padding: 100px 0;
 
   background: var(--dark);
@@ -859,6 +894,8 @@ button {
 .industry-heading {
   position: relative;
 
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
@@ -868,6 +905,8 @@ button {
   gap: 80px;
 
   margin-bottom: 70px;
+
+  min-width: 0;
 }
 
 .section-label.light {
@@ -885,6 +924,8 @@ button {
 .industry-grid {
   position: relative;
 
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
@@ -892,6 +933,8 @@ button {
 
   border-top: 1px solid rgba(255,255,255,.12);
   border-left: 1px solid rgba(255,255,255,.12);
+
+  min-width: 0;
 }
 
 .industry-item {
@@ -909,6 +952,8 @@ button {
   gap: 15px;
 
   padding: 25px 28px;
+
+  min-width: 0;
 
   border-right: 1px solid rgba(255,255,255,.12);
   border-bottom: 1px solid rgba(255,255,255,.12);
@@ -967,12 +1012,15 @@ button {
 ========================================================= */
 
 .delivery-section {
+  width: 100%;
   padding: 100px 0;
 
   background: var(--white);
 }
 
 .delivery-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
@@ -982,10 +1030,13 @@ button {
   gap: 100px;
 
   align-items: center;
+
+  min-width: 0;
 }
 
 .delivery-copy {
   max-width: 500px;
+  min-width: 0;
 }
 
 .delivery-copy h2 {
@@ -1021,6 +1072,8 @@ button {
 }
 
 .delivery-steps {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
@@ -1028,6 +1081,8 @@ button {
 
   border-top: 1px solid var(--border);
   border-left: 1px solid var(--border);
+
+  min-width: 0;
 }
 
 .delivery-step {
@@ -1038,6 +1093,8 @@ button {
   justify-content: space-between;
 
   padding: 22px;
+
+  min-width: 0;
 
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -1071,6 +1128,8 @@ button {
 .project-cta {
   position: relative;
 
+  width: 100%;
+
   overflow: hidden;
 
   background: var(--orange);
@@ -1099,6 +1158,7 @@ button {
   position: relative;
   z-index: 2;
 
+  width: 100%;
   min-height: 360px;
 
   display: flex;
@@ -1106,6 +1166,8 @@ button {
   justify-content: space-between;
 
   gap: 50px;
+
+  min-width: 0;
 }
 
 .cta-inner .section-kicker {
@@ -1206,13 +1268,16 @@ button {
 @media (max-width: 900px) {
 
   .container {
-    width: min(100% - 48px, var(--container));
+    width: min(var(--container), calc(100% - 48px));
+    margin-inline: auto;
   }
 
 
   /* HERO */
 
   .hero-inner {
+    width: 100%;
+
     grid-template-columns: 1fr;
 
     min-height: auto;
@@ -1296,7 +1361,8 @@ button {
 @media (max-width: 600px) {
 
   .container {
-    width: min(100% - 36px, var(--container));
+    width: min(var(--container), calc(100% - 36px));
+    margin-inline: auto;
   }
 
 
