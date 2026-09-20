@@ -8,64 +8,61 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <meta
-    name="description"
-    content="ARCSONS Infratech — Specialized machinery, tools and testing equipment supporting multi-sector EPC and infrastructure project execution."
-  />
-
-  <meta
-    name="theme-color"
-    content="#101820"
-  />
-
   <title>Machinery & Technology | ARCSONS Infratech</title>
 
-  <!-- Google Fonts -->
+  <meta
+    name="description"
+    content="ARCSONS Infratech — Specialized machinery, testing equipment and technology supporting reliable infrastructure project execution."
+  />
+
+  <meta name="theme-color" content="#101820" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
     rel="stylesheet"
   />
 
-  <!-- Main Site CSS -->
   <link rel="stylesheet" href="../css/style.css" />
-
-  <!-- Machinery Page CSS -->
-  <link rel="stylesheet" href="machinery.css" />
+  <link rel="stylesheet" href="../css/machinery.css" />
 </head>
 
 <body>
 
-  <!-- =========================================================
+  <!-- =========================================
        TOPBAR
-  ========================================================== -->
-
+  ========================================== -->
   <div class="topbar">
     <div class="container topbar-inner">
 
-      <div class="topbar-left">
-        <span>Maharashtra, India</span>
-        <span>+91 94225 56347</span>
-        <span>contact@arcsons.com</span>
+      <span>Maharashtra, India</span>
+
+      <div class="topbar-contact">
+        <a href="tel:+919422556347">
+          +91 94225 56347
+        </a>
+
+        <a href="mailto:contact@arcsons.com">
+          contact@arcsons.com
+        </a>
       </div>
 
-      <div class="topbar-right">
-        <span>Multi-Sector EPC &amp; Infrastructure Project Services</span>
-      </div>
+      <span class="topbar-tag">
+        Multi-Sector EPC &amp; Infrastructure Project Services
+      </span>
 
     </div>
   </div>
 
 
-  <!-- =========================================================
+  <!-- =========================================
        NAVBAR
-  ========================================================== -->
-
+  ========================================== -->
   <header class="site-header">
 
-    <div class="container nav-inner">
+    <div class="container nav-wrap">
 
       <a
         class="brand"
@@ -73,10 +70,7 @@
         aria-label="ARCSONS Infratech home"
       >
 
-        <span
-          class="brand-mark"
-          aria-hidden="true"
-        >
+        <span class="brand-mark" aria-hidden="true">
           <i></i>
           <b></b>
         </span>
@@ -159,10 +153,11 @@
         </a>
 
         <a
-          class="button button-orange nav-cta"
+          class="nav-cta"
           href="../index.html#contact"
         >
           Get in Touch
+          <span>↗</span>
         </a>
 
       </nav>
@@ -174,115 +169,48 @@
 
   <main>
 
-
-    <!-- =========================================================
-         HERO
-    ========================================================== -->
-
+    <!-- =========================================
+         MACHINERY HERO
+    ========================================== -->
     <section class="machinery-hero">
 
-      <div
-        class="machinery-hero-grid"
-        aria-hidden="true"
-      ></div>
-
-      <div
-        class="machinery-hero-glow"
-        aria-hidden="true"
-      ></div>
-
-
-      <!-- Technical visual -->
-
-      <div
-        class="machinery-hero-visual"
-        aria-hidden="true"
-      >
-
-        <div class="machine-frame">
-
-          <span class="machine-corner machine-corner-tl"></span>
-          <span class="machine-corner machine-corner-tr"></span>
-          <span class="machine-corner machine-corner-bl"></span>
-          <span class="machine-corner machine-corner-br"></span>
-
-
-          <div class="machine-body">
-
-            <span class="machine-body-top"></span>
-
-            <span class="machine-body-main"></span>
-
-            <span class="machine-body-base"></span>
-
-            <span class="machine-wheel machine-wheel-left"></span>
-
-            <span class="machine-wheel machine-wheel-right"></span>
-
-            <span class="machine-arm"></span>
-
-            <span class="machine-arm-joint"></span>
-
-            <span class="machine-bit"></span>
-
-          </div>
-
-
-          <div class="machine-measure measure-horizontal">
-            <span></span>
-            <b>EXECUTION SYSTEM / 05</b>
-            <span></span>
-          </div>
-
-
-          <div class="machine-measure measure-vertical">
-            <span></span>
-            <b>ARC</b>
-            <span></span>
-          </div>
-
-        </div>
-
+      <div class="machinery-hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1764422743505-97c9ea0e43f2?auto=format&fit=crop&w=2200&q=85"
+          alt="Heavy construction machinery at an infrastructure project site"
+        />
       </div>
 
+      <div class="machinery-hero-overlay"></div>
 
-      <div class="container machinery-hero-inner reveal">
+      <div class="machinery-hero-grid"></div>
 
-        <div class="machinery-hero-top">
 
-          <div class="eyebrow eyebrow-light">
-            <span></span>
+      <div class="container machinery-hero-inner">
+
+        <div class="machinery-hero-content reveal">
+
+          <div class="machinery-hero-label">
             MACHINERY &amp; TECHNOLOGY
           </div>
 
-          <span class="machinery-hero-code">
-            ARC / MCH / 05
-          </span>
-
-        </div>
-
-
-        <div class="machinery-hero-content">
-
-          <p class="machinery-hero-kicker">
-            Engineering Capability. Execution Excellence.
-          </p>
+          <div class="machinery-hero-kicker">
+            Specialized Equipment. Controlled Execution.
+          </div>
 
           <h1>
             Equipped for
-            <br />
             <em>execution.</em>
           </h1>
 
           <p class="machinery-hero-description">
             Project execution is supported by specialized machinery,
-            tools and testing equipment selected around project
-            requirements, site conditions and technical needs.
+            tools and testing equipment based on project requirements.
           </p>
 
           <a
-            class="button button-orange"
             href="#equipment"
+            class="machinery-hero-btn"
           >
             Explore Equipment
             <span>↓</span>
@@ -290,70 +218,22 @@
 
         </div>
 
-      </div>
 
+        <div class="machinery-hero-side reveal">
 
-      <div class="machinery-hero-meta">
+          <div class="hero-side-line"></div>
 
-        <span>01 — EQUIPMENT</span>
+          <span>
+            ENGINEERED
+          </span>
 
-        <span class="hero-meta-line"></span>
+          <strong>
+            FOR PERFORMANCE
+          </strong>
 
-        <span>SPECIALIZED MACHINERY</span>
-
-        <span class="hero-meta-line"></span>
-
-        <span>PRECISION / CONTROL / EXECUTION</span>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         INTRODUCTION
-    ========================================================== -->
-
-    <section class="machinery-intro section-pad">
-
-      <div class="container">
-
-        <div class="machinery-intro-grid">
-
-          <div class="section-heading reveal">
-
-            <div class="eyebrow">
-              <span></span>
-              EQUIPMENT SYSTEM
-            </div>
-
-            <h2>
-              Built around the
-              <em>requirements.</em>
-            </h2>
-
-          </div>
-
-
-          <div class="machinery-intro-copy reveal">
-
-            <p>
-              Infrastructure execution demands the right combination
-              of equipment, tools, testing systems and operational
-              support. ARCSONS maintains access to specialized
-              equipment categories aligned with diverse project
-              requirements.
-            </p>
-
-            <p>
-              From trenchless construction and excavation to fibre
-              installation, pipeline works, electrical testing and
-              survey operations, equipment selection is coordinated
-              with the technical and site requirements of each project.
-            </p>
-
-          </div>
+          <small>
+            ARCSONS / EQUIPMENT
+          </small>
 
         </div>
 
@@ -362,1111 +242,1083 @@
     </section>
 
 
-
-    <!-- =========================================================
+    <!-- =========================================
          EQUIPMENT INDEX
-    ========================================================== -->
+    ========================================== -->
+    <section class="machinery-index">
 
-    <section class="equipment-index">
+      <div class="container machinery-index-inner">
 
-      <div class="container">
+        <div class="machinery-index-label">
+          EQUIPMENT CATEGORIES
+        </div>
 
-        <div class="equipment-index-header reveal">
+        <div class="machinery-index-links">
 
-          <div>
-            <div class="eyebrow">
-              <span></span>
-              EQUIPMENT CATEGORIES
-            </div>
+          <a href="#hdd">
+            HDD &amp; Trenchless
+          </a>
 
-            <h2>
-              Machinery for
-              <em>every stage.</em>
-            </h2>
-          </div>
+          <a href="#excavation">
+            Excavation
+          </a>
+
+          <a href="#fibre">
+            Fibre Installation
+          </a>
+
+          <a href="#testing">
+            Testing &amp; Inspection
+          </a>
+
+          <a href="#pipeline">
+            Pipeline &amp; Welding
+          </a>
+
+          <a href="#survey">
+            Survey &amp; Measurement
+          </a>
+
+          <a href="#handling">
+            Handling &amp; Safety
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         MACHINERY INTRO
+    ========================================== -->
+    <section class="machinery-intro">
+
+      <div class="container machinery-intro-grid">
+
+        <div class="machinery-intro-heading reveal">
+
+          <span class="section-overline">
+            EQUIPPED FOR THE FIELD
+          </span>
+
+          <h2>
+            The right equipment
+            for <em>every stage.</em>
+          </h2>
+
+        </div>
+
+
+        <div class="machinery-intro-copy reveal">
 
           <p>
-            Specialized equipment supporting construction,
-            installation, testing, inspection and site execution.
+            ARCSONS supports project execution with a range of
+            specialized machinery, installation tools, testing
+            instruments and site equipment selected according to
+            project scope and technical requirements.
+          </p>
+
+          <p>
+            Equipment capability is combined with skilled operators,
+            planned maintenance and disciplined execution to support
+            safety, productivity and project reliability.
           </p>
 
         </div>
 
-
-        <div class="equipment-index-grid">
-
-          <a href="#hdd-equipment" class="equipment-index-item reveal">
-            <span>01</span>
-            <strong>HDD &amp; Trenchless</strong>
-            <i>↗</i>
-          </a>
-
-          <a href="#excavation-equipment" class="equipment-index-item reveal">
-            <span>02</span>
-            <strong>Excavation &amp; Trenching</strong>
-            <i>↗</i>
-          </a>
-
-          <a href="#telecom-equipment" class="equipment-index-item reveal">
-            <span>03</span>
-            <strong>Telecom &amp; Fibre</strong>
-            <i>↗</i>
-          </a>
-
-          <a href="#testing-equipment" class="equipment-index-item reveal">
-            <span>04</span>
-            <strong>Testing &amp; Inspection</strong>
-            <i>↗</i>
-          </a>
-
-          <a href="#pipeline-equipment" class="equipment-index-item reveal">
-            <span>05</span>
-            <strong>Pipeline &amp; Welding</strong>
-            <i>↗</i>
-          </a>
-
-          <a href="#survey-equipment" class="equipment-index-item reveal">
-            <span>06</span>
-            <strong>Survey &amp; Measurement</strong>
-            <i>↗</i>
-          </a>
-
-          <a href="#site-equipment" class="equipment-index-item reveal">
-            <span>07</span>
-            <strong>Handling &amp; Safety</strong>
-            <i>↗</i>
-          </a>
-
-        </div>
-
       </div>
 
     </section>
 
 
-
-    <!-- =========================================================
-         EQUIPMENT
-    ========================================================== -->
-
+    <!-- =========================================
+         EQUIPMENT LIST
+    ========================================== -->
     <section
-      class="equipment-section section-pad"
+      class="machinery-list"
       id="equipment"
     >
 
       <div class="container">
 
-
-        <!-- ================= HDD ================= -->
-
-        <div
-          class="equipment-group reveal"
-          id="hdd-equipment"
+        <!-- =====================================
+             01 HDD & TRENCHLESS
+        ====================================== -->
+        <article
+          class="machinery-detail reveal"
+          id="hdd"
         >
 
-          <div class="equipment-group-heading">
+          <div class="machinery-detail-heading">
 
-            <span class="equipment-group-number">
+            <div class="machinery-number">
               01
-            </span>
+            </div>
 
             <div>
-              <span class="equipment-group-label">
-                TRENCHLESS TECHNOLOGY
+
+              <span class="machinery-overline">
+                HDD &amp; TRENCHLESS
               </span>
 
-              <h2>
-                HDD &amp; Trenchless
-              </h2>
+              <h3>
+                Directional Drilling
+                <em>&amp; Locating</em>
+              </h3>
+
+              <p>
+                Equipment supporting controlled underground
+                installation and trenchless infrastructure works.
+              </p>
+
             </div>
 
           </div>
 
 
-          <div class="equipment-cards">
+          <div class="equipment-grid">
 
-            <article class="equipment-card">
+            <div class="equipment-card">
 
               <div class="equipment-image">
-
                 <img
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=85"
-                  alt="Horizontal directional drilling equipment"
+                  src="https://images.unsplash.com/photo-1764422743505-97c9ea0e43f2?auto=format&fit=crop&w=1200&q=85"
+                  alt="Construction drilling and excavation machinery"
                   loading="lazy"
                 />
+              </div>
 
-                <span class="equipment-image-number">
-                  01
-                </span>
+              <div class="equipment-card-body">
+
+                <span>01 / 02</span>
+
+                <h4>
+                  HDD Rigs
+                </h4>
+
+                <p>
+                  Specialized drilling equipment supporting
+                  trenchless installation across suitable
+                  underground infrastructure projects.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="equipment-card">
+
+              <div class="equipment-image equipment-technical">
+
+                <div class="technical-visual">
+                  <span></span>
+                  <i></i>
+                  <b></b>
+                </div>
 
               </div>
 
               <div class="equipment-card-body">
 
-                <span>01 / 14</span>
+                <span>02 / 02</span>
 
-                <h3>HDD Rigs</h3>
+                <h4>
+                  HDD Tracking &amp; Locating Systems
+                </h4>
 
                 <p>
-                  Specialized horizontal directional drilling
-                  equipment supporting trenchless installation
-                  requirements across suitable infrastructure projects.
+                  Precision locating and tracking systems used
+                  to monitor bore alignment and support controlled
+                  underground execution.
                 </p>
 
               </div>
 
-            </article>
-
-
-            <article class="equipment-card">
-
-              <div class="equipment-image">
-
-                <img
-                  src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85"
-                  alt="HDD tracking and locating equipment"
-                  loading="lazy"
-                />
-
-                <span class="equipment-image-number">
-                  02
-                </span>
-
-              </div>
-
-              <div class="equipment-card-body">
-
-                <span>02 / 14</span>
-
-                <h3>HDD Tracking &amp; Locating Systems</h3>
-
-                <p>
-                  Tracking and locating systems supporting bore
-                  alignment, positioning and controlled trenchless
-                  execution.
-                </p>
-
-              </div>
-
-            </article>
+            </div>
 
           </div>
 
-        </div>
+        </article>
 
 
-
-        <!-- ================= EXCAVATION ================= -->
-
-        <div
-          class="equipment-group reveal"
-          id="excavation-equipment"
+        <!-- =====================================
+             02 EXCAVATION
+        ====================================== -->
+        <article
+          class="machinery-detail reveal"
+          id="excavation"
         >
 
-          <div class="equipment-group-heading">
+          <div class="machinery-detail-heading">
 
-            <span class="equipment-group-number">
+            <div class="machinery-number">
               02
-            </span>
+            </div>
 
             <div>
-              <span class="equipment-group-label">
-                GROUNDWORKS
+
+              <span class="machinery-overline">
+                EARTHWORKS
               </span>
 
-              <h2>
-                Excavation &amp; Trenching
-              </h2>
+              <h3>
+                Excavation
+                <em>&amp; Trenching</em>
+              </h3>
+
+              <p>
+                Site equipment supporting excavation, trench
+                preparation and infrastructure installation works.
+              </p>
+
             </div>
 
           </div>
 
 
-          <div class="equipment-cards">
+          <div class="equipment-grid">
 
-            <article class="equipment-card">
+            <div class="equipment-card">
 
               <div class="equipment-image">
-
                 <img
-                  src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=85"
-                  alt="Excavation construction equipment"
+                  src="https://images.unsplash.com/photo-1764422743505-97c9ea0e43f2?auto=format&fit=crop&w=1200&q=85"
+                  alt="Excavator working at a construction site"
                   loading="lazy"
                 />
+              </div>
 
-                <span class="equipment-image-number">
-                  03
-                </span>
+              <div class="equipment-card-body">
+
+                <span>02 / 01</span>
+
+                <h4>
+                  Excavation Equipment
+                </h4>
+
+                <p>
+                  Heavy equipment supporting excavation,
+                  earthmoving, site preparation and utility
+                  infrastructure activities.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="equipment-card">
+
+              <div class="equipment-image trench-visual">
+
+                <div class="trench-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
 
               </div>
 
               <div class="equipment-card-body">
 
-                <span>03 / 14</span>
+                <span>02 / 02</span>
 
-                <h3>Excavation Equipment</h3>
+                <h4>
+                  Trenching Equipment
+                </h4>
 
                 <p>
-                  Earthmoving and excavation equipment supporting
-                  utility corridors, civil works and infrastructure
-                  construction activities.
+                  Equipment deployed for controlled trench
+                  formation and underground utility installation
+                  requirements.
                 </p>
 
               </div>
 
-            </article>
-
-
-            <article class="equipment-card">
-
-              <div class="equipment-image">
-
-                <img
-                  src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&w=1200&q=85"
-                  alt="Trenching construction equipment"
-                  loading="lazy"
-                />
-
-                <span class="equipment-image-number">
-                  04
-                </span>
-
-              </div>
-
-              <div class="equipment-card-body">
-
-                <span>04 / 14</span>
-
-                <h3>Trenching Equipment</h3>
-
-                <p>
-                  Equipment supporting controlled trench preparation
-                  for pipelines, cables and underground utility
-                  installations.
-                </p>
-
-              </div>
-
-            </article>
+            </div>
 
           </div>
 
-        </div>
+        </article>
 
 
-
-        <!-- ================= TELECOM ================= -->
-
-        <div
-          class="equipment-group reveal"
-          id="telecom-equipment"
+        <!-- =====================================
+             03 FIBRE INSTALLATION
+        ====================================== -->
+        <article
+          class="machinery-detail reveal"
+          id="fibre"
         >
 
-          <div class="equipment-group-heading">
+          <div class="machinery-detail-heading">
 
-            <span class="equipment-group-number">
+            <div class="machinery-number">
               03
-            </span>
+            </div>
 
             <div>
-              <span class="equipment-group-label">
+
+              <span class="machinery-overline">
                 TELECOM &amp; OFC
               </span>
 
-              <h2>
-                Fibre Installation
-              </h2>
+              <h3>
+                Fibre
+                <em>Installation</em>
+              </h3>
+
+              <p>
+                Specialized equipment supporting fibre deployment,
+                jointing and optical network testing.
+              </p>
+
             </div>
 
           </div>
 
 
-          <div class="equipment-cards equipment-cards-three">
+          <div class="equipment-grid equipment-grid-three">
 
-            <article class="equipment-card">
+            <div class="equipment-card">
 
-              <div class="equipment-image">
+              <div class="equipment-image fibre-visual">
+                <div class="fibre-cable-visual">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
 
-                <img
-                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85"
-                  alt="Cable installation equipment"
-                  loading="lazy"
-                />
+              <div class="equipment-card-body">
 
-                <span class="equipment-image-number">
-                  05
-                </span>
+                <span>03 / 01</span>
+
+                <h4>
+                  Cable Blowing Machines
+                </h4>
+
+                <p>
+                  Equipment used for controlled installation
+                  of fibre optic cables through suitable duct
+                  networks.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="equipment-card">
+
+              <div class="equipment-image splice-visual">
+                <div class="splice-box">
+                  <span></span>
+                  <i></i>
+                </div>
+              </div>
+
+              <div class="equipment-card-body">
+
+                <span>03 / 02</span>
+
+                <h4>
+                  Fusion Splicing Machines
+                </h4>
+
+                <p>
+                  Precision equipment used for fibre jointing
+                  and optical connectivity works.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="equipment-card">
+
+              <div class="equipment-image otdr-visual">
+
+                <div class="instrument-screen">
+                  <span></span>
+                  <i></i>
+                  <b></b>
+                </div>
 
               </div>
 
               <div class="equipment-card-body">
 
-                <span>05 / 14</span>
+                <span>03 / 03</span>
 
-                <h3>Cable Blowing Machines</h3>
+                <h4>
+                  OTDR Equipment
+                </h4>
 
                 <p>
-                  Cable installation equipment supporting controlled
-                  fibre deployment through suitable ducts and routes.
+                  Optical testing equipment supporting fibre
+                  link testing, fault identification and
+                  performance verification.
                 </p>
 
               </div>
 
-            </article>
-
-
-            <article class="equipment-card">
-
-              <div class="equipment-image">
-
-                <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85"
-                  alt="Fibre optic fusion splicing equipment"
-                  loading="lazy"
-                />
-
-                <span class="equipment-image-number">
-                  06
-                </span>
-
-              </div>
-
-              <div class="equipment-card-body">
-
-                <span>06 / 14</span>
-
-                <h3>Fusion Splicing Machines</h3>
-
-                <p>
-                  Fibre splicing equipment supporting precision
-                  optical fibre jointing and network installation.
-                </p>
-
-              </div>
-
-            </article>
-
-
-            <article class="equipment-card">
-
-              <div class="equipment-image">
-
-                <img
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85"
-                  alt="Optical fibre testing equipment"
-                  loading="lazy"
-                />
-
-                <span class="equipment-image-number">
-                  07
-                </span>
-
-              </div>
-
-              <div class="equipment-card-body">
-
-                <span>07 / 14</span>
-
-                <h3>OTDR Equipment</h3>
-
-                <p>
-                  Optical testing equipment supporting fibre link
-                  testing, fault identification and network verification.
-                </p>
-
-              </div>
-
-            </article>
+            </div>
 
           </div>
 
-        </div>
+        </article>
 
 
-
-        <!-- ================= TESTING ================= -->
-
-        <div
-          class="equipment-group reveal"
-          id="testing-equipment"
+        <!-- =====================================
+             04 TESTING & INSPECTION
+        ====================================== -->
+        <article
+          class="machinery-detail reveal"
+          id="testing"
         >
 
-          <div class="equipment-group-heading">
+          <div class="machinery-detail-heading">
 
-            <span class="equipment-group-number">
+            <div class="machinery-number">
               04
-            </span>
+            </div>
 
             <div>
-              <span class="equipment-group-label">
-                TESTING &amp; SUPPORT
+
+              <span class="machinery-overline">
+                TESTING &amp; INSPECTION
               </span>
 
-              <h2>
-                Testing &amp; Inspection
-              </h2>
+              <h3>
+                Testing
+                <em>&amp; Verification</em>
+              </h3>
+
+              <p>
+                Equipment supporting pressure, electrical and
+                infrastructure testing requirements.
+              </p>
+
             </div>
 
           </div>
 
 
-          <div class="equipment-cards">
+          <div class="equipment-grid equipment-grid-three">
 
-            <article class="equipment-card">
+            <div class="equipment-card">
 
-              <div class="equipment-image">
+              <div class="equipment-image compressor-visual">
 
-                <img
-                  src="https://images.unsplash.com/photo-1581093458791-9d42e3c1c1a4?auto=format&fit=crop&w=1200&q=85"
-                  alt="Air compressor equipment"
-                  loading="lazy"
-                />
-
-                <span class="equipment-image-number">
-                  08
-                </span>
+                <div class="compressor">
+                  <span></span>
+                  <i></i>
+                  <b></b>
+                </div>
 
               </div>
 
               <div class="equipment-card-body">
 
-                <span>08 / 14</span>
+                <span>04 / 01</span>
 
-                <h3>Air Compressors</h3>
+                <h4>
+                  Air Compressors
+                </h4>
 
                 <p>
-                  Compressed-air equipment supporting construction,
-                  testing and selected site activities.
+                  Compressed-air equipment supporting
+                  installation, cleaning and testing-related
+                  site requirements.
                 </p>
 
               </div>
 
-            </article>
+            </div>
 
 
-            <article class="equipment-card">
+            <div class="equipment-card">
 
-              <div class="equipment-image">
+              <div class="equipment-image pipeline-visual">
 
-                <img
-                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85"
-                  alt="Pipeline testing equipment"
-                  loading="lazy"
-                />
-
-                <span class="equipment-image-number">
-                  09
-                </span>
+                <div class="pipeline-diagram">
+                  <span></span>
+                  <span></span>
+                  <i></i>
+                </div>
 
               </div>
 
               <div class="equipment-card-body">
 
-                <span>09 / 14</span>
+                <span>04 / 02</span>
 
-                <h3>Pipeline Testing Equipment</h3>
+                <h4>
+                  Pipeline Testing Equipment
+                </h4>
 
                 <p>
-                  Testing equipment supporting inspection and
-                  verification activities for pipeline infrastructure.
+                  Testing equipment supporting verification
+                  of pipeline integrity and project requirements.
                 </p>
 
               </div>
 
-            </article>
+            </div>
 
 
-            <article class="equipment-card">
+            <div class="equipment-card">
 
-              <div class="equipment-image">
+              <div class="equipment-image electrical-visual">
 
-                <img
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=85"
-                  alt="Electrical testing instruments"
-                  loading="lazy"
-                />
-
-                <span class="equipment-image-number">
-                  10
-                </span>
+                <div class="meter">
+                  <span></span>
+                  <i></i>
+                  <b></b>
+                </div>
 
               </div>
 
               <div class="equipment-card-body">
 
-                <span>10 / 14</span>
+                <span>04 / 03</span>
 
-                <h3>Electrical Testing Instruments</h3>
+                <h4>
+                  Electrical Testing Instruments
+                </h4>
 
                 <p>
-                  Electrical measurement and testing instruments
-                  supporting installation verification and commissioning
-                  activities.
+                  Instruments supporting electrical inspection,
+                  measurement and commissioning activities.
                 </p>
 
               </div>
 
-            </article>
+            </div>
 
           </div>
 
-        </div>
+        </article>
 
 
-
-        <!-- ================= PIPELINE ================= -->
-
-        <div
-          class="equipment-group reveal"
-          id="pipeline-equipment"
+        <!-- =====================================
+             05 PIPELINE & WELDING
+        ====================================== -->
+        <article
+          class="machinery-detail reveal"
+          id="pipeline"
         >
 
-          <div class="equipment-group-heading">
+          <div class="machinery-detail-heading">
 
-            <span class="equipment-group-number">
+            <div class="machinery-number">
               05
-            </span>
+            </div>
 
             <div>
-              <span class="equipment-group-label">
+
+              <span class="machinery-overline">
                 PIPELINE WORKS
               </span>
 
-              <h2>
-                Welding &amp; Pipeline
-              </h2>
+              <h3>
+                Welding
+                <em>&amp; Pipeline Works</em>
+              </h3>
+
+              <p>
+                Specialized equipment supporting fabrication,
+                joining and pipeline installation activities.
+              </p>
+
             </div>
 
           </div>
 
 
-          <div class="equipment-cards">
+          <div class="equipment-wide">
 
-            <article class="equipment-card">
+            <div class="equipment-card equipment-card-wide">
 
-              <div class="equipment-image">
+              <div class="equipment-image welding-visual">
 
-                <img
-                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=85"
-                  alt="Industrial welding equipment"
-                  loading="lazy"
-                />
-
-                <span class="equipment-image-number">
-                  11
-                </span>
+                <div class="welding-effect">
+                  <span></span>
+                  <i></i>
+                  <b></b>
+                </div>
 
               </div>
 
               <div class="equipment-card-body">
 
-                <span>11 / 14</span>
+                <span>05 / 01</span>
 
-                <h3>Welding Equipment</h3>
+                <h4>
+                  Welding Equipment
+                </h4>
 
                 <p>
-                  Welding equipment supporting fabrication,
-                  installation and project-specific pipeline works.
+                  Welding systems and supporting equipment used
+                  for suitable pipeline, structural and fabrication
+                  requirements.
                 </p>
 
               </div>
 
-            </article>
+            </div>
 
           </div>
 
-        </div>
+        </article>
 
 
-
-        <!-- ================= SURVEY ================= -->
-
-        <div
-          class="equipment-group reveal"
-          id="survey-equipment"
+        <!-- =====================================
+             06 SURVEY
+        ====================================== -->
+        <article
+          class="machinery-detail reveal"
+          id="survey"
         >
 
-          <div class="equipment-group-heading">
+          <div class="machinery-detail-heading">
 
-            <span class="equipment-group-number">
+            <div class="machinery-number">
               06
-            </span>
+            </div>
 
             <div>
-              <span class="equipment-group-label">
+
+              <span class="machinery-overline">
                 SURVEY &amp; MEASUREMENT
               </span>
 
-              <h2>
-                Survey Systems
-              </h2>
+              <h3>
+                Precision
+                <em>Survey Equipment</em>
+              </h3>
+
+              <p>
+                Surveying and measurement equipment supporting
+                accurate project planning and execution.
+              </p>
+
             </div>
 
           </div>
 
 
-          <div class="equipment-cards">
+          <div class="equipment-grid">
 
-            <article class="equipment-card">
+            <div class="equipment-card">
 
               <div class="equipment-image">
 
                 <img
-                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85"
-                  alt="Construction survey equipment"
+                  src="https://images.unsplash.com/photo-1766830110938-0ea8a6d78ecb?auto=format&fit=crop&w=1200&q=85"
+                  alt="Surveyor using precision surveying equipment"
                   loading="lazy"
                 />
-
-                <span class="equipment-image-number">
-                  12
-                </span>
 
               </div>
 
               <div class="equipment-card-body">
 
-                <span>12 / 14</span>
+                <span>06 / 01</span>
 
-                <h3>Survey Equipment</h3>
+                <h4>
+                  Survey Equipment
+                </h4>
 
                 <p>
-                  Survey and measurement equipment supporting site
-                  surveys, setting out, alignment and construction
-                  planning activities.
+                  Precision surveying instruments supporting
+                  alignment, measurement, setting-out and
+                  infrastructure project requirements.
                 </p>
 
               </div>
 
-            </article>
+            </div>
+
+
+            <div class="survey-spec-panel">
+
+              <div class="spec-panel-top">
+                FIELD PRECISION
+              </div>
+
+              <div class="crosshair">
+                <span></span>
+                <i></i>
+              </div>
+
+              <div class="spec-panel-bottom">
+                MEASURE / ALIGN / EXECUTE
+              </div>
+
+            </div>
 
           </div>
 
-        </div>
+        </article>
 
 
-
-        <!-- ================= SITE ================= -->
-
-        <div
-          class="equipment-group reveal"
-          id="site-equipment"
+        <!-- =====================================
+             07 HANDLING & SAFETY
+        ====================================== -->
+        <article
+          class="machinery-detail reveal"
+          id="handling"
         >
 
-          <div class="equipment-group-heading">
+          <div class="machinery-detail-heading">
 
-            <span class="equipment-group-number">
+            <div class="machinery-number">
               07
-            </span>
+            </div>
 
             <div>
-              <span class="equipment-group-label">
-                SITE OPERATIONS
+
+              <span class="machinery-overline">
+                SITE SUPPORT
               </span>
 
-              <h2>
-                Handling &amp; Safety
-              </h2>
+              <h3>
+                Material Handling
+                <em>&amp; Safety</em>
+              </h3>
+
+              <p>
+                Site support equipment helping maintain safe,
+                organized and efficient project operations.
+              </p>
+
             </div>
 
           </div>
 
 
-          <div class="equipment-cards">
+          <div class="equipment-grid">
 
-            <article class="equipment-card">
+            <div class="equipment-card">
 
               <div class="equipment-image">
 
                 <img
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=85"
-                  alt="Material handling equipment"
+                  src="https://images.unsplash.com/photo-1776493929304-dfe4d50ae96b?auto=format&fit=crop&w=1200&q=85"
+                  alt="Forklift used for material handling"
                   loading="lazy"
                 />
-
-                <span class="equipment-image-number">
-                  13
-                </span>
 
               </div>
 
               <div class="equipment-card-body">
 
-                <span>13 / 14</span>
+                <span>07 / 01</span>
 
-                <h3>Material Handling Equipment</h3>
+                <h4>
+                  Material Handling Equipment
+                </h4>
 
                 <p>
-                  Material handling systems supporting movement,
-                  positioning and controlled handling of project
-                  materials and equipment.
+                  Equipment supporting movement, positioning
+                  and organized handling of materials across
+                  project sites.
                 </p>
 
               </div>
 
-            </article>
+            </div>
 
 
-            <article class="equipment-card">
+            <div class="equipment-card">
 
               <div class="equipment-image">
 
                 <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85"
-                  alt="Construction safety equipment"
+                  src="https://images.unsplash.com/photo-1755925193287-275aa7fe64f0?auto=format&fit=crop&w=1200&q=85"
+                  alt="Construction safety equipment and protective gear"
                   loading="lazy"
                 />
-
-                <span class="equipment-image-number">
-                  14
-                </span>
 
               </div>
 
               <div class="equipment-card-body">
 
-                <span>14 / 14</span>
+                <span>07 / 02</span>
 
-                <h3>Safety Equipment</h3>
+                <h4>
+                  Safety Equipment
+                </h4>
 
                 <p>
-                  Project and site safety equipment supporting
-                  controlled working environments and HSE requirements.
+                  Essential site safety equipment supporting
+                  controlled project environments and safe
+                  working practices.
                 </p>
 
               </div>
 
-            </article>
+            </div>
 
           </div>
 
-        </div>
+        </article>
 
       </div>
 
     </section>
 
 
+    <!-- =========================================
+         EXECUTION STATEMENT
+    ========================================== -->
+    <section class="machinery-execution">
 
-    <!-- =========================================================
-         EXECUTION SUPPORT
-    ========================================================== -->
+      <div class="container">
 
-    <section class="execution-section">
+        <div class="machinery-execution-inner reveal">
 
-      <div class="execution-grid"></div>
-
-      <div class="container execution-inner">
-
-        <div class="execution-heading reveal">
-
-          <div class="eyebrow eyebrow-light">
-            <span></span>
-            EXECUTION SUPPORT
+          <div class="execution-label">
+            EXECUTION CAPABILITY
           </div>
 
           <h2>
-            Equipment is only part
-            <br />
-            of the <em>system.</em>
+            Right Equipment
+            <span>•</span>
+            Skilled Operators
+            <span>•</span>
+            Planned Maintenance
+            <span>•</span>
+            Reliable Execution
           </h2>
 
           <p>
-            Reliable execution depends on the right equipment,
-            capable operators, planned maintenance and disciplined
-            project management.
+            Equipment capability becomes project capability when
+            supported by experienced teams, disciplined planning
+            and reliable field execution.
           </p>
 
         </div>
 
-
-        <div class="execution-pillars">
-
-          <div class="execution-pillar reveal">
-
-            <span>01</span>
-
-            <h3>
-              Right Equipment
-            </h3>
-
-            <p>
-              Equipment selection aligned with project scope,
-              technical requirements and site conditions.
-            </p>
-
-          </div>
-
-
-          <div class="execution-pillar reveal">
-
-            <span>02</span>
-
-            <h3>
-              Skilled Operators
-            </h3>
-
-            <p>
-              Experienced personnel supporting controlled and
-              coordinated equipment operation.
-            </p>
-
-          </div>
-
-
-          <div class="execution-pillar reveal">
-
-            <span>03</span>
-
-            <h3>
-              Planned Maintenance
-            </h3>
-
-            <p>
-              Planned equipment care supporting operational
-              readiness throughout project execution.
-            </p>
-
-          </div>
-
-
-          <div class="execution-pillar reveal">
-
-            <span>04</span>
-
-            <h3>
-              Reliable Execution
-            </h3>
-
-            <p>
-              Integrated equipment and execution practices focused
-              on consistent project delivery.
-            </p>
-
-          </div>
-
-        </div>
-
       </div>
 
     </section>
 
 
+    <!-- =========================================
+         CTA
+    ========================================== -->
+    <section class="machinery-cta">
 
-    <!-- =========================================================
-         CLOSING CTA
-    ========================================================== -->
+      <div class="container machinery-cta-inner reveal">
 
-    <section class="machinery-cta section-pad">
+        <div>
 
-      <div class="container">
+          <span class="section-overline">
+            ENGINEERED FOR EXECUTION
+          </span>
 
-        <div class="machinery-cta-inner reveal">
-
-          <div>
-
-            <div class="eyebrow">
-              <span></span>
-              PROJECT REQUIREMENTS
-            </div>
-
-            <h2>
-              Equipment that supports
-              <em>execution.</em>
-            </h2>
-
-            <p>
-              Discuss your project requirements and identify the
-              equipment capabilities needed for your next
-              infrastructure assignment.
-            </p>
-
-          </div>
-
-
-          <a
-            href="../index.html#contact"
-            class="button button-orange"
-          >
-            Discuss Your Project
-            <span>↗</span>
-          </a>
+          <h2>
+            Built to support
+            <em>the work.</em>
+          </h2>
 
         </div>
+
+        <a
+          href="../index.html#contact"
+          class="machinery-cta-button"
+        >
+          Discuss Your Project
+          <span>↗</span>
+        </a>
 
       </div>
 
     </section>
-
 
   </main>
 
 
-
-  <!-- =========================================================
+  <!-- =========================================
        FOOTER
-  ========================================================== -->
-
+  ========================================== -->
   <footer class="site-footer">
 
-    <div class="container">
+    <div class="container footer-main">
 
-      <div class="footer-grid">
+      <div class="footer-brand">
 
+        <a
+          class="brand brand-light"
+          href="../index.html"
+        >
 
-        <div class="footer-brand">
-
-          <a
-            class="brand footer-brand-logo"
-            href="../index.html"
-          >
-
-            <span
-              class="brand-mark"
-              aria-hidden="true"
-            >
-              <i></i>
-              <b></b>
-            </span>
-
-            <span class="brand-copy">
-              <strong>ARCSONS</strong>
-              <small>INFRATECH PRIVATE LIMITED</small>
-            </span>
-
-          </a>
-
-
-          <p>
-            Multi-sector EPC and infrastructure project services
-            focused on engineering capability, disciplined execution
-            and reliable project delivery.
-          </p>
-
-        </div>
-
-
-        <div class="footer-column">
-
-          <h4>
-            Quick Links
-          </h4>
-
-          <a href="../index.html#home">
-            Home
-          </a>
-
-          <a href="about.html">
-            About Us
-          </a>
-
-          <a href="services.html">
-            Services
-          </a>
-
-          <a href="../index.html#sectors">
-            Sectors
-          </a>
-
-          <a href="../index.html#lifecycle">
-            Capabilities
-          </a>
-
-          <a href="machinery.html">
-            Machinery
-          </a>
-
-          <a href="../index.html#contact">
-            Contact
-          </a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-          <h4>
-            Capabilities
-          </h4>
-
-          <a href="../index.html#services">
-            EPC
-          </a>
-
-          <a href="../index.html#services">
-            EPCM
-          </a>
-
-          <a href="../index.html#services">
-            Turnkey Projects
-          </a>
-
-          <a href="../index.html#services">
-            Project Management
-          </a>
-
-          <a href="../index.html#services">
-            Testing &amp; Commissioning
-          </a>
-
-          <a href="../index.html#services">
-            O&amp;M
-          </a>
-
-        </div>
-
-
-        <div class="footer-column footer-contact">
-
-          <h4>
-            Get in Touch
-          </h4>
-
-          <a href="tel:+919422556347">
-            +91 94225 56347
-          </a>
-
-          <a href="mailto:contact@arcsons.com">
-            contact@arcsons.com
-          </a>
-
-          <span>
-            Maharashtra, India
+          <span class="brand-mark" aria-hidden="true">
+            <i></i>
+            <b></b>
           </span>
 
-        </div>
+          <span class="brand-copy">
+            <strong>ARCSONS</strong>
+            <small>INFRATECH PRIVATE LIMITED</small>
+          </span>
+
+        </a>
+
+        <p>
+          Engineering Excellence for a Stronger Tomorrow.
+        </p>
+
+        <small>
+          Multi-Sector EPC &amp; Infrastructure Project Services
+        </small>
 
       </div>
 
 
-      <div class="footer-bottom">
+      <div class="footer-column">
 
-        <span>
-          © <span id="currentYear"></span>
-          ARCSONS INFRATECH PRIVATE LIMITED.
-          All Rights Reserved.
-        </span>
+        <h3>Quick Links</h3>
 
+        <a href="../index.html#home">
+          Home
+        </a>
 
-        <span>
-          Design and develop by
-          <a
-            href="https://kalachakrastudio.in"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Kalachakra Studio
-          </a>
-        </span>
+        <a href="about.html">
+          About Us
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="../index.html#sectors">
+          Sectors
+        </a>
+
+        <a href="../index.html#lifecycle">
+          Capabilities
+        </a>
+
+        <a href="machinery.html">
+          Machinery
+        </a>
+
+        <a href="../index.html#contact">
+          Contact
+        </a>
 
       </div>
+
+
+      <div class="footer-column">
+
+        <h3>Our Services</h3>
+
+        <a href="../index.html#sectors">
+          Telecom &amp; OFC
+        </a>
+
+        <a href="../index.html#sectors">
+          City Gas Distribution
+        </a>
+
+        <a href="../index.html#sectors">
+          Water &amp; Sewer
+        </a>
+
+        <a href="../index.html#sectors">
+          Electrical &amp; Power
+        </a>
+
+        <a href="../index.html#sectors">
+          HDD &amp; Trenchless
+        </a>
+
+        <a href="../index.html#sectors">
+          Solar &amp; Renewable
+        </a>
+
+      </div>
+
+
+      <div class="footer-column footer-contact">
+
+        <h3>Get in Touch</h3>
+
+        <span>
+          ⌖ &nbsp; Maharashtra, India
+        </span>
+
+        <a href="tel:+919422556347">
+          ☎ &nbsp; +91 94225 56347
+        </a>
+
+        <a href="mailto:contact@arcsons.com">
+          ✉ &nbsp; contact@arcsons.com
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <span>
+        © <span id="currentYear"></span>
+        ARCSONS INFRATECH PRIVATE LIMITED.
+        All rights reserved.
+      </span>
+
+      <div>
+
+        <a href="#">
+          Privacy Policy
+        </a>
+
+        <i></i>
+
+        <a href="#">
+          Terms &amp; Conditions
+        </a>
+
+        <i></i>
+
+        <a href="#">
+          Disclaimer
+        </a>
+
+        <i></i>
+
+      </div>
+
+      <span class="credit">
+
+        Design and develop by
+
+        <a
+          href="https://kalachakrastudio.in"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Kalachakra Studio ↗
+        </a>
+
+      </span>
 
     </div>
 
   </footer>
 
 
-  <!-- Machinery JS -->
-  <script src="machinery.js"></script>
+  <script src="../js/machinery.js"></script>
 
 </body>
 </html>
