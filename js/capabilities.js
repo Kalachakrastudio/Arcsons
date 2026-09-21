@@ -18,7 +18,7 @@
 
     const closeMenu = () => {
 
-      mainNav.classList.remove("is-open");
+      mainNav.classList.remove("open");
 
       menuToggle.classList.remove("is-active");
 
@@ -33,7 +33,7 @@
     menuToggle.addEventListener("click", () => {
 
       const isOpen =
-        mainNav.classList.toggle("is-open");
+        mainNav.classList.toggle("open");
 
       menuToggle.classList.toggle(
         "is-active",
