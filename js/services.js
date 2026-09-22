@@ -15,83 +15,100 @@
   }
 
 
-  /* =======================================================
-   MOBILE MENU
-======================================================= */
+  /* =========================================================
+     MOBILE MENU
+     ========================================================= */
 
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
+  if (menuToggle && mainNav) {
 
-if (menuToggle && mainNav) {
+    const closeMenu = () => {
 
-  const closeMenu = () => {
+      mainNav.classList.remove("open");
 
-    mainNav.classList.remove("open");
+      menuToggle.classList.remove("is-active");
 
-    menuToggle.classList.remove("is-active");
-
-    menuToggle.setAttribute(
-      "aria-expanded",
-      "false"
-    );
-
-  };
-
-
-  menuToggle.addEventListener("click", () => {
-
-    const isOpen =
-      mainNav.classList.toggle("open");
-
-    menuToggle.classList.toggle(
-      "is-active",
-      isOpen
-    );
-
-    menuToggle.setAttribute(
-      "aria-expanded",
-      String(isOpen)
-    );
-
-  });
-
-
-  mainNav
-    .querySelectorAll("a")
-    .forEach((link) => {
-
-      link.addEventListener(
-        "click",
-        closeMenu
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
       );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        "Open navigation"
+      );
+
+    };
+
+
+    const openMenu = () => {
+
+      mainNav.classList.add("open");
+
+      menuToggle.classList.add("is-active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        "Close navigation"
+      );
+
+    };
+
+
+    menuToggle.addEventListener("click", () => {
+
+      const isOpen =
+        mainNav.classList.contains("open");
+
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
 
     });
 
 
-  document.addEventListener(
-    "keydown",
-    (event) => {
+    mainNav
+      .querySelectorAll("a")
+      .forEach((link) => {
 
-      if (event.key === "Escape") {
-        closeMenu();
+        link.addEventListener(
+          "click",
+          closeMenu
+        );
+
+      });
+
+
+    document.addEventListener(
+      "keydown",
+      (event) => {
+
+        if (event.key === "Escape") {
+          closeMenu();
+        }
+
       }
-
-    }
-  );
+    );
 
 
-  window.addEventListener(
-    "resize",
-    () => {
+    window.addEventListener(
+      "resize",
+      () => {
 
-      if (window.innerWidth > 900) {
-        closeMenu();
+        if (window.innerWidth > 900) {
+          closeMenu();
+        }
+
       }
+    );
 
-    }
-  );
-
-}
+  }
 
 
   /* =========================================================
