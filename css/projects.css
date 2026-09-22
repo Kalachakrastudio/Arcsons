@@ -999,24 +999,73 @@ button {
   line-height: 1.8;
 }
 
+/* =========================================================
+   CONNECTING CAPABILITIES LINK
+========================================================= */
+
 .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 28px;
+  padding: 8px 0;
+
+  color: var(--dark);
+  background: transparent;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+
+  border-bottom: 1px solid var(--orange);
+
+  text-decoration: none;
+
   transition:
     color .25s ease,
     background-color .25s ease,
     border-color .25s ease;
 }
 
-.text-link:hover {
-  color: var(--orange) !important;
-  background: transparent !important;
-  border-color: var(--orange);
-}
-
-.text-link:hover span {
-  color: var(--orange) !important;
-}
 .text-link span {
   color: var(--orange);
+
+  transition:
+    color .25s ease,
+    transform .25s ease;
+}
+
+
+/* HOVER */
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: var(--orange) !important;
+
+  background: transparent !important;
+
+  border-bottom-color: var(--orange);
+}
+
+.text-link:hover span,
+.text-link:focus-visible span {
+  color: var(--orange) !important;
+
+  transform: translateX(3px);
+}
+
+
+/* PREVENT GLOBAL LINK HOVER STYLES */
+
+.delivery-copy .text-link:hover {
+  color: var(--orange) !important;
+  background: transparent !important;
+  text-decoration: none;
+}
+
+.delivery-copy .text-link:hover span {
+  color: var(--orange) !important;
 }
 
 .delivery-steps {
