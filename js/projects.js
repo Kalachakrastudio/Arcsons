@@ -30,7 +30,7 @@
 
       mainNav.classList.remove("open");
 
-      menuToggle.classList.remove("active");
+      menuToggle.classList.remove("is-active");
 
       menuToggle.setAttribute(
         "aria-expanded",
@@ -41,30 +41,39 @@
         "aria-label",
         "Open navigation"
       );
+
+    };
+
+
+    const openMenu = () => {
+
+      mainNav.classList.add("open");
+
+      menuToggle.classList.add("is-active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        "Close navigation"
+      );
+
     };
 
 
     menuToggle.addEventListener("click", () => {
 
       const isOpen =
-        mainNav.classList.toggle("open");
+        mainNav.classList.contains("open");
 
-      menuToggle.classList.toggle(
-        "active",
-        isOpen
-      );
-
-      menuToggle.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-      );
-
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen
-          ? "Close navigation"
-          : "Open navigation"
-      );
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
 
     });
 
@@ -154,7 +163,9 @@
 
     revealItems.forEach((item) => {
 
-      item.classList.add("is-visible");
+      item.classList.add(
+        "is-visible"
+      );
 
     });
 
@@ -175,6 +186,7 @@
 
           const targetId =
             link.getAttribute("href");
+
 
           if (
             !targetId ||
