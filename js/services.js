@@ -15,67 +15,50 @@
   }
 
 
-  /* =========================================================
-     MOBILE NAVIGATION
-     ========================================================= */
+  /* =======================================================
+   MOBILE MENU
+======================================================= */
 
-  if (menuToggle && mainNav) {
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
 
-    const closeMenu = () => {
+if (menuToggle && mainNav) {
 
-      mainNav.classList.remove("open");
+  const closeMenu = () => {
 
-      menuToggle.classList.remove("is-active");
+    mainNav.classList.remove("open");
 
-      menuToggle.setAttribute(
-        "aria-expanded",
-        "false"
-      );
+    menuToggle.classList.remove("is-active");
 
-      menuToggle.setAttribute(
-        "aria-label",
-        "Open navigation"
-      );
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
 
-    };
+  };
 
 
-    const openMenu = () => {
+  menuToggle.addEventListener("click", () => {
 
-      mainNav.classList.add("open");
+    const isOpen =
+      mainNav.classList.toggle("open");
 
-      menuToggle.classList.add("is-active");
+    menuToggle.classList.toggle(
+      "is-active",
+      isOpen
+    );
 
-      menuToggle.setAttribute(
-        "aria-expanded",
-        "true"
-      );
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
 
-      menuToggle.setAttribute(
-        "aria-label",
-        "Close navigation"
-      );
-
-    };
-
-
-    menuToggle.addEventListener("click", () => {
-
-      const isOpen =
-        mainNav.classList.contains("open");
-
-      if (isOpen) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-
-    });
+  });
 
 
-    /* Close menu after clicking a navigation link */
-
-    mainNav.querySelectorAll("a").forEach((link) => {
+  mainNav
+    .querySelectorAll("a")
+    .forEach((link) => {
 
       link.addEventListener(
         "click",
@@ -85,28 +68,30 @@
     });
 
 
-    /* Close with Escape */
-
-    document.addEventListener("keydown", (event) => {
+  document.addEventListener(
+    "keydown",
+    (event) => {
 
       if (event.key === "Escape") {
         closeMenu();
       }
 
-    });
+    }
+  );
 
 
-    /* Close when returning to desktop */
-
-    window.addEventListener("resize", () => {
+  window.addEventListener(
+    "resize",
+    () => {
 
       if (window.innerWidth > 900) {
         closeMenu();
       }
 
-    });
+    }
+  );
 
-  }
+}
 
 
   /* =========================================================
