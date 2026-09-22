@@ -6,18 +6,18 @@
   const currentYear = document.getElementById("currentYear");
 
 
-  /* =====================================================
+  /* =========================================================
      CURRENT YEAR
-     ===================================================== */
+  ========================================================== */
 
   if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
   }
 
 
-  /* =====================================================
+  /* =========================================================
      MOBILE NAVIGATION
-     ===================================================== */
+  ========================================================== */
 
   if (menuToggle && mainNav) {
 
@@ -25,9 +25,6 @@
 
       mainNav.classList.remove("open");
 
-      /* IMPORTANT:
-         Shared CSS uses .is-active
-      */
       menuToggle.classList.remove("is-active");
 
       menuToggle.setAttribute(
@@ -47,9 +44,6 @@
 
       mainNav.classList.add("open");
 
-      /* IMPORTANT:
-         Activates hamburger → X animation
-      */
       menuToggle.classList.add("is-active");
 
       menuToggle.setAttribute(
@@ -65,24 +59,19 @@
     };
 
 
-    menuToggle.addEventListener(
-      "click",
-      () => {
+    menuToggle.addEventListener("click", () => {
 
-        const isOpen =
-          mainNav.classList.contains("open");
+      const isOpen =
+        mainNav.classList.contains("open");
 
-        if (isOpen) {
-          closeMenu();
-        } else {
-          openMenu();
-        }
-
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
       }
-    );
 
+    });
 
-    /* Close menu after clicking a navigation link */
 
     mainNav
       .querySelectorAll("a")
@@ -96,8 +85,6 @@
       });
 
 
-    /* Escape key */
-
     document.addEventListener(
       "keydown",
       (event) => {
@@ -109,8 +96,6 @@
       }
     );
 
-
-    /* Reset mobile menu when returning to desktop */
 
     window.addEventListener(
       "resize",
@@ -126,24 +111,15 @@
   }
 
 
-  /* =====================================================
-     SCROLL REVEAL
-     ===================================================== */
+  /* =========================================================
+     REVEAL ANIMATION
+  ========================================================== */
 
   const revealItems =
     document.querySelectorAll(".reveal");
 
 
-  const prefersReducedMotion =
-    window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-
-  if (
-    "IntersectionObserver" in window &&
-    !prefersReducedMotion
-  ) {
+  if ("IntersectionObserver" in window) {
 
     const revealObserver =
       new IntersectionObserver(
@@ -167,10 +143,7 @@
 
         },
         {
-          threshold: 0.12,
-
-          rootMargin:
-            "0px 0px -35px 0px"
+          threshold: 0.12
         }
       );
 
@@ -182,13 +155,60 @@
   } else {
 
     revealItems.forEach((item) => {
-
-      item.classList.add(
-        "is-visible"
-      );
-
+      item.classList.add("is-visible");
     });
 
   }
+
+
+  /* =========================================================
+     SMOOTH SCROLL FOR EQUIPMENT INDEX
+  ========================================================== */
+
+  document
+    .querySelectorAll(
+      '.equipment-index a[href^="#"]'
+    )
+    .forEach((link) => {
+
+      link.addEventListener(
+        "click",
+        (event) => {
+
+          const targetId =
+            link.getAttribute("href");
+
+          const target =
+            document.querySelector(targetId);
+
+          if (!target) return;
+
+          event.preventDefault();
+
+          const header =
+            document.querySelector(
+              ".site-header"
+            );
+
+          const headerHeight =
+            header
+              ? header.offsetHeight
+              : 0;
+
+          const targetPosition =
+            target.getBoundingClientRect().top +
+            window.scrollY -
+            headerHeight -
+            25;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth"
+          });
+
+        }
+      );
+
+    });
 
 })();
