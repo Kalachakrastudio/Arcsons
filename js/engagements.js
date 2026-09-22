@@ -1,15 +1,9 @@
 (() => {
   "use strict";
 
-
-  const menuToggle =
-    document.getElementById("menuToggle");
-
-  const mainNav =
-    document.getElementById("mainNav");
-
-  const currentYear =
-    document.getElementById("currentYear");
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+  const currentYear = document.getElementById("currentYear");
 
 
   /* =========================================================
@@ -17,8 +11,7 @@
   ========================================================== */
 
   if (currentYear) {
-    currentYear.textContent =
-      new Date().getFullYear();
+    currentYear.textContent = new Date().getFullYear();
   }
 
 
@@ -29,10 +22,12 @@
   if (menuToggle && mainNav) {
 
     const closeMenu = () => {
-
       mainNav.classList.remove("open");
 
-      menuToggle.classList.remove("active");
+      /* IMPORTANT:
+         Shared CSS uses .is-active, not .active
+      */
+      menuToggle.classList.remove("is-active");
 
       menuToggle.setAttribute(
         "aria-expanded",
@@ -43,7 +38,26 @@
         "aria-label",
         "Open navigation"
       );
+    };
 
+
+    const openMenu = () => {
+      mainNav.classList.add("open");
+
+      /* IMPORTANT:
+         This triggers the hamburger → X animation
+      */
+      menuToggle.classList.add("is-active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        "Close navigation"
+      );
     };
 
 
@@ -52,31 +66,19 @@
       () => {
 
         const isOpen =
-          mainNav.classList.toggle("open");
+          mainNav.classList.contains("open");
 
-
-        menuToggle.classList.toggle(
-          "active",
-          isOpen
-        );
-
-
-        menuToggle.setAttribute(
-          "aria-expanded",
-          String(isOpen)
-        );
-
-
-        menuToggle.setAttribute(
-          "aria-label",
-          isOpen
-            ? "Close navigation"
-            : "Open navigation"
-        );
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
 
       }
     );
 
+
+    /* Close menu after clicking any navigation link */
 
     mainNav
       .querySelectorAll("a")
@@ -90,6 +92,8 @@
       });
 
 
+    /* Close menu with ESC */
+
     document.addEventListener(
       "keydown",
       (event) => {
@@ -101,6 +105,8 @@
       }
     );
 
+
+    /* Close mobile menu when returning to desktop */
 
     window.addEventListener(
       "resize",
@@ -154,9 +160,7 @@
 
 
     revealItems.forEach((item) => {
-
       revealObserver.observe(item);
-
     });
 
   } else {
@@ -173,7 +177,7 @@
 
 
   /* =========================================================
-     SMOOTH SCROLL
+     SMOOTH SCROLL — ENGAGEMENT INDEX
   ========================================================== */
 
   document
@@ -190,11 +194,21 @@
             link.getAttribute("href");
 
 
+          if (
+            !targetId ||
+            targetId === "#"
+          ) {
+            return;
+          }
+
+
           const target =
             document.querySelector(targetId);
 
 
-          if (!target) return;
+          if (!target) {
+            return;
+          }
 
 
           event.preventDefault();
