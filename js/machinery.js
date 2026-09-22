@@ -5,6 +5,7 @@
   const mainNav = document.getElementById("mainNav");
   const currentYear = document.getElementById("currentYear");
 
+
   /* =========================================================
      CURRENT YEAR
   ========================================================== */
@@ -21,9 +22,10 @@
   if (menuToggle && mainNav) {
 
     const closeMenu = () => {
+
       mainNav.classList.remove("open");
 
-      menuToggle.classList.remove("active");
+      menuToggle.classList.remove("is-active");
 
       menuToggle.setAttribute(
         "aria-expanded",
@@ -34,30 +36,39 @@
         "aria-label",
         "Open navigation"
       );
+
+    };
+
+
+    const openMenu = () => {
+
+      mainNav.classList.add("open");
+
+      menuToggle.classList.add("is-active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        "Close navigation"
+      );
+
     };
 
 
     menuToggle.addEventListener("click", () => {
 
       const isOpen =
-        mainNav.classList.toggle("open");
+        mainNav.classList.contains("open");
 
-      menuToggle.classList.toggle(
-        "active",
-        isOpen
-      );
-
-      menuToggle.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-      );
-
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen
-          ? "Close navigation"
-          : "Open navigation"
-      );
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
 
     });
 
