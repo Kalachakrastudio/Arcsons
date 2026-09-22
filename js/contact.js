@@ -34,7 +34,7 @@
 
       mainNav.classList.remove("open");
 
-      menuToggle.classList.remove("active");
+      menuToggle.classList.remove("is-active");
 
       menuToggle.setAttribute(
         "aria-expanded",
@@ -58,7 +58,7 @@
 
 
         menuToggle.classList.toggle(
-          "active",
+          "is-active",
           isOpen
         );
 
