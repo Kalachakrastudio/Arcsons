@@ -30,101 +30,109 @@
   }
 
 
-  /* =========================================================
-     MOBILE NAVIGATION
-     ========================================================= */
+ /* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
 
-  if (menuToggle && mainNav) {
+if (menuToggle && mainNav) {
 
-    const closeMenu = () => {
+  const closeMenu = () => {
 
-      mainNav.classList.remove("open");
+    mainNav.classList.remove("open");
 
-      menuToggle.classList.remove("active");
+    menuToggle.classList.remove("is-active");
 
-      menuToggle.setAttribute(
-        "aria-expanded",
-        "false"
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation"
+    );
+
+  };
+
+
+  const openMenu = () => {
+
+    mainNav.classList.add("open");
+
+    menuToggle.classList.add("is-active");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      "Close navigation"
+    );
+
+  };
+
+
+  menuToggle.addEventListener(
+    "click",
+    () => {
+
+      const isOpen =
+        mainNav.classList.contains("open");
+
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+
+    }
+  );
+
+
+  /* Close menu when navigation link is clicked */
+
+  mainNav
+    .querySelectorAll("a")
+    .forEach((link) => {
+
+      link.addEventListener(
+        "click",
+        closeMenu
       );
 
-      menuToggle.setAttribute(
-        "aria-label",
-        "Open navigation"
-      );
-
-    };
+    });
 
 
-    menuToggle.addEventListener(
-      "click",
-      () => {
+  /* Escape key */
 
-        const isOpen =
-          mainNav.classList.toggle("open");
+  document.addEventListener(
+    "keydown",
+    (event) => {
 
-        menuToggle.classList.toggle(
-          "active",
-          isOpen
-        );
-
-        menuToggle.setAttribute(
-          "aria-expanded",
-          String(isOpen)
-        );
-
-        menuToggle.setAttribute(
-          "aria-label",
-          isOpen
-            ? "Close navigation"
-            : "Open navigation"
-        );
-
+      if (event.key === "Escape") {
+        closeMenu();
       }
-    );
+
+    }
+  );
 
 
-    /* Close menu when navigation link is clicked */
+  /* Close menu when switching to desktop */
 
-    mainNav
-      .querySelectorAll("a")
-      .forEach((link) => {
+  window.addEventListener(
+    "resize",
+    () => {
 
-        link.addEventListener(
-          "click",
-          closeMenu
-        );
-
-      });
-
-
-    /* Escape key */
-
-    document.addEventListener(
-      "keydown",
-      (event) => {
-
-        if (event.key === "Escape") {
-          closeMenu();
-        }
-
+      if (window.innerWidth > 900) {
+        closeMenu();
       }
-    );
 
+    }
+  );
 
-    /* Close menu when switching to desktop */
-
-    window.addEventListener(
-      "resize",
-      () => {
-
-        if (window.innerWidth > 900) {
-          closeMenu();
-        }
-
-      }
-    );
-
-  }
+}
 
 
   /* =========================================================
